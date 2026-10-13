@@ -1,0 +1,25 @@
+name: Hindi site static QA
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [feature/hindi-site-foundation]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build static Hindi pages
+        run: node scripts/build.mjs
+      - name: Validate Hindi URLs, links, metadata, CNAME and sitemap
+        run: node tests/qa.mjs
+      - name: Check generated HTML matches committed source
+        run: |
+          git diff --exit-code -- '*.html' 'sitemap.xml' 'robots.txt'
