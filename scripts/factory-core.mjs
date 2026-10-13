@@ -91,8 +91,8 @@ export function validateDraft(article,row,site,published=[]){
    if(!source || typeof source.url!=="string" || typeof source.title!=="string" || source.title.trim().length<5)errors.push("source requires title and URL");
    try{
      const host=new URL(source.url).hostname.toLowerCase();
-     if(/(^|\\.)example\\.(com|org|net)$/.test(host))errors.push("placeholder example source forbidden");
-     sourceHosts.add(host.replace(/^www\\./,""));
+     if(/(^|\.)example\.(com|org|net)$/.test(host))errors.push("placeholder example source forbidden");
+     sourceHosts.add(host.replace(/^www\./,""));
    }catch{}
  }
  if(sourceHosts.size<2)errors.push("sources should be from at least two independent hostnames");
