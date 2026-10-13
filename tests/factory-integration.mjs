@@ -14,6 +14,21 @@ try{
  fs.copyFileSync(path.join(root,"CNAME"),path.join(temp,"CNAME"));
  fs.mkdirSync(path.join(temp,"content/incoming"),{recursive:true});
  const plan=JSON.parse(fs.readFileSync(path.join(temp,"data/editorial-plan.json"),"utf8"));
+ // Reset only the disposable fixture, never the actual production registry.
+ // This allows the same 0-to-2 integration case to run after 2, 20 or 298
+ // real posts have already been published.
+ const fixturePublished=plan.items.filter(row=>row.status==="PUBLISHED");
+ for(const item of fixturePublished){item.status="PLANNED";item.datePublished=null;}
+ fs.writeFileSync(path.join(temp,"data/editorial-plan.json"),JSON.stringify(plan,null,2)+"\n");
+ const statePath=path.join(temp,"data/factory-state.json"),state=JSON.parse(fs.readFileSync(statePath,"utf8"));
+ state.publishedCount=0;
+ state.checkpoint={lastArticleId:null,lastBatch:null,updatedAt:null};
+ state.claimed=[];
+ state.transactionPending=false;
+ fs.writeFileSync(statePath,JSON.stringify(state,null,2)+"\n");
+ const matrixPath=path.join(temp,"data/seo-master-matrix.json"),matrix=JSON.parse(fs.readFileSync(matrixPath,"utf8"));
+ const previouslyPublishedPaths=new Set(fixturePublished.map(row=>row.outputPath));
+ fs.writeFileSync(matrixPath,JSON.stringify(matrix.filter(item=>!previouslyPublishedPaths.has(item.slug)),null,2)+"\n");
  const row1=plan.items[0],row2=plan.items[1];
  const gearSentences=[
   "सड़क की हालत और मौसम देखकर वाहन चुनना जरूरी है ताकि अचानक ब्रेक लगाने की नौबत आने पर सुरक्षित नियंत्रण बना रहे।",
