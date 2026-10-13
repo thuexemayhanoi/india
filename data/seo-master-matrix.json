@@ -538,5 +538,35 @@
     "gscEvidence": null,
     "collisionStatus": "REVIEW_BEFORE_MERGE",
     "nextAction": "NATIVE_HINDI_AND_FACT_CHECK"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/हनोई-के-यातायात-में-गियर-वाली-बाइक-किसे-चुननी-चाहिए/",
+    "slug": "/बाइक-के-प्रकार/गियर-बाइक/हनोई-के-यातायात-में-गियर-वाली-बाइक-किसे-चुननी-चाहिए/",
+    "language": "hi-IN",
+    "keyword": "हनोई के यातायात में गियर वाली बाइक किसे चुननी चाहिए",
+    "role": "SUPPORT",
+    "parent": "/बाइक-के-प्रकार/गियर-बाइक/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/हनोई-में-ऑटोमैटिक-स्कूटर-के-फायदे-और-सीमाएँ/",
+    "slug": "/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/हनोई-में-ऑटोमैटिक-स्कूटर-के-फायदे-और-सीमाएँ/",
+    "language": "hi-IN",
+    "keyword": "हनोई में ऑटोमैटिक स्कूटर के फायदे और सीमाएँ",
+    "role": "SUPPORT",
+    "parent": "/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
   }
 ]

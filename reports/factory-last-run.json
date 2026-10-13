@@ -1,0 +1,26 @@
+{
+  "batch": "B01",
+  "accepted": [
+    {
+      "id": "HI0001",
+      "score": 100,
+      "words": 1306
+    },
+    {
+      "id": "HI0002",
+      "score": 100,
+      "words": 1267
+    }
+  ],
+  "blocked": [
+    {
+      "ids": [
+        "HI0003",
+        "HI0004"
+      ],
+      "reason": "WAIT_FOR_CONSECUTIVE_PAIR"
+    }
+  ],
+  "remaining": 298,
+  "at": "2026-10-13T12:38:05.689Z"
+}
