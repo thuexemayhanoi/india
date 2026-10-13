@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-13",
+  "pr": 2,
+  "branch": "feature/hindi-hub-silo-factory-preflight",
+  "checks": [
+    {
+      "name": "Hindi site static QA",
+      "runId": 38387321170,
+      "result": "SUCCESS_COMMIT_0976064"
+    },
+    {
+      "name": "Hindi Factory Preflight",
+      "runId": 38387321188,
+      "result": "SUCCESS_COMMIT_0976064"
+    }
+  ],
+  "note": "Follow-up collision regex patch commit 25ce40 CI also passed; browser visual and Core Web Vitals not verified.",
+  "status": "CI_PASS_NOT_PRODUCTION_APPROVED",
+  "deploymentPlan": [
+    "Await native Hindi and topic coverage QA",
+    "Review 11 draft Silo pages",
+    "Recheck GitHub CI after final changes",
+    "Only merge PR#2 on explicit owner approval",
+    "Verify production HTTP response, canonical, sitemap, mobile navigation, site crawl after deploy"
+  ],
+  "rollback": "Do not merge draft PR. If later merged, revert PR merge with a separate approval."
+}

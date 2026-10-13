@@ -1,0 +1,51 @@
+{
+  "asOf": "2026-10-13",
+  "source": "GitHub site.json, /vanchinh workflows as reference",
+  "siteRoutes": 36,
+  "supportingArticles": 0,
+  "hubs": 6,
+  "silos": 24,
+  "targetMaxSupportingArticles": 300,
+  "keywordVolumes": "UNAVAILABLE",
+  "gsc": "UNAVAILABLE",
+  "validatedNewArticleIdeas": 0,
+  "decision": "Do not fabricate 300 items. Phase 2 needs keyword and intent evidence.",
+  "candidateClusters": [
+    {
+      "hub": "/बाइक-के-प्रकार/",
+      "existingSilothCount": 5,
+      "supportingArticleCount": 0,
+      "action": "RESEARCH_TOPICAL_GAPS"
+    },
+    {
+      "hub": "/किराया-और-कीमतें/",
+      "existingSilothCount": 3,
+      "supportingArticleCount": 0,
+      "action": "RESEARCH_TOPICAL_GAPS"
+    },
+    {
+      "hub": "/जमा-और-बुकिंग/",
+      "existingSilothCount": 3,
+      "supportingArticleCount": 0,
+      "action": "RESEARCH_TOPICAL_GAPS"
+    },
+    {
+      "hub": "/हनोई-के-इलाके/",
+      "existingSilothCount": 7,
+      "supportingArticleCount": 0,
+      "action": "RESEARCH_TOPICAL_GAPS"
+    },
+    {
+      "hub": "/किराये-की-गाइड/",
+      "existingSilothCount": 4,
+      "supportingArticleCount": 0,
+      "action": "RESEARCH_TOPICAL_GAPS"
+    },
+    {
+      "hub": "/सुझाए-गए-रूट/",
+      "existingSilothCount": 2,
+      "supportingArticleCount": 0,
+      "action": "RESEARCH_TOPICAL_GAPS"
+    }
+  ]
+}
