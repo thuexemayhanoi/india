@@ -19,6 +19,10 @@ const accepted=[],blocked=[];
 for(let i=0;i<candidates.length;i+=2){
  const pair=candidates.slice(i,i+2);
  if(pair.length<2)break;
+ if(pair.some(r=>r.status==="REVIEW")){
+  blocked.push({ids:pair.map(x=>x.id),reason:"MANUAL_REVIEW_REQUIRED"});
+  break;
+ }
  if(!pair.every(r=>filesById.has(r.id))){ // Never skip an earlier pair.
   blocked.push({ids:pair.map(x=>x.id),reason:"WAIT_FOR_CONSECUTIVE_PAIR"});
   break;
@@ -54,5 +58,8 @@ if(accepted.length){
  writeJSON("data/editorial-plan.json",plan);
  writeJSON("data/factory-state.json",state);
 }
-writeJSON("reports/factory-last-run.json",{batch,accepted:accepted.map(x=>({id:x.row.id,score:x.checked.score,words:x.checked.wordCount})),blocked,remaining:plan.items.filter(x=>x.status!=="PUBLISHED").length,at:new Date().toISOString()});
+const runReport={batch,accepted:accepted.map(x=>({id:x.row.id,score:x.checked.score,words:x.checked.wordCount})),blocked,remaining:plan.items.filter(x=>x.status!=="PUBLISHED").length,at:new Date().toISOString()};
+if(accepted.length)writeJSON("reports/factory-last-run.json",runReport);
+else console.log("No approved articles; production working tree and checkpoint unchanged.");
+console.log("FACTORY_REPORT",JSON.stringify(runReport));
 console.log(JSON.stringify({batch,published:accepted.length,ids:accepted.map(x=>x.row.id),blocked},null,2));

@@ -3,8 +3,15 @@ on:
   pull_request:
     paths:
       - 'data/**'
-      - 'scripts/factory-preflight.mjs'
+      - 'scripts/**'
       - 'scripts/build.mjs'
+      - 'tests/**'
+      - '.github/workflows/hindi-factory-preflight.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'scripts/**'
       - 'tests/**'
       - '.github/workflows/hindi-factory-preflight.yml'
   workflow_dispatch:
