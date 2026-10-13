@@ -34,6 +34,7 @@ try{
  assert.ok(!fs.existsSync(path.join(temp,"content/published",row1.id+".json")),"never partial pair");
  write(row2,make(row2));
  const result=run("scripts/factory-publish.mjs");
+ console.log("PUBLISH_TEST_RESULT:",result);console.log("PUBLISH_TEST_REPORT:",fs.readFileSync(path.join(temp,"reports/factory-last-run.json"),"utf8"));
  const state=JSON.parse(fs.readFileSync(path.join(temp,"data/factory-state.json")));
  assert.equal(state.publishedCount,2);
  assert.equal(state.checkpoint.lastArticleId,row2.id);
