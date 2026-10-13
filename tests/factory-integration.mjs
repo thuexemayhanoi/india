@@ -22,7 +22,7 @@ try{
          r.title+" हेतु यात्रा योजना में "+["सुरक्षा","अनुभव","वाहन","निर्णय","समझौता","निर्देश"][i]+" और व्यावहारिक परीक्षण पर ध्यान दें तथा जानकारी जाँचें। क्रम "+(n+1)+"।"
       ).join(" "))
    })),
-   sources:[{url:"https://www.example.org/first",title:"Test only source"},{url:"https://www.example.com/second",title:"Test source two"}],
+   sources:[{url:"https://chinhphu.vn/test-fixture-government",title:"Test only source"},{url:"https://www.example.com/second",title:"Test source two"}],
    relatedPaths:[r.parentSilo,r.parentHub],
    editorialChecks:{factsReviewed:true,hindiReviewed:true,originalWriting:true}
  });
