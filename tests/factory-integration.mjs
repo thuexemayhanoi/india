@@ -20,12 +20,12 @@ try{
  const fixturePublished=plan.items.filter(row=>row.status==="PUBLISHED");
  for(const item of fixturePublished){item.status="PLANNED";item.datePublished=null;}
  fs.writeFileSync(path.join(temp,"data/editorial-plan.json"),JSON.stringify(plan,null,2)+"\n");
- const statePath=path.join(temp,"data/factory-state.json"),state=JSON.parse(fs.readFileSync(statePath,"utf8"));
- state.publishedCount=0;
- state.checkpoint={lastArticleId:null,lastBatch:null,updatedAt:null};
- state.claimed=[];
- state.transactionPending=false;
- fs.writeFileSync(statePath,JSON.stringify(state,null,2)+"\n");
+ const statePath=path.join(temp,"data/factory-state.json"),fixtureState=JSON.parse(fs.readFileSync(statePath,"utf8"));
+ fixtureState.publishedCount=0;
+ fixtureState.checkpoint={lastArticleId:null,lastBatch:null,updatedAt:null};
+ fixtureState.claimed=[];
+ fixtureState.transactionPending=false;
+ fs.writeFileSync(statePath,JSON.stringify(fixtureState,null,2)+"\n");
  const matrixPath=path.join(temp,"data/seo-master-matrix.json"),matrix=JSON.parse(fs.readFileSync(matrixPath,"utf8"));
  const previouslyPublishedPaths=new Set(fixturePublished.map(row=>row.outputPath));
  fs.writeFileSync(matrixPath,JSON.stringify(matrix.filter(item=>!previouslyPublishedPaths.has(item.slug)),null,2)+"\n");
