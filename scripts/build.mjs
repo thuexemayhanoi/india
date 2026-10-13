@@ -8,6 +8,7 @@ const byPath=Object.fromEntries([...all,...articles].map(p=>[p.path,p]));
 function e(x){return String(x).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 
 function url(path){return DOMAIN+path;}
+function translateUrl(path){return "https://translate.google.com/translate?sl=hi&amp;tl=en&amp;hl=en&amp;u="+encodeURIComponent(url(path));}
 
 function a(path,label,cls=""){return `<a href="${e(path)}"${cls?` class="${cls}"`:""}>${e(label)}</a>`;}
 
@@ -28,12 +29,12 @@ function head(p){let description=(p.lead+" | Cho Thuê Xe Máy Nguyễn Tú").sl
 return `<!doctype html><html lang="hi-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b2632"><meta name="google-site-verification" content="${e(config.googleSiteVerification)}" /><title>${e(p.title)} | Nguyễn Tú</title><meta name="description" content="${e(description)}"><link rel="canonical" href="${e(url(p.path))}"><meta property="og:type" content="website"><meta property="og:locale" content="hi_IN"><meta property="og:title" content="${e(p.title)}"><meta property="og:description" content="${e(description)}"><meta property="og:url" content="${e(url(p.path))}"><link rel="stylesheet" href="/assets/site.css">${schema(p)}</head><body><a class="skip-link" href="#main">मुख्य सामग्री पर जाएँ</a>`;
 }
 
-function header(){
+function header(p){
  const menu=NAV.map((hubPath,i)=>{
  const hub=byPath[hubPath],children=all.filter(p=>p.parent===hubPath);
  return `<div class="nav-group"><div class="nav-group-main">${a(hub.path,hub.label,"nav-hub-link")}<button class="nav-subtoggle" type="button" aria-expanded="false" aria-controls="nav-child-${i}" aria-label="${e(hub.label)}: उपविषय दिखाएँ">⌄</button></div><div class="nav-panel" id="nav-child-${i}"><a class="nav-panel-all" href="${e(hub.path)}">सभी ${e(hub.label)} →</a>${children.map(p=>a(p.path,p.label,"nav-child-link")).join("")}</div></div>`;
  }).join("");
- return `<header class="site-header"><div class="container header-inner"><a class="brand" href="/" aria-label="हनोई मोटरबाइक किराया - मुख्य पृष्ठ"><span class="brand-icon">↗</span><span><strong>HANOI<span class="accent">RIDE</span></strong><small>Nguyễn Tú · हिन्दी गाइड</small></span></a><button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="मेन्यू खोलें">☰</button><nav id="main-nav" class="nav nav-taxonomy" aria-label="मुख्य नेविगेशन">${menu}${a("/संपर्क/","संपर्क करें","nav-cta")}</nav></div></header>`;
+ return `<header class="site-header"><div class="container header-inner"><a class="brand" href="/" aria-label="हनोई मोटरबाइक किराया - मुख्य पृष्ठ"><span class="brand-icon">↗</span><span><strong>HANOI<span class="accent">RIDE</span></strong><small>Nguyễn Tú · हिन्दी गाइड</small></span></a><nav id="main-nav" class="nav nav-taxonomy" aria-label="मुख्य नेविगेशन">${menu}${a("/संपर्क/","संपर्क करें","nav-cta")}</nav><div class="header-actions notranslate" translate="no"><a class="language-pill" href="${translateUrl(p.path)}" target="_blank" rel="noopener noreferrer" lang="en" aria-label="Automatically translate this page into English with Google Translate (opens a new tab)" title="Translate current page into English"><span class="lang-globe" aria-hidden="true">🌐</span><span class="lang-full">English</span><span class="lang-short">EN</span></a><button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="मेन्यू खोलें">☰</button></div></div></header>`;
 }
 
 function footer(){
@@ -84,8 +85,8 @@ function outputPath(path){return path==="/"?"index.html":path.slice(1)+"index.ht
 
 function buildSite(){
 const files={};
-for(const p of all)files[outputPath(p.path)]=head(p)+header()+(p.path==="/"?homePage(p):regularPage(p))+footer();
-for(const a of articles)files[outputPath(a.path)]=head(a)+header()+articlePage(a)+footer();
+for(const p of all)files[outputPath(p.path)]=head(p)+header(p)+(p.path==="/"?homePage(p):regularPage(p))+footer();
+for(const a of articles)files[outputPath(a.path)]=head(a)+header(a)+articlePage(a)+footer();
 files["sitemap.xml"]='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+[...all,...articles].map(p=>`<url><loc>${e(url(p.path))}</loc></url>`).join("")+"</urlset>\n";
 files["robots.txt"]="User-agent: *\nAllow: /\nSitemap: "+DOMAIN+"/sitemap.xml\n";
 files[".nojekyll"]="";

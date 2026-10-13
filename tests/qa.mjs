@@ -48,3 +48,20 @@ for(const a of published){
  assert.ok(source.includes("<h1>"),"Missing article H1");
 }
 console.log("Published Article checks PASS:",published.length);
+
+
+/* Reader-facing English translation link (never creates an English SEO URL). */
+const translateHref = path => "https://translate.google.com/translate?sl=hi&amp;tl=en&amp;hl=en&amp;u="+encodeURIComponent(data.baseUrl+path);
+for(const page of [...ps,...published]){
+ const filename=page.path==="/"?"index.html":page.path.slice(1)+"index.html";
+ const source=fs.readFileSync(filename,"utf8");
+ const expected='class="language-pill" href="'+translateHref(page.path)+'"';
+ assert.ok(source.includes(expected),"English translator must target current URL: "+filename);
+ assert.equal((source.match(/class="language-pill"/g)||[]).length,1,"One language control per page");
+ assert.ok(source.includes('target="_blank" rel="noopener noreferrer" lang="en"'),"Accessible translator link");
+ assert.ok(source.includes('id="menu-toggle"'),"Mobile menu toggle preserved");
+ assert.ok(!source.includes("translate_a/element.js"),"Unsupported free Google Translate widget forbidden");
+}
+const css=fs.readFileSync("assets/site.css","utf8");
+assert.ok(css.includes(".language-pill")&&css.includes("@media(max-width:620px)"),"Responsive translator CSS missing");
+console.log("English switch QA PASS:",ps.length+published.length,"pages, canonical preserved and dynamic target URL");
