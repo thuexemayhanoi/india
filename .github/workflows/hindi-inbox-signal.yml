@@ -1,0 +1,14 @@
+name: Hindi Writer Inbox Signal
+on:
+  push:
+    branches: [writer-inbox]
+    paths:
+      - 'content/incoming/**'
+permissions:
+  contents: read
+jobs:
+  signal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm isolated inbox push
+        run: echo "Writer inbox updated. Publisher runs from trusted default branch via workflow_run."

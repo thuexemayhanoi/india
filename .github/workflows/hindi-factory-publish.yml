@@ -1,8 +1,9 @@
 name: Hindi Factory Publish - External Writer Inbox
 on:
-  push:
+  workflow_run:
+    workflows: ['Hindi Writer Inbox Signal']
+    types: [completed]
     branches: [writer-inbox]
-    paths: ['content/incoming/**']
   workflow_dispatch:
 permissions:
   contents: write
@@ -12,6 +13,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   publish:
+    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_repository.full_name == github.repository)
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
