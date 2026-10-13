@@ -8,16 +8,16 @@
 - No generic "no deposit" claim. E-bike prices must remain "contact to confirm". External references are not proof of this business's prices.
 
 ## Taxonomy contract
-- Homepage is one PILLAR, six HUB paths are listed in `nav`, child SILO `parent` links to one HUB, SUPPORT is a planned future article and does not create routes yet.
+- Homepage is one PILLAR, six HUB paths are listed in `nav`, child SILO `parent` links to one HUB, SUPPORT routes are created ONLY when their structured Hindi article passes Factory QA and is committed to PUBLISHED.
 - Header mega-menu, mobile navigation, footer and breadcrumb derive from `data/site.json`; do not maintain separate hard-coded menu arrays.
 - Every URL owns one search intent and one canonical. Do not clone existing URL to satisfy volume targets.
 - New SILO files have editorial status STAGED_NEW until review, build and owner-approved merge.
 
 ## Factory safety — modeled on /vanchinh, not copied
-- 300 articles MAXIMUM target, not an automatic publication quota; 6 possible batches x 50, article plans may be fewer if no genuine topical gap.
-- Status `PREFLIGHT_ONLY`, no AI Writer/cron/API keys, no auto publishing; `hindi-factory-preflight.yml` is read-only.
-- Phase 2 must implement verified queue + claim + scoped quality and SEO thresholds + checkpoint/recovery + transactional publish. Treat uncertain or conflicting intent as REVIEW; never auto-publish.
-- Decisions: ALLOW_CREATE, UPGRADE_EXISTING, REVIEW_COLLISION, REJECT_DUPLICATE. Duplicate check covers published, draft, plan and writer queue.
+- 300 approved topic briefs are planned in 6 batches x 50; do not publish filler and REVIEW unverifiable or overlapping topics.
+- State `AUTO_PUBLISH_READY`: external AI Writer is authorized to submit on isolated `writer-inbox`; deterministic publisher runs with CI gates, no paid AI API keys.
+- Queue, pair quality gate, checkpoint, immutable published rows and Git-atomic publish are implemented; **multi-writer durable leasing and robust recovery for interrupted runs are NOT yet implemented**. Use only one external writer session until further hardening. Treat uncertain or conflicting intent as REVIEW.
+- Decisions: ALLOW_CREATE, UPGRADE_EXISTING, REVIEW_COLLISION, REJECT_DUPLICATE. Duplicate check covers known routes, planned titles, queued IDs and published prose; it is a heuristic and cannot guarantee complete semantic detection.
 - Do not write 300 template articles before researching intent coverage, accuracy, legal sources and quality.
 - No claim of AEO/GEO placement or Google rankings without verified data.
 
