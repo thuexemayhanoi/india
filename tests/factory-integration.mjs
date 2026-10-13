@@ -76,6 +76,18 @@ try{
     editorialChecks:{factsReviewed:true,hindiReviewed:true,originalWriting:true}
    };
  };
+ const site=JSON.parse(fs.readFileSync(path.join(temp,"data/site.json"),"utf8"));
+ const mod=await import("../scripts/factory-core.mjs");
+ const valid1=mod.validateDraft(make(row1),row1,site);
+ assert.equal(valid1.pass,true,"valid test authoring should pass: "+JSON.stringify(valid1.errors));
+ const badSource=make(row1);
+ badSource.sources[1].url="https://www.example.com/not-a-source";
+ const badSourceCheck=mod.validateDraft(badSource,row1,site);
+ assert.ok(badSourceCheck.errors.some(x=>x.includes("placeholder example source")),"placeholder source should be refused");
+ const boiler=make(row1);
+ boiler.sections[0].paragraphs[1]=boiler.sections[0].paragraphs[0];
+ const boilerCheck=mod.validateDraft(boiler,row1,site);
+ assert.ok(boilerCheck.errors.some(x=>x.includes("duplicate or boilerplate")),"copied paragraph should be refused");
  const write=(row,v)=>fs.writeFileSync(path.join(temp,"content/incoming",row.id+".json"),JSON.stringify(v));
  write(row1,make(row1));
  const bad=make(row2);bad.sections=bad.sections.slice(0,1);write(row2,bad);
@@ -103,5 +115,12 @@ try{
  assert.ok(sitemap.includes("https://hi.rentbikehanoi.com"+row1.outputPath),"Article URL missing sitemap");
  run("scripts/factory-publish.mjs");
  assert.equal(JSON.parse(fs.readFileSync(path.join(temp,"data/factory-state.json"))).publishedCount,2,"idempotent retry");
- console.log("INTEGRATION PASS: failed pair held; valid pair committed; checkpoint exact; retry idempotent");
+ const reviewPlan=JSON.parse(fs.readFileSync(path.join(temp,"data/editorial-plan.json"),"utf8"));
+ reviewPlan.items[2].status="REVIEW";
+ fs.writeFileSync(path.join(temp,"data/editorial-plan.json"),JSON.stringify(reviewPlan,null,2));
+ const beforeReview=fs.readFileSync(path.join(temp,"data/factory-state.json"),"utf8");
+ const reviewResult=run("scripts/factory-publish.mjs");
+ assert.ok(reviewResult.includes("MANUAL_REVIEW_REQUIRED"),"REVIEW must never autopublish");
+ assert.equal(fs.readFileSync(path.join(temp,"data/factory-state.json"),"utf8"),beforeReview,"REVIEW must not mutate factory state");
+ console.log("INTEGRATION PASS: bad pair held, valid pair published, canonical and sitemap generated, duplicate prose rejected, REVIEW blocked, retry idempotent");
 }finally{process.chdir(root);fs.rmSync(temp,{recursive:true,force:true});}
