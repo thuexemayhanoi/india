@@ -73,3 +73,8 @@ assert.ok(homePrices.includes('class="money-value notranslate" translate="no"'),
 assert.ok(priceGuide.includes("3,000,000 VND")&&priceGuide.includes('class="money-value notranslate" translate="no"'),"Price table currency missing");
 assert.ok(fs.readFileSync("assets/site.js","utf8").includes('holder.classList.toggle("notranslate",isVnd)'),"Rental period selector must protect currency");
 console.log("VND machine-translation safety PASS");
+
+const homeFAQ = fs.readFileSync("index.html","utf8");
+assert.ok(homeFAQ.includes("2,000,000–5,000,000 VND"),"Homepage FAQ deposit amount must stay VND");
+assert.ok(homeFAQ.includes('class="money-value notranslate" translate="no">2,000,000–5,000,000 VND</span>'),"Homepage FAQ deposit must not be translated into euros");
+console.log("Homepage FAQ VND QA PASS");
