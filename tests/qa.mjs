@@ -1,9 +1,9 @@
 import fs from "node:fs";import path from "node:path";import assert from "node:assert/strict";
-const data=JSON.parse(fs.readFileSync("data/site.json","utf8"));const ps=data.groups;const pubFolder="content/published";
+const data=JSON.parse(fs.readFileSync("data/site.json","utf8"));const googleVerification='<meta name="google-site-verification" content="4Q_SglVzw-B7lnk_qs1yXOuMAL1zu6bSSmFsDuaOkuQ" />';assert.equal(data.googleSiteVerification,"4Q_SglVzw-B7lnk_qs1yXOuMAL1zu6bSSmFsDuaOkuQ","Google verification content drift");const ps=data.groups;const pubFolder="content/published";
 const published=fs.existsSync(pubFolder)?fs.readdirSync(pubFolder).filter(f=>/^HI\d{4}\.json$/.test(f)).map(f=>JSON.parse(fs.readFileSync(path.join(pubFolder,f),"utf8"))):[];
 const paths=new Set([...ps,...published].map(p=>p.path));assert.equal(paths.size,ps.length+published.length,"duplicate URL");
 assert.equal(ps.filter(p=>p.path==="/").length,1);assert.equal(ps.filter(p=>p.role==="PILLAR").length,1);
-for(const p of ps){if(p.parent)assert.ok(paths.has(p.parent),p.path+" parent missing");const f=p.path==="/"? "index.html":p.path.slice(1)+"index.html";assert.ok(fs.existsSync(f),f);let s=fs.readFileSync(f,"utf8");assert.match(s,/<html lang="hi-IN">/);assert.ok(s.includes('<link rel="canonical" href="'+data.baseUrl+p.path+'"'));assert.ok(s.includes('type="application/ld+json"'));assert.ok(s.includes('<h1>'));assert.ok(s.includes('href="/assets/site.css"'));assert.ok(s.includes('href="/संपर्क/"'));assert.ok(!s.includes("Lorem ipsum"));}
+for(const p of ps){if(p.parent)assert.ok(paths.has(p.parent),p.path+" parent missing");const f=p.path==="/"? "index.html":p.path.slice(1)+"index.html";assert.ok(fs.existsSync(f),f);let s=fs.readFileSync(f,"utf8");assert.match(s,/<html lang="hi-IN">/);assert.equal(s.split(googleVerification).length-1,1,"verification meta missing or duplicated "+f);assert.ok(s.includes('<link rel="canonical" href="'+data.baseUrl+p.path+'"'));assert.ok(s.includes('type="application/ld+json"'));assert.ok(s.includes('<h1>'));assert.ok(s.includes('href="/assets/site.css"'));assert.ok(s.includes('href="/संपर्क/"'));assert.ok(!s.includes("Lorem ipsum"));}
 for(const p of ps){const f=p.path==="/"? "index.html":p.path.slice(1)+"index.html";const s=fs.readFileSync(f,"utf8");for(const [,href] of s.matchAll(/href="(\/[^"#?]+)"/g)){if(href.startsWith("/assets/"))continue;assert.ok(paths.has(href),f+" broken internal link "+href)}}
 const sitemap=fs.readFileSync("sitemap.xml","utf8");assert.equal((sitemap.match(/<loc>/g)||[]).length,ps.length+published.length);assert.equal(fs.readFileSync("CNAME","utf8").trim(),"hi.rentbikehanoi.com");assert.ok(fs.readFileSync("robots.txt","utf8").includes(data.baseUrl+"/sitemap.xml"));
 console.log("PASS",ps.length,"Hindi pages; links, canonical, sitemap, CNAME, schema and architecture.");
@@ -33,11 +33,18 @@ const deployed=ps.filter(x=>x.role==="SILO").length;
 console.log("Taxonomy PASS:",hubs.length,"hubs,",deployed,"silos; menu, footer, matrix, plan.");
 
 for(const a of published){
+ if(a.role!=="SUPPORT" || !paths.has(a.parentSilo))throw Error("invalid published article ownership");
  const file=a.path.slice(1)+"index.html",source=fs.readFileSync(file,"utf8");
- assert.ok(source.includes('rel="canonical" href="'+data.baseUrl+a.path+'"'));
+ assert.ok(source.includes('rel="canonical" href="'+data.baseUrl+a.path+'"'));assert.equal(source.split(googleVerification).length-1,1,"future article verification meta missing or duplicated");
  assert.ok(source.includes('"@type":"Article"'));
  assert.ok(sitemap.includes(data.baseUrl+a.path));
  assert.ok(!source.includes('<script>alert('));
  assert.ok(source.includes('href="'+a.parentSilo+'"'));
+ for(const [,href] of source.matchAll(/href="(\/[^"#?]+)"/g)) {
+   if(href.startsWith("/assets/"))continue;
+   assert.ok(paths.has(href),file+" broken internal link "+href);
+ }
+ assert.ok(source.includes('"@type":"BreadcrumbList"'),"Missing breadcrumb JSON-LD");
+ assert.ok(source.includes("<h1>"),"Missing article H1");
 }
 console.log("Published Article checks PASS:",published.length);
