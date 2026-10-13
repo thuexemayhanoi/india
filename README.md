@@ -1,7 +1,7 @@
 # India · Hindi Hanoi Motorbike Rental
 
 **Domain:** https://hi.rentbikehanoi.com/  
-**Branch:** `feature/hindi-site-foundation` (Phase 1, not production)  
+**Production branch:** `main` · **Writer branch:** `writer-inbox`  
 **Language:** Hindi (`hi-IN`), Devanagari URL paths.  
 **Owner:** thuexemayhanoi
 
@@ -16,8 +16,20 @@ No npm dependencies. Pages are pre-rendered to repository root for future GitHub
 
 ## Phase 1
 
-Homepage commercial pillar + 24 Hindi pages across topical hubs, nested categories, FAQ, About, Contact, Privacy and Terms. `CNAME` remains unchanged. No 300 article writer is enabled, no stock photos or invented ratings, no live rental booking engine. Prices are reference values and deposit requires confirmation.
+Homepage commercial pillar + foundation Hub/Silo/utility pages generated from shared site.json. `CNAME` remains unchanged. Writer automation is implemented separately from UI; no stock photos, invented ratings or live rental booking engine. Prices are reference values and deposit requires confirmation.
 
-## Phase 2 (future, explicitly deferred)
+## Phase 2 architecture (implemented with manual editorial verification)
 
-Audit the published/draft registry, create Topical Matrix and evidence-based 300-topic Editorial Plan, integrate collision guard and article production/checkpoints only after review. Follow `reports/phase-1.md`.
+The approved 300-topic editorial plan and deterministic external-writer auto publisher have now been added. No articles were authored or published during setup; verify source credibility and search intent during authoring. Follow `reports/phase-1.md`.
+
+
+## Phase 1.5: Topic architecture + read-only factory preparation
+
+- Master taxonomy: `data/site.json` (36 URL drafts, 6 Hub / 24 Silo).
+- GitHub workflow: `.github/workflows/hindi-factory-preflight.yml` (PR checks; no writes).
+- Manual dry-run: `.github/workflows/hindi-article-batch.yml` (B01–B06 × 50 article capacity; no writer/publisher).
+- Reports: `data/global-content-inventory.json`, `data/cannibalization-matrix.json`, `data/knowledge-graph.json`, `data/internal-linking-matrix.json`, `data/topical-gap-report.json`, `data/content-upgrade-backlog.json`.
+- Writer operates only on a dedicated branch. Publisher updates main with Git atomic commits after QA; no per-post approval. Semantic ambiguity requires REVIEW; multi-writer leasing is not implemented.
+
+## External Hindi Writer Factory
+The Editorial Plan has 300 topic briefs (6 batches × 50). Writer pushes pairs of structured Hindi JSON to `writer-inbox/content/incoming/`. GitHub Actions `hindi-factory-publish.yml` imports only allowed IDs, runs deterministic QA and publishes accepted pages automatically to `main`. See `docs/EXTERNAL-WRITER-HI.md`. No article content is copied from `/vanchinh`.

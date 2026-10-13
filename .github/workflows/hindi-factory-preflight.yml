@@ -1,0 +1,32 @@
+name: Hindi Factory Preflight (READ ONLY)
+on:
+  pull_request:
+    paths:
+      - 'data/**'
+      - 'scripts/factory-preflight.mjs'
+      - 'scripts/build.mjs'
+      - 'tests/**'
+      - '.github/workflows/hindi-factory-preflight.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit-taxonomy-and-plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate topic taxonomy and collision gates (read only)
+        run: |
+          node scripts/factory-preflight.mjs
+          node tests/factory-unit.mjs
+          node tests/factory-integration.mjs
+      - name: Build + check all page navigation and SEO (read only)
+        run: |
+          node scripts/build.mjs
+          node tests/qa.mjs
+      - name: Ensure generated pages match committed source
+        run: git diff --exit-code -- '*.html' 'sitemap.xml' 'robots.txt'

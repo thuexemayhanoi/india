@@ -7,12 +7,12 @@
     "role": "PILLAR",
     "parent": null,
     "searchIntent": "commercial",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "MONITOR"
   },
   {
     "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/",
@@ -22,12 +22,12 @@
     "role": "HUB",
     "parent": null,
     "searchIntent": "mixed-hub",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "UPGRADE_CONTEXTUAL_LINKS"
   },
   {
     "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/",
@@ -37,12 +37,12 @@
     "role": "SILO",
     "parent": "/बाइक-के-प्रकार/",
     "searchIntent": "focused-information",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "MONITOR"
   },
   {
     "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/",
@@ -52,12 +52,12 @@
     "role": "SILO",
     "parent": "/बाइक-के-प्रकार/",
     "searchIntent": "focused-information",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "MONITOR"
   },
   {
     "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/",
@@ -67,12 +67,12 @@
     "role": "SILO",
     "parent": "/बाइक-के-प्रकार/",
     "searchIntent": "focused-information",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "MONITOR"
   },
   {
     "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/",
@@ -82,12 +82,12 @@
     "role": "SILO",
     "parent": "/बाइक-के-प्रकार/",
     "searchIntent": "focused-information",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "MONITOR"
   },
   {
     "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/",
@@ -97,12 +97,12 @@
     "role": "HUB",
     "parent": null,
     "searchIntent": "mixed-hub",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "UPGRADE_CONTEXTUAL_LINKS"
   },
   {
     "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/",
@@ -112,12 +112,12 @@
     "role": "SILO",
     "parent": "/किराया-और-कीमतें/",
     "searchIntent": "focused-information",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "MONITOR"
   },
   {
     "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/",
@@ -127,12 +127,12 @@
     "role": "SILO",
     "parent": "/किराया-और-कीमतें/",
     "searchIntent": "focused-information",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "MONITOR"
   },
   {
     "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/",
@@ -142,12 +142,12 @@
     "role": "SILO",
     "parent": "/किराया-और-कीमतें/",
     "searchIntent": "focused-information",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "MONITOR"
   },
   {
     "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/",
@@ -157,12 +157,12 @@
     "role": "HUB",
     "parent": null,
     "searchIntent": "mixed-hub",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "UPGRADE_CONTEXTUAL_LINKS"
   },
   {
     "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/",
@@ -172,12 +172,12 @@
     "role": "HUB",
     "parent": null,
     "searchIntent": "mixed-hub",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "UPGRADE_CONTEXTUAL_LINKS"
   },
   {
     "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/",
@@ -187,12 +187,12 @@
     "role": "SILO",
     "parent": "/हनोई-के-इलाके/",
     "searchIntent": "focused-information",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "MONITOR"
   },
   {
     "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/",
@@ -202,12 +202,12 @@
     "role": "SILO",
     "parent": "/हनोई-के-इलाके/",
     "searchIntent": "focused-information",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "MONITOR"
   },
   {
     "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/",
@@ -217,12 +217,12 @@
     "role": "SILO",
     "parent": "/हनोई-के-इलाके/",
     "searchIntent": "focused-information",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "MONITOR"
   },
   {
     "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/",
@@ -232,12 +232,12 @@
     "role": "SILO",
     "parent": "/हनोई-के-इलाके/",
     "searchIntent": "focused-information",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "MONITOR"
   },
   {
     "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/",
@@ -247,12 +247,12 @@
     "role": "HUB",
     "parent": null,
     "searchIntent": "mixed-hub",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "UPGRADE_CONTEXTUAL_LINKS"
   },
   {
     "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/",
@@ -262,12 +262,12 @@
     "role": "SILO",
     "parent": "/किराये-की-गाइड/",
     "searchIntent": "focused-information",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "MONITOR"
   },
   {
     "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/",
@@ -277,12 +277,12 @@
     "role": "SILO",
     "parent": "/किराये-की-गाइड/",
     "searchIntent": "focused-information",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "MONITOR"
   },
   {
     "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/",
@@ -292,12 +292,12 @@
     "role": "HUB",
     "parent": null,
     "searchIntent": "mixed-hub",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "UPGRADE_CONTEXTUAL_LINKS"
   },
   {
     "url": "https://hi.rentbikehanoi.com/अक्सर-पूछे-जाने-वाले-सवाल/",
@@ -307,12 +307,12 @@
     "role": "FAQ",
     "parent": null,
     "searchIntent": "informational",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "MONITOR"
   },
   {
     "url": "https://hi.rentbikehanoi.com/हमारे-बारे-में/",
@@ -322,12 +322,12 @@
     "role": "UTILITY",
     "parent": null,
     "searchIntent": "navigational",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "MONITOR"
   },
   {
     "url": "https://hi.rentbikehanoi.com/संपर्क/",
@@ -337,12 +337,12 @@
     "role": "UTILITY",
     "parent": null,
     "searchIntent": "navigational",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "HINDI_EDITORIAL_QA"
+    "nextAction": "MONITOR"
   },
   {
     "url": "https://hi.rentbikehanoi.com/गोपनीयता-नीति/",
@@ -352,12 +352,12 @@
     "role": "UTILITY",
     "parent": null,
     "searchIntent": "navigational",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "LEGAL_REVIEW"
+    "nextAction": "MONITOR"
   },
   {
     "url": "https://hi.rentbikehanoi.com/नियम-और-शर्तें/",
@@ -367,11 +367,176 @@
     "role": "UTILITY",
     "parent": null,
     "searchIntent": "navigational",
-    "status": "STAGED_NEW",
-    "decision": "CREATE_FOUNDATION",
-    "published": false,
+    "status": "PUBLISHED_BASELINE",
+    "decision": "KEEP_NAVIGATION",
+    "published": true,
     "gscEvidence": null,
     "collisionStatus": "NOT_APPLICABLE_NO_EXISTING_ARTICLES",
-    "nextAction": "LEGAL_REVIEW"
+    "nextAction": "MONITOR"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/",
+    "slug": "/जमा-और-बुकिंग/सुरक्षा-जमा/",
+    "language": "hi-IN",
+    "keyword": "हनोई में मोटरबाइक किराये का सुरक्षा जमा",
+    "role": "SILO",
+    "parent": "/जमा-और-बुकिंग/",
+    "searchIntent": "focused-informational",
+    "status": "STAGED_NEW",
+    "decision": "CREATE_WITH_EDITORIAL_REVIEW",
+    "published": false,
+    "gscEvidence": null,
+    "collisionStatus": "REVIEW_BEFORE_MERGE",
+    "nextAction": "NATIVE_HINDI_AND_FACT_CHECK"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
+    "slug": "/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
+    "language": "hi-IN",
+    "keyword": "हनोई में मोटरबाइक किराये की बुकिंग कैसे करें?",
+    "role": "SILO",
+    "parent": "/जमा-और-बुकिंग/",
+    "searchIntent": "focused-informational",
+    "status": "STAGED_NEW",
+    "decision": "CREATE_WITH_EDITORIAL_REVIEW",
+    "published": false,
+    "gscEvidence": null,
+    "collisionStatus": "REVIEW_BEFORE_MERGE",
+    "nextAction": "NATIVE_HINDI_AND_FACT_CHECK"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/",
+    "slug": "/जमा-और-बुकिंग/डिलीवरी-और-वापसी/",
+    "language": "hi-IN",
+    "keyword": "हनोई में किराये की बाइक लेना और लौटाना",
+    "role": "SILO",
+    "parent": "/जमा-और-बुकिंग/",
+    "searchIntent": "focused-informational",
+    "status": "STAGED_NEW",
+    "decision": "CREATE_WITH_EDITORIAL_REVIEW",
+    "published": false,
+    "gscEvidence": null,
+    "collisionStatus": "REVIEW_BEFORE_MERGE",
+    "nextAction": "NATIVE_HINDI_AND_FACT_CHECK"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/",
+    "slug": "/हनोई-के-इलाके/गिया-लाम/",
+    "language": "hi-IN",
+    "keyword": "गिया लाम क्षेत्र के लिए मोटरबाइक किराये की गाइड",
+    "role": "SILO",
+    "parent": "/हनोई-के-इलाके/",
+    "searchIntent": "focused-informational",
+    "status": "STAGED_NEW",
+    "decision": "CREATE_WITH_EDITORIAL_REVIEW",
+    "published": false,
+    "gscEvidence": null,
+    "collisionStatus": "REVIEW_BEFORE_MERGE",
+    "nextAction": "NATIVE_HINDI_AND_FACT_CHECK"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/",
+    "slug": "/हनोई-के-इलाके/बा-दिन्ह/",
+    "language": "hi-IN",
+    "keyword": "बा दिन्ह में मोटरबाइक किराये की जानकारी",
+    "role": "SILO",
+    "parent": "/हनोई-के-इलाके/",
+    "searchIntent": "focused-informational",
+    "status": "STAGED_NEW",
+    "decision": "CREATE_WITH_EDITORIAL_REVIEW",
+    "published": false,
+    "gscEvidence": null,
+    "collisionStatus": "REVIEW_BEFORE_MERGE",
+    "nextAction": "NATIVE_HINDI_AND_FACT_CHECK"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/",
+    "slug": "/हनोई-के-इलाके/हाई-बा-त्रुंग/",
+    "language": "hi-IN",
+    "keyword": "हाई बा त्रुंग में मोटरबाइक किराये की गाइड",
+    "role": "SILO",
+    "parent": "/हनोई-के-इलाके/",
+    "searchIntent": "focused-informational",
+    "status": "STAGED_NEW",
+    "decision": "CREATE_WITH_EDITORIAL_REVIEW",
+    "published": false,
+    "gscEvidence": null,
+    "collisionStatus": "REVIEW_BEFORE_MERGE",
+    "nextAction": "NATIVE_HINDI_AND_FACT_CHECK"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/",
+    "slug": "/किराये-की-गाइड/वाहन-जाँच/",
+    "language": "hi-IN",
+    "keyword": "किराये की मोटरबाइक लेने से पहले क्या जाँचें?",
+    "role": "SILO",
+    "parent": "/किराये-की-गाइड/",
+    "searchIntent": "focused-informational",
+    "status": "STAGED_NEW",
+    "decision": "CREATE_WITH_EDITORIAL_REVIEW",
+    "published": false,
+    "gscEvidence": null,
+    "collisionStatus": "REVIEW_BEFORE_MERGE",
+    "nextAction": "NATIVE_HINDI_AND_FACT_CHECK"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/",
+    "slug": "/किराये-की-गाइड/किराया-अनुबंध/",
+    "language": "hi-IN",
+    "keyword": "मोटरबाइक रेंटल अनुबंध में क्या स्पष्ट करें?",
+    "role": "SILO",
+    "parent": "/किराये-की-गाइड/",
+    "searchIntent": "focused-informational",
+    "status": "STAGED_NEW",
+    "decision": "CREATE_WITH_EDITORIAL_REVIEW",
+    "published": false,
+    "gscEvidence": null,
+    "collisionStatus": "REVIEW_BEFORE_MERGE",
+    "nextAction": "NATIVE_HINDI_AND_FACT_CHECK"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/",
+    "slug": "/सुझाए-गए-रूट/शहर-की-यात्रा/",
+    "language": "hi-IN",
+    "keyword": "हनोई शहर में मोटरबाइक से घूमने की योजना",
+    "role": "SILO",
+    "parent": "/सुझाए-गए-रूट/",
+    "searchIntent": "focused-informational",
+    "status": "STAGED_NEW",
+    "decision": "CREATE_WITH_EDITORIAL_REVIEW",
+    "published": false,
+    "gscEvidence": null,
+    "collisionStatus": "REVIEW_BEFORE_MERGE",
+    "nextAction": "NATIVE_HINDI_AND_FACT_CHECK"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/",
+    "slug": "/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/",
+    "language": "hi-IN",
+    "keyword": "हनोई से लंबी मोटरबाइक यात्रा की तैयारी",
+    "role": "SILO",
+    "parent": "/सुझाए-गए-रूट/",
+    "searchIntent": "focused-informational",
+    "status": "STAGED_NEW",
+    "decision": "CREATE_WITH_EDITORIAL_REVIEW",
+    "published": false,
+    "gscEvidence": null,
+    "collisionStatus": "REVIEW_BEFORE_MERGE",
+    "nextAction": "NATIVE_HINDI_AND_FACT_CHECK"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/",
+    "slug": "/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/",
+    "language": "hi-IN",
+    "keyword": "हनोई में इलेक्ट्रिक साइकिल किराये की जानकारी",
+    "role": "SILO",
+    "parent": "/बाइक-के-प्रकार/",
+    "searchIntent": "focused-informational",
+    "status": "STAGED_NEW",
+    "decision": "CREATE_WITH_EDITORIAL_REVIEW",
+    "published": false,
+    "gscEvidence": null,
+    "collisionStatus": "REVIEW_BEFORE_MERGE",
+    "nextAction": "NATIVE_HINDI_AND_FACT_CHECK"
   }
 ]

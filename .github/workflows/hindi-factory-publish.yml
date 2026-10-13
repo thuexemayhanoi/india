@@ -1,0 +1,72 @@
+name: Hindi Factory Publish - External Writer Inbox
+on:
+  workflow_run:
+    workflows: ['Hindi Writer Inbox Signal']
+    types: [completed]
+    branches: [writer-inbox]
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: hindi-single-publisher
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_repository.full_name == github.repository)
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Refresh repository truth and external writer branch
+        run: |
+          git fetch origin main writer-inbox
+          git checkout -B main origin/main
+      - name: Guard existing production content
+        run: |
+          node scripts/factory-preflight.mjs
+          node tests/factory-unit.mjs
+      - name: Import at most 10 pending articles
+        run: node scripts/import-writer-inbox.mjs
+      - name: Publish consecutive passing pairs
+        run: node scripts/factory-publish.mjs
+      - name: Remove temporary untrusted inputs
+        run: rm -rf content/incoming
+      - name: Build and quality-check all generated pages
+        run: |
+          node scripts/build.mjs
+          node tests/qa.mjs
+          node tests/factory-unit.mjs
+          node scripts/factory-preflight.mjs
+      - name: Commit approved content, fast-forward only
+        id: result
+        run: |
+          set -euo pipefail
+          git config user.name "india-factory-bot"
+          git config user.email "247212094+india-factory-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "factory(hi): auto-publish approved Hindi articles"
+            git push origin HEAD:main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Request Pages branch rebuild
+        if: steps.result.outputs.changed == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          curl --fail-with-body --retry 2 -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/pages/builds"

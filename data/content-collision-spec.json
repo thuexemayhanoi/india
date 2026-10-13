@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "phase": "SPEC_ONLY",
+  "phase": "AUTO_PUBLISH_IMPLEMENTED",
   "articleTargetCap": 300,
-  "autoPublish": false,
+  "autoPublish": true,
   "decisions": [
     "ALLOW_CREATE",
     "UPGRADE_EXISTING",
@@ -16,15 +16,15 @@
     "writer_queue"
   ],
   "steps": [
-    "normalize_hindi_english_vietnamese_terms",
-    "exact_url_and_canonical_check",
-    "keyword_entity_match",
-    "search_intent_comparison",
-    "semantic_duplicate_review",
-    "editor_approval"
+    "normalize_hindi_titles_and_paths",
+    "check_existing_pillar_hub_silo_and_editorial_plan",
+    "check_exact_intent_and_url_ownership",
+    "compare_published_prose_fivegram_overlap",
+    "validate_originality_source_language_quality",
+    "PUBLISH_PAIR_ONLY_IF_BOTH_PASS"
   ],
   "ambiguous": "REVIEW_COLLISION",
   "duplicate": "REJECT_DUPLICATE",
   "unavailableInput": "BLOCK_REVIEW",
-  "notes": "Not integrated with any live writer in phase 1. Do not generate filler pages to meet article target."
+  "notes": "Deterministic two-article pair publisher is implemented. 300 planned topics are original editorial briefs, not written posts; thresholds cannot guarantee factual or semantic uniqueness. External writers must verify sources. Multi-writer leasing and Pages deployment evidence require further QA."
 }

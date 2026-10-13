@@ -1,0 +1,152 @@
+[
+  {
+    "id": "HUB-01",
+    "priority": "P1",
+    "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/",
+    "action": "CONTENT_DEPTH_REVIEW",
+    "reason": "Hub navigation improved, search intent coverage and factual depth not externally verified",
+    "status": "OPEN"
+  },
+  {
+    "id": "HUB-02",
+    "priority": "P1",
+    "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/",
+    "action": "CONTENT_DEPTH_REVIEW",
+    "reason": "Hub navigation improved, search intent coverage and factual depth not externally verified",
+    "status": "OPEN"
+  },
+  {
+    "id": "HUB-03",
+    "priority": "P1",
+    "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/",
+    "action": "CONTENT_DEPTH_REVIEW",
+    "reason": "Hub navigation improved, search intent coverage and factual depth not externally verified",
+    "status": "OPEN"
+  },
+  {
+    "id": "HUB-04",
+    "priority": "P1",
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/",
+    "action": "CONTENT_DEPTH_REVIEW",
+    "reason": "Hub navigation improved, search intent coverage and factual depth not externally verified",
+    "status": "OPEN"
+  },
+  {
+    "id": "HUB-05",
+    "priority": "P1",
+    "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/",
+    "action": "CONTENT_DEPTH_REVIEW",
+    "reason": "Hub navigation improved, search intent coverage and factual depth not externally verified",
+    "status": "OPEN"
+  },
+  {
+    "id": "HUB-06",
+    "priority": "P1",
+    "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/",
+    "action": "CONTENT_DEPTH_REVIEW",
+    "reason": "Hub navigation improved, search intent coverage and factual depth not externally verified",
+    "status": "OPEN"
+  },
+  {
+    "id": "SILO-01",
+    "priority": "P1",
+    "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/",
+    "action": "HINDI_EDITORIAL_AND_FACT_QA",
+    "reason": "Staged new Silo requires expert content quality approval before merge",
+    "status": "OPEN"
+  },
+  {
+    "id": "SILO-02",
+    "priority": "P1",
+    "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
+    "action": "HINDI_EDITORIAL_AND_FACT_QA",
+    "reason": "Staged new Silo requires expert content quality approval before merge",
+    "status": "OPEN"
+  },
+  {
+    "id": "SILO-03",
+    "priority": "P1",
+    "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/",
+    "action": "HINDI_EDITORIAL_AND_FACT_QA",
+    "reason": "Staged new Silo requires expert content quality approval before merge",
+    "status": "OPEN"
+  },
+  {
+    "id": "SILO-04",
+    "priority": "P1",
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/",
+    "action": "HINDI_EDITORIAL_AND_FACT_QA",
+    "reason": "Staged new Silo requires expert content quality approval before merge",
+    "status": "OPEN"
+  },
+  {
+    "id": "SILO-05",
+    "priority": "P1",
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/",
+    "action": "HINDI_EDITORIAL_AND_FACT_QA",
+    "reason": "Staged new Silo requires expert content quality approval before merge",
+    "status": "OPEN"
+  },
+  {
+    "id": "SILO-06",
+    "priority": "P1",
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/",
+    "action": "HINDI_EDITORIAL_AND_FACT_QA",
+    "reason": "Staged new Silo requires expert content quality approval before merge",
+    "status": "OPEN"
+  },
+  {
+    "id": "SILO-07",
+    "priority": "P1",
+    "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/",
+    "action": "HINDI_EDITORIAL_AND_FACT_QA",
+    "reason": "Staged new Silo requires expert content quality approval before merge",
+    "status": "OPEN"
+  },
+  {
+    "id": "SILO-08",
+    "priority": "P1",
+    "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/",
+    "action": "HINDI_EDITORIAL_AND_FACT_QA",
+    "reason": "Staged new Silo requires expert content quality approval before merge",
+    "status": "OPEN"
+  },
+  {
+    "id": "SILO-09",
+    "priority": "P1",
+    "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/",
+    "action": "HINDI_EDITORIAL_AND_FACT_QA",
+    "reason": "Staged new Silo requires expert content quality approval before merge",
+    "status": "OPEN"
+  },
+  {
+    "id": "SILO-10",
+    "priority": "P1",
+    "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/",
+    "action": "HINDI_EDITORIAL_AND_FACT_QA",
+    "reason": "Staged new Silo requires expert content quality approval before merge",
+    "status": "OPEN"
+  },
+  {
+    "id": "SILO-11",
+    "priority": "P1",
+    "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/",
+    "action": "HINDI_EDITORIAL_AND_FACT_QA",
+    "reason": "Staged new Silo requires expert content quality approval before merge",
+    "status": "OPEN"
+  },
+  {
+    "priority": "P0",
+    "url": "https://hi.rentbikehanoi.com/गोपनीयता-नीति/",
+    "action": "LEGAL_REVIEW",
+    "status": "OPEN",
+    "reason": "Privacy data handling assumptions not independently verified"
+  },
+  {
+    "priority": "P0",
+    "url": "https://hi.rentbikehanoi.com/नियम-और-शर्तें/",
+    "action": "LEGAL_REVIEW",
+    "status": "OPEN",
+    "reason": "Rental legal terms depend on real contract"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "phase": "AUTO_PUBLISH_READY",
+  "version": 2,
+  "enabled": true,
+  "writerEnabled": true,
+  "autoPublish": true,
+  "publishedCount": 0,
+  "checkpoint": {
+    "lastArticleId": null,
+    "lastBatch": null,
+    "updatedAt": null
+  },
+  "claimed": [],
+  "immutablePublishedUrls": true,
+  "transactionPending": false,
+  "updatedAt": "2026-10-13",
+  "notes": "External writers submit vetted structured Hindi articles; deterministic CI publisher commits only passing pairs, with Git atomic commits and no force pushes."
+}

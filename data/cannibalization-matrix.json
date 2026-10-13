@@ -1,0 +1,362 @@
+[
+  {
+    "url": "https://hi.rentbikehanoi.com/",
+    "role": "PILLAR",
+    "primaryIntent": "हनोई में मोटरबाइक किराए पर लें",
+    "normalizedIntent": "हनोई में मोटरबाइक किराए पर लें",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/",
+    "role": "HUB",
+    "primaryIntent": "हनोई में कौन-सी बाइक चुनें?",
+    "normalizedIntent": "हनोई में कौन सी बाइक चुनें",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/",
+    "role": "SILO",
+    "primaryIntent": "हनोई में गियर वाली मोटरबाइक",
+    "normalizedIntent": "हनोई में गियर वाली मोटरबाइक",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/",
+    "role": "SILO",
+    "primaryIntent": "हनोई में ऑटोमैटिक स्कूटर",
+    "normalizedIntent": "हनोई में ऑटोमैटिक स्कूटर",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/",
+    "role": "SILO",
+    "primaryIntent": "हनोई में 50cc स्कूटर किराया",
+    "normalizedIntent": "हनोई में 50cc स्कूटर किराया",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/",
+    "role": "SILO",
+    "primaryIntent": "हनोई में इलेक्ट्रिक बाइक के विकल्प",
+    "normalizedIntent": "हनोई में इलेक्ट्रिक बाइक के विकल्प",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/",
+    "role": "HUB",
+    "primaryIntent": "हनोई मोटरबाइक किराया: दिन, सप्ताह और महीना",
+    "normalizedIntent": "हनोई मोटरबाइक किराया दिन सप्ताह और महीना",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/",
+    "role": "SILO",
+    "primaryIntent": "हनोई में एक दिन के लिए बाइक किराये पर लें",
+    "normalizedIntent": "हनोई में एक दिन के लिए बाइक किराये पर लें",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/",
+    "role": "SILO",
+    "primaryIntent": "हनोई में एक सप्ताह के लिए मोटरबाइक किराया",
+    "normalizedIntent": "हनोई में एक सप्ताह के लिए मोटरबाइक किराया",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/",
+    "role": "SILO",
+    "primaryIntent": "हनोई में महीने भर के लिए बाइक किराया",
+    "normalizedIntent": "हनोई में महीने भर के लिए बाइक किराया",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/",
+    "role": "HUB",
+    "primaryIntent": "मोटरबाइक किराये में जमा और बुकिंग की प्रक्रिया",
+    "normalizedIntent": "मोटरबाइक किराये में जमा और बुकिंग की प्रक्रिया",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/",
+    "role": "HUB",
+    "primaryIntent": "हनोई के किन इलाकों में बाइक किराये पर लें?",
+    "normalizedIntent": "हनोई के किन इलाकों में बाइक किराये पर लें",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/",
+    "role": "SILO",
+    "primaryIntent": "हनोई ओल्ड क्वार्टर में मोटरबाइक किराया",
+    "normalizedIntent": "हनोई ओल्ड क्वार्टर में मोटरबाइक किराया",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/",
+    "role": "SILO",
+    "primaryIntent": "लॉन्ग बिएन में मोटरबाइक किराये की जानकारी",
+    "normalizedIntent": "लॉन्ग बिएन में मोटरबाइक किराये की जानकारी",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/",
+    "role": "SILO",
+    "primaryIntent": "होआन कीएम क्षेत्र में बाइक किराया",
+    "normalizedIntent": "होआन कीएम क्षेत्र में बाइक किराया",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/",
+    "role": "SILO",
+    "primaryIntent": "वेस्ट लेक और ताय हो के आसपास बाइक किराया",
+    "normalizedIntent": "वेस्ट लेक और ताय हो के आसपास बाइक किराया",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/",
+    "role": "HUB",
+    "primaryIntent": "हनोई में मोटरबाइक किराये की उपयोगी गाइड",
+    "normalizedIntent": "हनोई में मोटरबाइक किराये की उपयोगी गाइड",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/",
+    "role": "SILO",
+    "primaryIntent": "वियतनाम में मोटरबाइक लाइसेंस और दस्तावेज़",
+    "normalizedIntent": "वियतनाम में मोटरबाइक लाइसेंस और दस्तावेज़",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/",
+    "role": "SILO",
+    "primaryIntent": "हनोई में मोटरबाइक सुरक्षित कैसे चलाएँ?",
+    "normalizedIntent": "हनोई में मोटरबाइक सुरक्षित कैसे चलाएँ",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/",
+    "role": "HUB",
+    "primaryIntent": "हनोई में बाइक से घूमने के लिए यात्रा योजना",
+    "normalizedIntent": "हनोई में बाइक से घूमने के लिए यात्रा योजना",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/अक्सर-पूछे-जाने-वाले-सवाल/",
+    "role": "FAQ",
+    "primaryIntent": "हनोई मोटरबाइक किराये के सामान्य सवाल",
+    "normalizedIntent": "हनोई मोटरबाइक किराये के सामान्य सवाल",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हमारे-बारे-में/",
+    "role": "UTILITY",
+    "primaryIntent": "Cho Thuê Xe Máy Nguyễn Tú के बारे में",
+    "normalizedIntent": "cho thuê xe máy nguyễn tú के बारे में",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/संपर्क/",
+    "role": "UTILITY",
+    "primaryIntent": "हनोई मोटरबाइक किराये के लिए संपर्क करें",
+    "normalizedIntent": "हनोई मोटरबाइक किराये के लिए संपर्क करें",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/गोपनीयता-नीति/",
+    "role": "UTILITY",
+    "primaryIntent": "इस वेबसाइट की गोपनीयता जानकारी",
+    "normalizedIntent": "इस वेबसाइट की गोपनीयता जानकारी",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/नियम-और-शर्तें/",
+    "role": "UTILITY",
+    "primaryIntent": "मोटरबाइक किराये की सामान्य शर्तें",
+    "normalizedIntent": "मोटरबाइक किराये की सामान्य शर्तें",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "KEEP"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/",
+    "role": "SILO",
+    "primaryIntent": "हनोई में मोटरबाइक किराये का सुरक्षा जमा",
+    "normalizedIntent": "हनोई में मोटरबाइक किराये का सुरक्षा जमा",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "REVIEW_BEFORE_MERGE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
+    "role": "SILO",
+    "primaryIntent": "हनोई में मोटरबाइक किराये की बुकिंग कैसे करें?",
+    "normalizedIntent": "हनोई में मोटरबाइक किराये की बुकिंग कैसे करें",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "REVIEW_BEFORE_MERGE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/",
+    "role": "SILO",
+    "primaryIntent": "हनोई में किराये की बाइक लेना और लौटाना",
+    "normalizedIntent": "हनोई में किराये की बाइक लेना और लौटाना",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "REVIEW_BEFORE_MERGE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/",
+    "role": "SILO",
+    "primaryIntent": "गिया लाम क्षेत्र के लिए मोटरबाइक किराये की गाइड",
+    "normalizedIntent": "गिया लाम क्षेत्र के लिए मोटरबाइक किराये की गाइड",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "REVIEW_BEFORE_MERGE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/",
+    "role": "SILO",
+    "primaryIntent": "बा दिन्ह में मोटरबाइक किराये की जानकारी",
+    "normalizedIntent": "बा दिन्ह में मोटरबाइक किराये की जानकारी",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "REVIEW_BEFORE_MERGE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/",
+    "role": "SILO",
+    "primaryIntent": "हाई बा त्रुंग में मोटरबाइक किराये की गाइड",
+    "normalizedIntent": "हाई बा त्रुंग में मोटरबाइक किराये की गाइड",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "REVIEW_BEFORE_MERGE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/",
+    "role": "SILO",
+    "primaryIntent": "किराये की मोटरबाइक लेने से पहले क्या जाँचें?",
+    "normalizedIntent": "किराये की मोटरबाइक लेने से पहले क्या जाँचें",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "REVIEW_BEFORE_MERGE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/",
+    "role": "SILO",
+    "primaryIntent": "मोटरबाइक रेंटल अनुबंध में क्या स्पष्ट करें?",
+    "normalizedIntent": "मोटरबाइक रेंटल अनुबंध में क्या स्पष्ट करें",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "REVIEW_BEFORE_MERGE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/",
+    "role": "SILO",
+    "primaryIntent": "हनोई शहर में मोटरबाइक से घूमने की योजना",
+    "normalizedIntent": "हनोई शहर में मोटरबाइक से घूमने की योजना",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "REVIEW_BEFORE_MERGE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/",
+    "role": "SILO",
+    "primaryIntent": "हनोई से लंबी मोटरबाइक यात्रा की तैयारी",
+    "normalizedIntent": "हनोई से लंबी मोटरबाइक यात्रा की तैयारी",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "REVIEW_BEFORE_MERGE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/",
+    "role": "SILO",
+    "primaryIntent": "हनोई में इलेक्ट्रिक साइकिल किराये की जानकारी",
+    "normalizedIntent": "हनोई में इलेक्ट्रिक साइकिल किराये की जानकारी",
+    "pathCollision": false,
+    "exactIntentCollision": false,
+    "semanticOverlap": "NOT_ASSESSED_REQUIRE_MANUAL_REVIEW",
+    "action": "REVIEW_BEFORE_MERGE"
+  }
+]
