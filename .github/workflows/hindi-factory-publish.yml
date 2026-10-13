@@ -29,6 +29,8 @@ jobs:
         run: |
           git fetch origin main writer-inbox
           git checkout -B main origin/main
+      - name: Recover from interrupted runs (deterministic reconcile)
+        run: node scripts/factory-recovery.mjs
       - name: Guard existing production content
         run: |
           node scripts/factory-preflight.mjs
