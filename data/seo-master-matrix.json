@@ -658,5 +658,35 @@
     "gscEvidence": null,
     "collisionStatus": "PASSED_AUTOMATED_QA",
     "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/लॉन्ग-बिएन-में-किराये-की-बाइक-लेते-समय-पता-जाँचें/",
+    "slug": "/हनोई-के-इलाके/लॉन्ग-बिएन/लॉन्ग-बिएन-में-किराये-की-बाइक-लेते-समय-पता-जाँचें/",
+    "language": "hi-IN",
+    "keyword": "लॉन्ग बिएन में किराये की बाइक लेते समय पता जाँचें",
+    "role": "SUPPORT",
+    "parent": "/हनोई-के-इलाके/लॉन्ग-बिएन/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-झील-के-पास-यातायात-नियम-जाँचना/",
+    "slug": "/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-झील-के-पास-यातायात-नियम-जाँचना/",
+    "language": "hi-IN",
+    "keyword": "होआन कीएम झील के पास यातायात नियम जाँचना",
+    "role": "SUPPORT",
+    "parent": "/हनोई-के-इलाके/होआन-कीएम/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
   }
 ]
