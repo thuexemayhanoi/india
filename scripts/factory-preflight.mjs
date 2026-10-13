@@ -8,7 +8,7 @@ const matrix=JSON.parse(fs.readFileSync('data/seo-master-matrix.json','utf8'));
 const policy=JSON.parse(fs.readFileSync('data/content-collision-spec.json','utf8'));
 const index=new Map(site.groups.map(p=>[p.path,p]));
 const registry=new Map();
-function clean(s){return String(s||'').normalize('NFKC').toLocaleLowerCase('hi-IN').trim().replace(/[\\p{P}\\p{S}\\s]+/gu,' ');}
+function clean(s){return String(s||'').normalize('NFKC').toLocaleLowerCase('hi-IN').trim().replace(/[\p{P}\p{S}\s]+/gu,' ');}
 for(const p of site.groups){
  assert.ok(p.path.startsWith('/')&&p.path.endsWith('/'),'invalid route '+p.path);
  assert.ok(!registry.has(p.path),'duplicate route');
