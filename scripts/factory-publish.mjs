@@ -7,8 +7,10 @@ if(state.enabled!==true||state.autoPublish!==true)throw Error("Publisher is disa
 if(state.transactionPending)throw Error("Unfinished transaction: stop and investigate");
 const existing=publishedRecords();assertPlan(site,plan,existing);
 const incoming="content/incoming";
+const maxFiles=10;
 if(!fs.existsSync(incoming)){console.log("No incoming directory; 0 articles published");process.exit(0);}
 const files=fs.readdirSync(incoming).filter(f=>/^HI\d{4}\.json$/.test(f)).sort();
+if(files.length>maxFiles)throw Error("Maximum ten incoming article files per workflow run");
 const filesById=new Map(files.map(f=>[f.slice(0,-5),f]));
 const batch=plan.items.find(x=>x.status!=="PUBLISHED")?.batch;
 if(!batch){console.log("ALL 300 PUBLISHED");process.exit(0);}
