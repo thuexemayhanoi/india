@@ -30,3 +30,6 @@ Audit the published/draft registry, create Topical Matrix and evidence-based 300
 - Manual dry-run: `.github/workflows/hindi-article-batch.yml` (B01–B06 × 50 article capacity; no writer/publisher).
 - Reports: `data/global-content-inventory.json`, `data/cannibalization-matrix.json`, `data/knowledge-graph.json`, `data/internal-linking-matrix.json`, `data/topical-gap-report.json`, `data/content-upgrade-backlog.json`.
 - Production remains on main unchanged until explicit merge approval; future factory build needs real semantic collision evaluation, transaction/recovery, article QA and editorial approval.
+
+## External Hindi Writer Factory
+The Editorial Plan has 300 topic briefs (6 batches × 50). Writer pushes pairs of structured Hindi JSON to `writer-inbox/content/incoming/`. GitHub Actions `hindi-factory-publish.yml` imports only allowed IDs, runs deterministic QA and publishes accepted pages automatically to `main`. See `docs/EXTERNAL-WRITER-HI.md`. No article content is copied from `/vanchinh`.

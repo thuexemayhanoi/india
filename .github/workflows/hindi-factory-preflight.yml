@@ -20,7 +20,10 @@ jobs:
         with:
           node-version: '22'
       - name: Validate topic taxonomy and collision gates (read only)
-        run: node scripts/factory-preflight.mjs
+        run: |
+          node scripts/factory-preflight.mjs
+          node tests/factory-unit.mjs
+          node tests/factory-integration.mjs
       - name: Build + check all page navigation and SEO (read only)
         run: |
           node scripts/build.mjs
