@@ -81,3 +81,6 @@
  .language-pill{padding:6px 8px;gap:4px}
  .header-actions{gap:5px}
 }
+
+/* Keep Vietnamese-dong reference amounts untouched by machine translation. */
+.money-value{font-variant-numeric:tabular-nums;letter-spacing:-.1px}
