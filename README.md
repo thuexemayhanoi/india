@@ -21,3 +21,12 @@ Homepage commercial pillar + 24 Hindi pages across topical hubs, nested categori
 ## Phase 2 (future, explicitly deferred)
 
 Audit the published/draft registry, create Topical Matrix and evidence-based 300-topic Editorial Plan, integrate collision guard and article production/checkpoints only after review. Follow `reports/phase-1.md`.
+
+
+## Phase 1.5: Topic architecture + read-only factory preparation
+
+- Master taxonomy: `data/site.json` (36 URL drafts, 6 Hub / 24 Silo).
+- GitHub workflow: `.github/workflows/hindi-factory-preflight.yml` (PR checks; no writes).
+- Manual dry-run: `.github/workflows/hindi-article-batch.yml` (B01–B06 × 50 article capacity; no writer/publisher).
+- Reports: `data/global-content-inventory.json`, `data/cannibalization-matrix.json`, `data/knowledge-graph.json`, `data/internal-linking-matrix.json`, `data/topical-gap-report.json`, `data/content-upgrade-backlog.json`.
+- Production remains on main unchanged until explicit merge approval; future factory build needs real semantic collision evaluation, transaction/recovery, article QA and editorial approval.

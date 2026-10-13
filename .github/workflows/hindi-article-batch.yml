@@ -1,0 +1,27 @@
+name: Hindi Article Batch (READ-ONLY DRY-RUN)
+on:
+  workflow_dispatch:
+    inputs:
+      batch:
+        description: "Batch ID (B01 through B06)"
+        required: true
+        type: choice
+        options: [B01, B02, B03, B04, B05, B06]
+        default: B01
+permissions:
+  contents: read
+jobs:
+  dry-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate global topical matrix and collision gate
+        run: node scripts/factory-preflight.mjs
+      - name: Read-only batch planning and checkpoint preview
+        run: node scripts/plan-batch.mjs ${{ inputs.batch }}
+      - name: Verify no files were mutated by audit
+        run: git diff --exit-code
