@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "phase": "SPEC_ONLY",
+  "phase": "PREFLIGHT_SPEC",
   "articleTargetCap": 300,
   "autoPublish": false,
   "decisions": [
@@ -26,5 +26,5 @@
   "ambiguous": "REVIEW_COLLISION",
   "duplicate": "REJECT_DUPLICATE",
   "unavailableInput": "BLOCK_REVIEW",
-  "notes": "Not integrated with any live writer in phase 1. Do not generate filler pages to meet article target."
+  "notes": "Deterministic read-only preflight implemented; no writer or publish path. No 300 titles have been fabricated. Live production checks are separate."
 }

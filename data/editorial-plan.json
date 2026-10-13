@@ -1,0 +1,20 @@
+{
+  "language": "hi-IN",
+  "domain": "https://hi.rentbikehanoi.com",
+  "targetArticleCap": 300,
+  "batchSize": 50,
+  "batchIds": [
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06"
+  ],
+  "items": [],
+  "status": "RESEARCH_REQUIRED",
+  "writerEnabled": false,
+  "autoPublish": false,
+  "productionLocked": true,
+  "reason": "Topic selection requires evidence and intent/collision review before 300 planned records are created."
+}

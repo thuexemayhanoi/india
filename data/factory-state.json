@@ -1,0 +1,17 @@
+{
+  "phase": "PREFLIGHT_ONLY",
+  "version": 1,
+  "enabled": false,
+  "writerEnabled": false,
+  "autoPublish": false,
+  "claimed": [],
+  "publishedCount": 0,
+  "checkpoint": {
+    "lastArticleId": null,
+    "lastBatch": null
+  },
+  "immutablePublishedUrls": true,
+  "transactionPending": false,
+  "updatedAt": "2026-10-13",
+  "notes": "Read-only workflow; runtime operations not implemented. Do not treat flags as production automation."
+}
