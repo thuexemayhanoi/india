@@ -11,9 +11,25 @@ try{
  fs.cpSync(path.join(root,"scripts"),path.join(temp,"scripts"),{recursive:true});
  fs.cpSync(path.join(root,"data"),path.join(temp,"data"),{recursive:true});
  fs.cpSync(path.join(root,"tests"),path.join(temp,"tests"),{recursive:true});
+ fs.cpSync(path.join(root,"assets"),path.join(temp,"assets"),{recursive:true});
  fs.copyFileSync(path.join(root,"CNAME"),path.join(temp,"CNAME"));
  fs.mkdirSync(path.join(temp,"content/incoming"),{recursive:true});
  const plan=JSON.parse(fs.readFileSync(path.join(temp,"data/editorial-plan.json"),"utf8"));
+ // Reset only the disposable fixture, never the actual production registry.
+ // This allows the same 0-to-2 integration case to run after 2, 20 or 298
+ // real posts have already been published.
+ const fixturePublished=plan.items.filter(row=>row.status==="PUBLISHED");
+ for(const item of fixturePublished){item.status="PLANNED";item.datePublished=null;}
+ fs.writeFileSync(path.join(temp,"data/editorial-plan.json"),JSON.stringify(plan,null,2)+"\n");
+ const statePath=path.join(temp,"data/factory-state.json"),fixtureState=JSON.parse(fs.readFileSync(statePath,"utf8"));
+ fixtureState.publishedCount=0;
+ fixtureState.checkpoint={lastArticleId:null,lastBatch:null,updatedAt:null};
+ fixtureState.claimed=[];
+ fixtureState.transactionPending=false;
+ fs.writeFileSync(statePath,JSON.stringify(fixtureState,null,2)+"\n");
+ const matrixPath=path.join(temp,"data/seo-master-matrix.json"),matrix=JSON.parse(fs.readFileSync(matrixPath,"utf8"));
+ const previouslyPublishedPaths=new Set(fixturePublished.map(row=>row.outputPath));
+ fs.writeFileSync(matrixPath,JSON.stringify(matrix.filter(item=>!previouslyPublishedPaths.has(item.slug)),null,2)+"\n");
  const row1=plan.items[0],row2=plan.items[1];
  const gearSentences=[
   "सड़क की हालत और मौसम देखकर वाहन चुनना जरूरी है ताकि अचानक ब्रेक लगाने की नौबत आने पर सुरक्षित नियंत्रण बना रहे।",
