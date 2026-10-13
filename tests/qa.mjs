@@ -1,7 +1,7 @@
 import fs from "node:fs";import path from "node:path";import assert from "node:assert/strict";
 const data=JSON.parse(fs.readFileSync("data/site.json","utf8"));const ps=data.groups;const pubFolder="content/published";
 const published=fs.existsSync(pubFolder)?fs.readdirSync(pubFolder).filter(f=>/^HI\d{4}\.json$/.test(f)).map(f=>JSON.parse(fs.readFileSync(path.join(pubFolder,f),"utf8"))):[];
-const paths=new Set([...ps,...published].map(p=>p.path));assert.equal(paths.size,ps.length,"duplicate URL");
+const paths=new Set([...ps,...published].map(p=>p.path));assert.equal(paths.size,ps.length+published.length,"duplicate URL");
 assert.equal(ps.filter(p=>p.path==="/").length,1);assert.equal(ps.filter(p=>p.role==="PILLAR").length,1);
 for(const p of ps){if(p.parent)assert.ok(paths.has(p.parent),p.path+" parent missing");const f=p.path==="/"? "index.html":p.path.slice(1)+"index.html";assert.ok(fs.existsSync(f),f);let s=fs.readFileSync(f,"utf8");assert.match(s,/<html lang="hi-IN">/);assert.ok(s.includes('<link rel="canonical" href="'+data.baseUrl+p.path+'"'));assert.ok(s.includes('type="application/ld+json"'));assert.ok(s.includes('<h1>'));assert.ok(s.includes('href="/assets/site.css"'));assert.ok(s.includes('href="/संपर्क/"'));assert.ok(!s.includes("Lorem ipsum"));}
 for(const p of ps){const f=p.path==="/"? "index.html":p.path.slice(1)+"index.html";const s=fs.readFileSync(f,"utf8");for(const [,href] of s.matchAll(/href="(\/[^"#?]+)"/g)){if(href.startsWith("/assets/"))continue;assert.ok(paths.has(href),f+" broken internal link "+href)}}
