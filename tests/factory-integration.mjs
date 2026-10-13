@@ -11,6 +11,7 @@ try{
  fs.cpSync(path.join(root,"scripts"),path.join(temp,"scripts"),{recursive:true});
  fs.cpSync(path.join(root,"data"),path.join(temp,"data"),{recursive:true});
  fs.cpSync(path.join(root,"tests"),path.join(temp,"tests"),{recursive:true});
+ fs.cpSync(path.join(root,"assets"),path.join(temp,"assets"),{recursive:true});
  fs.copyFileSync(path.join(root,"CNAME"),path.join(temp,"CNAME"));
  fs.mkdirSync(path.join(temp,"content/incoming"),{recursive:true});
  const plan=JSON.parse(fs.readFileSync(path.join(temp,"data/editorial-plan.json"),"utf8"));
