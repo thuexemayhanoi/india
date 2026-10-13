@@ -628,5 +628,35 @@
     "gscEvidence": null,
     "collisionStatus": "PASSED_AUTOMATED_QA",
     "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/एक-महीने-की-बाइक-किराये-के-खर्च-की-तुलना/",
+    "slug": "/किराया-और-कीमतें/मासिक-किराया/एक-महीने-की-बाइक-किराये-के-खर्च-की-तुलना/",
+    "language": "hi-IN",
+    "keyword": "एक महीने की बाइक किराये के खर्च की तुलना",
+    "role": "SUPPORT",
+    "parent": "/किराया-और-कीमतें/मासिक-किराया/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/हनोई-ओल्ड-क्वार्टर-में-एकतरफा-सड़कें-कैसे-पहचानें/",
+    "slug": "/हनोई-के-इलाके/ओल्ड-क्वार्टर/हनोई-ओल्ड-क्वार्टर-में-एकतरफा-सड़कें-कैसे-पहचानें/",
+    "language": "hi-IN",
+    "keyword": "हनोई ओल्ड क्वार्टर में एकतरफा सड़कें कैसे पहचानें",
+    "role": "SUPPORT",
+    "parent": "/हनोई-के-इलाके/ओल्ड-क्वार्टर/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
   }
 ]
