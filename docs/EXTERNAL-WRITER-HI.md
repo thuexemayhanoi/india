@@ -56,6 +56,8 @@ The example contains placeholders and MUST NOT be submitted without replacing ev
 - Passing articles are rendered with shared UI, schema Article, breadcrumb, Silo list, sitemap and metadata. PUBLISHED rows are immutable.
 - The CI publisher creates a single atomic, non-force commit on `main`, updates checkpoint and exposes blocked report.
 - GitHub Pages deployment must be verified separately; the publisher attempts to request a Pages rebuild.
+- Before every publish run, `scripts/factory-recovery.mjs` reconciles interrupted or drifted state: stale checkpoint/count, leftover `transactionPending`, expired claim leases (48h TTL) and missing seo-master-matrix rows. Non-deterministic inconsistencies (e.g. a PUBLISHED row without its file) block with RECOVERY_BLOCKED for human review; recovery never invents data.
+- Optional writer claim leases: a writer may record `{"claimed": [{"id":"HI0005","claimedAt":"<ISO-8601>","by":"writer-a"}]}` entries in `data/factory-state.json` via maintainer; claims expire after 48h and are validated (unique, non-PUBLISHED, not future-dated) by preflight.
 
 ## Practical cautions
 Static tests cannot prove every factual claim or source accuracy; the external writer is responsible for checking sources. Do not invent business claims, no-deposit terms, unlimited mileage, insurance coverage or guaranteed rankings. If unknown, stop at REVIEW.
