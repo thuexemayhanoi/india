@@ -10,6 +10,8 @@ function run(script){return execFileSync(process.execPath,[script],{cwd:temp,enc
 try{
  fs.cpSync(path.join(root,"scripts"),path.join(temp,"scripts"),{recursive:true});
  fs.cpSync(path.join(root,"data"),path.join(temp,"data"),{recursive:true});
+ fs.cpSync(path.join(root,"tests"),path.join(temp,"tests"),{recursive:true});
+ fs.copyFileSync(path.join(root,"CNAME"),path.join(temp,"CNAME"));
  fs.mkdirSync(path.join(temp,"content/incoming"),{recursive:true});
  const plan=JSON.parse(fs.readFileSync(path.join(temp,"data/editorial-plan.json"),"utf8"));
  const row1=plan.items[0],row2=plan.items[1];
@@ -44,6 +46,13 @@ try{
  assert.ok(!fs.existsSync(path.join(temp,"content/incoming",row2.id+".json")));
  assert.equal(JSON.parse(fs.readFileSync(path.join(temp,"data/editorial-plan.json"))).items.filter(x=>x.status==="PUBLISHED").length,2);
  run("scripts/factory-preflight.mjs");
+ run("scripts/build.mjs");
+ run("tests/qa.mjs");
+ const built=fs.readFileSync(path.join(temp,row1.outputPath.slice(1)+"index.html"),"utf8");
+ assert.ok(built.includes('<h1>'+row1.title+'</h1>'),"Hindi article H1 missing");
+ assert.ok(built.includes('"@type":"Article"'),"Article JSON-LD missing");
+ const sitemap=fs.readFileSync(path.join(temp,"sitemap.xml"),"utf8");
+ assert.ok(sitemap.includes("https://hi.rentbikehanoi.com"+row1.outputPath),"Article URL missing sitemap");
  run("scripts/factory-publish.mjs");
  assert.equal(JSON.parse(fs.readFileSync(path.join(temp,"data/factory-state.json"))).publishedCount,2,"idempotent retry");
  console.log("INTEGRATION PASS: failed pair held; valid pair committed; checkpoint exact; retry idempotent");
