@@ -65,3 +65,11 @@ for(const page of [...ps,...published]){
 const css=fs.readFileSync("assets/site.css","utf8");
 assert.ok(css.includes(".language-pill")&&css.includes("@media(max-width:620px)"),"Responsive translator CSS missing");
 console.log("English switch QA PASS:",ps.length+published.length,"pages, canonical preserved and dynamic target URL");
+
+/* Keep VND amounts unchanged in the English translation service. */
+const homePrices=fs.readFileSync("index.html","utf8"),priceGuide=fs.readFileSync("किराया-और-कीमतें/index.html","utf8");
+assert.ok(homePrices.includes("150,000 VND")&&homePrices.includes("2,000,000–3,000,000 VND"),"Homepage currency mismatch");
+assert.ok(homePrices.includes('class="money-value notranslate" translate="no"'),"Homepage currency must be untranslatable");
+assert.ok(priceGuide.includes("3,000,000 VND")&&priceGuide.includes('class="money-value notranslate" translate="no"'),"Price table currency missing");
+assert.ok(fs.readFileSync("assets/site.js","utf8").includes('holder.classList.toggle("notranslate",isVnd)'),"Rental period selector must protect currency");
+console.log("VND machine-translation safety PASS");
