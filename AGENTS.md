@@ -16,7 +16,7 @@
 ## Factory safety — modeled on /vanchinh, not copied
 - 300 approved topic briefs are planned in 6 batches x 50; do not publish filler and REVIEW unverifiable or overlapping topics.
 - State `AUTO_PUBLISH_READY`: external AI Writer is authorized to submit on isolated `writer-inbox`; deterministic publisher runs with CI gates, no paid AI API keys.
-- Queue, pair quality gate, checkpoint, immutable published rows and Git-atomic publish are implemented; **multi-writer durable leasing and robust recovery for interrupted runs are NOT yet implemented**. Use only one external writer session until further hardening. Treat uncertain or conflicting intent as REVIEW.
+- Queue, pair quality gate, checkpoint, immutable published rows and Git-atomic publish are implemented. Single-writer claims support a 48h TTL lease (`claimed` entries: `"HIxxxx"` or `{id, claimedAt, by}`), and `scripts/factory-recovery.mjs` deterministically reconciles interrupted or drifted runs (checkpoint, counts, stale leases, missing matrix rows) before each publish; non-deterministic inconsistency blocks with RECOVERY_BLOCKED and needs human review. Concurrent multi-writer sessions remain unsupported; use one external writer session. Treat uncertain or conflicting intent as REVIEW.
 - Decisions: ALLOW_CREATE, UPGRADE_EXISTING, REVIEW_COLLISION, REJECT_DUPLICATE. Duplicate check covers known routes, planned titles, queued IDs and published prose; it is a heuristic and cannot guarantee complete semantic detection.
 - Do not write 300 template articles before researching intent coverage, accuracy, legal sources and quality.
 - No claim of AEO/GEO placement or Google rankings without verified data.
