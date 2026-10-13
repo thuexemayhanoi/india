@@ -33,11 +33,18 @@ const deployed=ps.filter(x=>x.role==="SILO").length;
 console.log("Taxonomy PASS:",hubs.length,"hubs,",deployed,"silos; menu, footer, matrix, plan.");
 
 for(const a of published){
+ if(a.role!=="SUPPORT" || !paths.has(a.parentSilo))throw Error("invalid published article ownership");
  const file=a.path.slice(1)+"index.html",source=fs.readFileSync(file,"utf8");
  assert.ok(source.includes('rel="canonical" href="'+data.baseUrl+a.path+'"'));
  assert.ok(source.includes('"@type":"Article"'));
  assert.ok(sitemap.includes(data.baseUrl+a.path));
  assert.ok(!source.includes('<script>alert('));
  assert.ok(source.includes('href="'+a.parentSilo+'"'));
+ for(const [,href] of source.matchAll(/href="(\/[^"#?]+)"/g)) {
+   if(href.startsWith("/assets/"))continue;
+   assert.ok(paths.has(href),file+" broken internal link "+href);
+ }
+ assert.ok(source.includes('"@type":"BreadcrumbList"'),"Missing breadcrumb JSON-LD");
+ assert.ok(source.includes("<h1>"),"Missing article H1");
 }
 console.log("Published Article checks PASS:",published.length);

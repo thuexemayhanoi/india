@@ -71,12 +71,31 @@ export function validateDraft(article,row,site,published=[]){
   for(const p of sec.paragraphs||[]){if(typeof p!=="string"||p.trim().length<75)errors.push("paragraph too short");else text.push(p);}
   for(const ss of sec.subsections||[]){if(!ss.heading||!Array.isArray(ss.paragraphs))errors.push("invalid H3");else text.push(...ss.paragraphs);}
  }
+ const normParagraphs=text.map(normalize);
+ if(new Set(normParagraphs).size!==normParagraphs.length)errors.push("duplicate or boilerplate paragraphs");
+ for(const paragraph of text){
+   const tokens=normalize(paragraph).split(" ").filter(Boolean),f=new Map();
+   for(let i=0;i+7<tokens.length;i++){
+     const gram=tokens.slice(i,i+8).join(" "),repeat=(f.get(gram)||0)+1;f.set(gram,repeat);
+     if(repeat>=4){errors.push("repeated eight-word phrase within paragraph");break;}
+   }
+ }
  const body=text.join("\n"),wc=wordCount(body);
  if(wc<850)errors.push("Hindi body word count "+wc+" < 850");
  const devanagari=(body.match(/[\u0900-\u097f]/gu)||[]).length;
  if(devanagari<Math.max(950,body.replace(/\s/g,"").length*.30))errors.push("insufficient Hindi Devanagari writing");
  const urls=(article.sources||[]).map(s=>s?.url).filter(Boolean);
  if(new Set(urls).size<2)errors.push("minimum two distinct sources");
+ const sourceHosts=new Set();
+ for(const source of article.sources||[]){
+   if(!source || typeof source.url!=="string" || typeof source.title!=="string" || source.title.trim().length<5)errors.push("source requires title and URL");
+   try{
+     const host=new URL(source.url).hostname.toLowerCase();
+     if(/(^|\.)example\.(com|org|net)$/.test(host))errors.push("placeholder example source forbidden");
+     sourceHosts.add(host.replace(/^www\./,""));
+   }catch{}
+ }
+ if(sourceHosts.size<2)errors.push("sources should be from at least two independent hostnames");
  for(const u of urls){try{const z=new URL(u);if(z.protocol!=="https:"||z.username||z.password)errors.push("invalid HTTPS source "+u);}catch{errors.push("bad source URL")}}
  if(row.requiresOfficialSources&&!urls.some(officialURL))errors.push("official VN source needed for regulatory topic");
  const links=article.relatedPaths||[];

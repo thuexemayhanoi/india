@@ -10,6 +10,8 @@ assert.equal(site.groups.filter(p=>p.role==="HUB").length,6);
 assert.equal(site.groups.filter(p=>p.role==="SILO").length,24);
 assert.deepEqual(new Set(site.nav),new Set(site.groups.filter(p=>p.role==="HUB").map(p=>p.path)));
 assert.equal(state.publishedCount,pub.length,"checkpoint count drift");
+if(state.publishedCount>0)assert.ok(state.checkpoint.lastArticleId,"Missing last article checkpoint");
+if(state.publishedCount===0)assert.equal(state.checkpoint.lastArticleId,null,"Unexpected checkpoint at zero");
 assert.equal(state.immutablePublishedUrls,true);
 assert.equal(state.transactionPending,false);
 const matrix=JSON.parse(fs.readFileSync("data/seo-master-matrix.json","utf8"));

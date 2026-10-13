@@ -3,7 +3,7 @@ on:
   pull_request:
     branches: [main]
   push:
-    branches: [feature/hindi-site-foundation]
+    branches: [main, feature/hindi-site-foundation]
   workflow_dispatch:
 permissions:
   contents: read
