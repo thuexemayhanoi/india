@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "phase": "SPEC_ONLY",
+  "articleTargetCap": 300,
+  "autoPublish": false,
+  "decisions": [
+    "ALLOW_CREATE",
+    "UPGRADE_EXISTING",
+    "REVIEW_COLLISION",
+    "REJECT_DUPLICATE"
+  ],
+  "inputs": [
+    "published",
+    "draft",
+    "editorial_plan",
+    "writer_queue"
+  ],
+  "steps": [
+    "normalize_hindi_english_vietnamese_terms",
+    "exact_url_and_canonical_check",
+    "keyword_entity_match",
+    "search_intent_comparison",
+    "semantic_duplicate_review",
+    "editor_approval"
+  ],
+  "ambiguous": "REVIEW_COLLISION",
+  "duplicate": "REJECT_DUPLICATE",
+  "unavailableInput": "BLOCK_REVIEW",
+  "notes": "Not integrated with any live writer in phase 1. Do not generate filler pages to meet article target."
+}
