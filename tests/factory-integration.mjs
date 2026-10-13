@@ -19,7 +19,7 @@ try{
    sections:Array.from({length:6},(_,i)=>({
       heading:r.title+" — खंड "+(i+1),
       paragraphs:Array.from({length:2},(_,k)=>Array.from({length:9},(_,n)=>
-         r.title+" हेतु यात्रा योजना में "+["सुरक्षा","अनुभव","वाहन","निर्णय","समझौता","निर्देश"][i]+" और व्यावहारिक परीक्षण पर ध्यान दें तथा जानकारी जाँचें। क्रम "+(n+1)+"।"
+         (r.id==="HI0001" ? r.title+" के गियर नियंत्रण अभ्यास में सुरक्षित रुकना, सही गति और सड़क को समझना उपयोगी है। केवल पुष्टि किए गए तथ्य लिखें। अभ्यास "+(n+1)+"।" : r.title+" के स्कूटर चयन में बैठने की सुविधा, वजन संतुलन और ब्रेक की पहचान अलग निर्णय बिंदु हैं। व्यक्तिगत कौशल पर विचार करें। समीक्षा "+(n+1)+"।")
       ).join(" "))
    })),
    sources:[{url:"https://chinhphu.vn/test-fixture-government",title:"Test only source"},{url:"https://www.example.com/second",title:"Test source two"}],
