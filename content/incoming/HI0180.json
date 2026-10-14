@@ -12,7 +12,7 @@
   "relatedPaths": [
     "/किराये-की-गाइड/कागजात-और-लाइसेंस/",
     "/किराये-की-गाइड/",
-    "/पूछे-जाने-वाले-सवाल/"
+    "/अक्सर-पूछे-जाने-वाले-सवाल/"
   ],
   "sources": [
     {
@@ -22,6 +22,10 @@
     {
       "url": "https://vi.wikipedia.org/wiki/Gi%E1%BA%A5y_ph%C3%A9p_l%C3%A1i_xe",
       "title": "Giấy phép lái xe"
+    },
+    {
+      "url": "https://www.chinhphu.vn/",
+      "title": "Cổng thông tin điện tử Chính phủ Việt Nam"
     }
   ],
   "sections": [
