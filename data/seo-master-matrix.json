@@ -4018,5 +4018,35 @@
     "gscEvidence": null,
     "collisionStatus": "PASSED_AUTOMATED_QA",
     "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-के-व्यस्त-चौराहों-पर-सावधानी/",
+    "slug": "/हनोई-के-इलाके/गिया-लाम/gia-lâm-के-व्यस्त-चौराहों-पर-सावधानी/",
+    "language": "hi-IN",
+    "keyword": "Gia Lâm के व्यस्त चौराहों पर सावधानी",
+    "role": "SUPPORT",
+    "parent": "/हनोई-के-इलाके/गिया-लाम/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/ba-đình-में-दैनिक-बाइक-किराया-चुनना/",
+    "slug": "/हनोई-के-इलाके/बा-दिन्ह/ba-đình-में-दैनिक-बाइक-किराया-चुनना/",
+    "language": "hi-IN",
+    "keyword": "Ba Đình में दैनिक बाइक किराया चुनना",
+    "role": "SUPPORT",
+    "parent": "/हनोई-के-इलाके/बा-दिन्ह/",
+    "searchIntent": "commercial-support",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
   }
 ]
