@@ -11,9 +11,18 @@
     "/किराये-की-गाइड/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Renting",
-    "https://en.wikipedia.org/wiki/Motorcycle",
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%99%99i"
+    {
+      "url": "https://vietnam.travel/faqs",
+      "title": "Vietnam Tourism — Frequently Asked Questions on Motorbike Rental"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Renting",
+      "title": "Renting — Wikipedia"
+    },
+    {
+      "url": "https://www.honda.com.vn/training-material",
+      "title": "Honda Vietnam — Motorcycle Safety Training Materials"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,
