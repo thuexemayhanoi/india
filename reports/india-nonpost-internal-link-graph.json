@@ -2,12 +2,12 @@
   "repository": "thuexemayhanoi/india",
   "production": "https://hi.rentbikehanoi.com/",
   "scope": "36 existing non-Post routes",
-  "method": "Extract main-content links from the generated HTML of 36 non-Post pages and 300 published Posts; header, footer, JS links and external URLs excluded.",
+  "method": "Extract main-content links from the generated HTML of 36 non-Post pages and 300 published Posts; header, footer, breadcrumb navigation, JS links and external URLs excluded.",
   "counts": {
     "nonPost": 36,
     "publishedPosts": 300,
-    "mainContentEdges": 3645,
-    "toNonPost": 2793
+    "mainContentEdges": 3185,
+    "toNonPost": 2333
   },
   "nodes": [
     {
@@ -81,1683 +81,7 @@
           "role": "FAQ"
         }
       ],
-      "incomingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "HUB"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "HUB"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "HUB"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "HUB"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "HUB"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "HUB"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/अक्सर-पूछे-जाने-वाले-सवाल/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "FAQ"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हमारे-बारे-में/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "UTILITY"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/संपर्क/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "UTILITY"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/गोपनीयता-नीति/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "UTILITY"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/नियम-और-शर्तें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "UTILITY"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/हनोई-के-यातायात-में-गियर-वाली-बाइक-किसे-चुननी-चाहिए/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/हनोई-में-ऑटोमैटिक-स्कूटर-के-फायदे-और-सीमाएँ/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-स्कूटर-के-तकनीकी-वर्ग-को-कैसे-पहचानें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-मोटरबाइक-की-घोषित-रेंज-कैसे-जाँचें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/एक-दिन-की-बाइक-किराये-में-क्या-शामिल-पूछें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/सात-दिनों-के-किराये-का-कुल-भुगतान-कैसे-समझें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/एक-महीने-की-बाइक-किराये-के-खर्च-की-तुलना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/हनोई-ओल्ड-क्वार्टर-में-एकतरफा-सड़कें-कैसे-पहचानें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/लॉन्ग-बिएन-में-किराये-की-बाइक-लेते-समय-पता-जाँचें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-झील-के-पास-यातायात-नियम-जाँचना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/वेस्ट-लेक-के-आसपास-मोटरबाइक-यात्रा-की-तैयारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/वियतनाम-में-मोटरबाइक-लाइसेंस-सत्यापन-की-शुरुआत/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/हनोई-के-चौराहों-पर-मोटरबाइक-सुरक्षा/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/honda-vision-का-जमा-और-किराया-अलग-कैसे-गिनें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/पहली-बार-मोटरबाइक-किराये-की-पूछताछ-कैसे-करें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/होटल-तक-बाइक-डिलीवरी-उपलब्ध-है-या-नहीं/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-में-बाइक-यात्रा-शुरू-करने-के-सवाल/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/ba-đình-में-मोटरबाइक-लेकर-निकलने-की-तैयारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-में-मोटरबाइक-यात्रा-की-योजना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/मोटरबाइक-के-दोनों-ब्रेक-जाँचने-का-तरीका/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/किराये-के-अनुबंध-में-बाइक-मॉडल-का-महत्व/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/हनोई-में-एक-दिन-की-बाइक-यात्रा-का-समय-बाँटना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/हनोई-से-दूर-यात्रा-के-लिए-बाइक-उपयुक्तता/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-की-तकनीकी-श्रेणी-कैसे-समझें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/honda-wave-लेने-से-पहले-क्लच-और-गियर-का-अनुभव/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/honda-vision-और-air-blade-किस-जरूरत-के-लिए-अलग-हैं/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-बाइक-और-बड़े-इंजन-वाली-बाइक-में-अंतर/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-बाइक-लेते-समय-बैटरी-स्तर-की-जाँच/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/आधे-दिन-और-पूरे-दिन-की-किराया-अवधि-कैसे-समझें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/साप्ताहिक-बाइक-पैकेज-बनाम-दैनिक-दर-तुलना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/मासिक-honda-wave-और-vision-किराया-अंतर/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/ओल्ड-क्वार्टर-से-बाइक-यात्रा-शुरू-करने-की-तैयारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/nguyễn-văn-cừ-सड़क-से-यात्रा-की-तैयारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-क्षेत्र-में-पार्किंग-कैसे-ढूँढें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/ताय-हो-इलाके-में-बाइक-पार्किंग-का-ध्यान/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/अंतरराष्ट्रीय-ड्राइविंग-परमिट-के-बारे-में-जाँचने-योग्य-बातें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/बरसात-में-मोटरबाइक-की-ब्रेक-दूरी-समझना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/honda-wave-के-जमा-दायरे-को-कैसे-समझें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/बाइक-मॉडल-और-यात्रा-अवधि-बताने-की-चेकलिस्ट/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/बाइक-लेने-के-स्थान-की-सही-पहचान-कैसे-करें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-से-हनोई-केंद्र-का-रूट-चुनना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/बा-दिन्ह-के-आसपास-पार्किंग-की-योजना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-के-चौराहों-पर-ध्यान-देने-योग्य-बातें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/टायर-के-घिसाव-और-हवा-पर-ध्यान/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/किराया-अनुबंध-में-तारीख-और-समय-कैसे-पढ़ें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/शहर-घूमते-समय-ट्रैफ़िक-का-समय-कैसे-सोचें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/लंबी-यात्रा-में-मौसम-पूर्वानुमान-जाँचें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-किराये-की-कीमत-कैसे-पूछें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/गियर-वाली-मोटरबाइक-पर-धीमी-रफ्तार-में-नियंत्रण/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-चलाने-से-पहले-ब्रेक-की-पहचान/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-किराये-की-कीमत-और-जमा-अलग-कैसे-देखें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-मोटरबाइक-और-इलेक्ट्रिक-साइकिल-का-अंतर/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/दैनिक-बाइक-किराये-की-शुरुआत-का-समय-तय-करना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/साप्ताहिक-किराये-में-जमा-कब-तय-करना-चाहिए/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/मासिक-किराये-में-जमा-और-नकदी-योजना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/पुराने-शहर-में-बाइक-पार्किंग-से-जुड़े-सवाल/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/लॉन्ग-बिएन-से-हनोई-केंद्र-जाने-के-मार्ग-चुनना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-में-पैदल-सड़क-के-समय-की-पुष्टि/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/वेस्ट-लेक-के-पास-बारिश-में-सावधानी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/वाहन-श्रेणी-और-लाइसेंस-श्रेणी-का-संबंध/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/भीड़भाड़-में-सुरक्षित-अंतर-कैसे-रखें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/air-blade-किराये-में-जमा-के-सवाल/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/किराये-की-तारीख-बदलने-पर-पुष्टि-कैसे-लें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/डिलीवरी-शुल्क-पूछने-का-सरल-तरीका/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-में-वाहन-डिलीवरी-शुल्क-पूछें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/ba-đình-में-सड़क-प्रतिबंध-कैसे-जाँचें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-में-पार्किंग-नियम-जाँचना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/बाइक-के-दोनों-शीशे-ठीक-हैं-या-नहीं/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/अनुबंध-में-जमा-वापसी-की-शर्तें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/शहर-के-पर्यटन-स्थलों-पर-मोटरबाइक-पार्किंग/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/मोटरबाइक-रोड-ट्रिप-से-पहले-सर्विस-स्थिति/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-पर-बैटरी-की-जाँच/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/गियर-बदलते-समय-आम-शुरुआती-गलतियाँ/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-की-सीट-ऊँचाई-और-सवार-की-सुविधा/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-स्कूटर-की-क्षमता-के-बारे-में-क्या-पूछें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-वाहन-का-चार्जर-मिलने-पर-क्या-पूछें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/दैनिक-किराये-में-सुरक्षा-जमा-का-अलग-हिसाब/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/हनोई-में-एक-सप्ताह-के-लिए-मॉडल-चयन/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/लंबे-प्रवास-के-लिए-बाइक-चुनने-के-संकेत/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/ओल्ड-क्वार्टर-में-पैदल-क्षेत्रों-पर-ध्यान/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/लॉन्ग-बिएन-में-पुल-पार-करते-समय-सावधानियाँ/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-इलाके-में-बाइक-लेने-की-योजना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/ताय-हो-में-वाहन-लेने-का-स्थान-कैसे-तय-करें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/विदेशी-यात्री-के-ड्राइविंग-दस्तावेज़ों-की-तैयारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/रात-में-बाइक-की-लाइट-और-दृश्यता/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/click-और-mio-जमा-की-लिखित-पुष्टि/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/हनोई-में-वाहन-बुकिंग-से-पहले-कानूनी-पात्रता/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/बाइक-वापसी-का-स्थान-पहले-क्यों-तय-करें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-इलाके-में-सुरक्षित-पार्किंग/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/ba-đình-में-स्कूटर-किराये-के-सवाल/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-के-लिए-ऑटोमैटिक-स्कूटर-चयन/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/हेडलाइट-और-इंडिकेटर-की-जाँच/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/किराये-के-दस्तावेज़-में-डिलीवरी-शुल्क/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/नए-सवार-के-लिए-आसान-रूट-कैसे-चुनें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/लंबे-मार्ग-में-ईंधन-या-चार्जिंग-की-योजना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-की-चार्जिंग-सुविधा-पूछें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/ढलान-पर-गियर-वाली-बाइक-का-सुरक्षित-नियंत्रण/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/शहरी-मोड़ों-पर-ऑटोमैटिक-स्कूटर-का-नियंत्रण/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-के-लिए-लागू-ड्राइविंग-नियम-कहाँ-सत्यापित-करें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/हनोई-में-इलेक्ट्रिक-वाहन-की-चार्जिंग-योजना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/दिन-भर-शहर-घूमने-के-लिए-बाइक-मॉडल-कैसे-चुनें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/सात-दिन-की-यात्रा-में-बाइक-रखरखाव/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/एक-महीने-तक-बाइक-की-नियमित-जाँच/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/ओल्ड-क्वार्टर-के-लिए-छोटी-बाइक-चुनना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/long-biên-में-बाइक-पार्किंग-के-सवाल/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-से-लॉन्ग-बिएन-की-सवारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/वेस्ट-लेक-घूमने-के-लिए-सवारी-समय-योजना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/50cc-वाहन-के-नियम-जाँचने-का-विश्वसनीय-तरीका/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/सड़क-पर-अचानक-रुकने-की-सुरक्षित-प्रक्रिया/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/50cc-स्कूटर-में-चार-मिलियन-डोंग-जमा-क्या-है/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/किराये-की-बुकिंग-में-लिखित-मूल्य-पुष्टि/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/देर-से-वापसी-पर-किन-शर्तों-की-पुष्टि-करें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-में-सुबह-की-मोटरबाइक-सवारी-योजना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/ba-đình-से-ओल्ड-क्वार्टर-जाने-की-तैयारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-इलाके-में-डिलीवरी-पूछें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/बाइक-लेने-के-समय-खरोंच-का-फोटो-रिकॉर्ड/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/अनुबंध-पर-हस्ताक्षर-से-पहले-भाषा-समझना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/हनोई-में-बरसात-के-दिन-यात्रा-विकल्प/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/लंबी-बाइक-यात्रा-के-लिए-विश्राम-बिंदु/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-और-स्कूटर-का-उपयोग-अंतर/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/शहर-के-चौराहों-पर-गियर-बाइक-चलाने-की-सावधानियाँ/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/honda-click-और-yamaha-mio-की-किराया-तुलना-कैसे-करें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-स्कूटर-पर-चढ़ाई-से-पहले-क्या-जानें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-बाइक-के-किराये-में-जमा-कैसे-तय-होता-है/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/दो-दिनों-के-किराये-में-दैनिक-और-पैकेज-दर-तुलना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/साप्ताहिक-किराये-के-वापसी-समय-की-पुष्टि/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/मासिक-किराये-में-अनुबंध-अवधि-कैसे-तय-करें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/ओल्ड-क्वार्टर-से-लॉन्ग-बिएन-जाने-से-पहले/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/long-biên-में-लंबी-अवधि-किराये-पर-सोचें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-में-ट्रैफ़िक-संकेत-पढ़ने-की-तैयारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/ताय-हो-में-गियर-बाइक-बनाम-स्कूटर/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/इलेक्ट्रिक-वाहन-के-लाइसेंस-नियम-कहाँ-देखें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/नए-मोटरबाइक-चालक-के-लिए-शुरुआती-अभ्यास/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/वाहन-लौटाने-के-समय-जमा-वापसी-की-तैयारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/बुकिंग-के-समय-उपलब्धता-का-भ्रम-कैसे-टालें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/बाइक-हस्तांतरण-से-पहले-फोटो-चेकलिस्ट/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-में-बारिश-के-मौसम-की-तैयारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/बा-दिन्ह-में-भीड़-के-समय-सुरक्षित-सवारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-से-hoàn-kiếm-की-सवारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/स्कूटर-के-स्टैंड-की-काम-करने-की-स्थिति/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/वाहन-की-पुरानी-क्षति-का-अनुबंध-रिकॉर्ड/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/दोपहर-की-गर्मी-में-बाइक-यात्रा-की-तैयारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/पहाड़ी-मार्ग-से-पहले-ब्रेक-की-जाँच/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-चलाने-की-कानूनी-पात्रता/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/honda-wave-की-सीट-और-सामान-की-जगह-कैसे-देखें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/बारिश-में-स्कूटर-चलाते-समय-आवश्यक-सावधानियाँ/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-बाइक-के-ब्रेक-और-टायर-जाँचने-के-चरण/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-मोटरबाइक-के-ब्रेक-और-टायर-की-जाँच/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/दैनिक-किराये-के-लिए-वाहन-फोटो-रिकॉर्ड/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/साप्ताहिक-स्कूटर-किराये-में-बजट-अनुमान/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/मासिक-स्कूटर-किराये-पर-वाहन-वापसी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/ओल्ड-क्वार्टर-में-पीक-ट्रैफ़िक-का-अनुमान/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/bồ-đề-इलाके-में-वाहन-प्राप्ति-से-पहले-पूछें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-में-छोटी-दूरी-की-यात्रा/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/झील-के-आसपास-पैदल-यात्रियों-की-सुरक्षा/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/किराये-के-अनुबंध-में-पहचान-संबंधी-बातें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/यात्री-के-साथ-मोटरबाइक-का-संतुलन/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/किराये-में-बिना-जमा-के-दावे-की-जाँच/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/किराये-में-भुगतान-के-तरीके-के-सवाल/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/डिलीवरी-पर-ब्रेक-और-लाइट-की-जाँच/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-में-छोटी-अवधि-किराये-की-जानकारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/ba-đình-में-होटल-पर-बाइक-डिलीवरी-पूछें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-में-बाइक-की-दैनिक-लागत-समझें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/हॉर्न-और-स्विच-जाँचने-का-छोटा-अभ्यास/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/किराये-की-अवधि-बढ़ाने-की-लिखित-शर्तें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/किराये-की-बाइक-से-शहर-के-अंदर-सामान-ले-जाना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/शहर-के-बाहर-वाहन-ले-जाने-की-अनुमति/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-के-ब्रेक-की-जाँच/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/गियर-मोटरबाइक-की-पहली-टेस्ट-राइड-चेकलिस्ट/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-के-नीचे-सामान-रखने-से-पहले-जाँच/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-स्कूटर-पर-सामान-की-सुरक्षित-सीमा-पूछना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/बारिश-में-इलेक्ट्रिक-वाहन-के-उपयोग-की-सावधानियाँ/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/किराये-के-दिन-में-देरी-होने-पर-क्या-पूछें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/साप्ताहिक-गियर-बाइक-किराये-में-क्या-देखें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/मासिक-किराये-में-खराबी-की-सूचना-कैसे-दें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/पुराने-शहर-में-बारिश-के-समय-सवारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/लॉन्ग-बिएन-से-ओल्ड-क्वार्टर-जाने-का-रूट/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-क्षेत्र-के-लिए-हेलमेट-चेकलिस्ट/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/वेस्ट-लेक-से-शहर-केंद्र-का-रूट-चुनना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/लाइसेंस-नियम-बदलने-पर-नवीन-जानकारी-कहाँ-मिले/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/गीली-सड़क-पर-मोड़-लेते-समय-सावधानी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/जमा-राशि-और-अग्रिम-किराये-का-अंतर/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/परिवार-के-साथ-यात्रा-पर-वाहन-चयन/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/स्कूटर-लौटाते-समय-सामान-की-जाँच/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-में-एक-सप्ताह-के-लिए-बाइक-चयन/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/ba-đình-से-long-biên-वाहन-वापसी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-में-बरसात-और-सड़क-सुरक्षा/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/हेलमेट-की-गुणवत्ता-और-फिटिंग-कैसे-देखें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/बाइक-वापसी-में-देरी-पर-अनुबंध-पढ़ना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/शहर-में-रुकने-की-जगह-पहले-तय-करना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/लंबी-यात्रा-में-हेलमेट-और-सुरक्षा-सामान/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-पर-शहर-में-छोटी-यात्रा/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/गीली-सड़क-पर-गियर-बाइक-की-ब्रेकिंग/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-पर-यात्री-के-साथ-वजन-संतुलन/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/छोटी-दूरी-के-लिए-50cc-वाहन-चुनने-के-सवाल/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-बाइक-पर-लंबा-रूट-चुनने-से-पहले/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/दैनिक-किराये-पर-हेलमेट-और-उपकरण-जाँच/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/सप्ताह-भर-के-लिए-वाहन-स्थिति-रिपोर्ट/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/मासिक-बाइक-किराये-में-शहरी-पार्किंग/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/ओल्ड-क्वार्टर-के-होटल-पर-बाइक-लेना-कैसे-पूछें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/लॉन्ग-बिएन-में-बरसात-के-दौरान-यात्रा-योजना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-के-होटल-से-बाइक-लेने-के-सवाल/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/ताय-हो-में-बाइक-की-छोटी-यात्रा-चेकलिस्ट/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/दस्तावेज़ों-की-प्रतियाँ-साझा-करते-समय-सावधानियाँ/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/सवारी-के-दौरान-ध्यान-भटकने-से-कैसे-बचें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/जमा-भुगतान-की-रसीद-में-क्या-देखें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/विदेशी-पर्यटक-के-लिए-किराये-की-जानकारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/किराये-की-अवधि-बढ़ाने-पर-रिटर्न-योजना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-में-मोटरबाइक-वापसी-की-व्यवस्था/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/ba-đình-इलाके-में-पहचान-और-दस्तावेज़/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-क्षेत्र-में-बाइक-लेने-की-चेकलिस्ट/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/लंबी-यात्रा-से-पहले-ईंधन-या-बैटरी-जाँच/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/किराये-में-यात्री-और-उपयोग-संबंधी-नियम/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/हनोई-में-पैदल-क्षेत्र-और-वाहन-प्रतिबंध/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/अचानक-मौसम-बदलने-पर-रूट-बदलना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/बैटरी-खत्म-होने-से-पहले-वापसी-योजना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/गियर-बाइक-और-स्कूटर-में-सवारी-के-अनुभव-का-फर्क/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-पार्क-करते-समय-स्टैंड-का-सुरक्षित-उपयोग/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-स्कूटर-के-साथ-हेलमेट-का-सही-चयन/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/बैटरी-कम-होने-पर-सुरक्षित-रूट-योजना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/दैनिक-किराये-में-डिलीवरी-शुल्क-स्पष्ट-करना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/साप्ताहिक-किराये-में-यात्रा-योजना-और-पार्किंग/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/मासिक-किराये-में-मॉडल-बदलने-की-शर्तें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/ओल्ड-क्वार्टर-में-सुरक्षित-हेलमेट-उपयोग/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/लॉन्ग-बिएन-में-स्कूटर-और-गियर-बाइक-चुनना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-क्षेत्र-में-मौसम-देखकर-निकलना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/वेस्ट-लेक-क्षेत्र-में-गर्मी-और-पानी-की-तैयारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/बिना-सही-दस्तावेज़-वाहन-चलाने-के-जोखिम/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/अनजान-रास्ते-पर-गति-सीमा-पढ़ना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/वाहन-की-पुरानी-खरोंच-का-रिकॉर्ड-क्यों-रखें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/एक-सप्ताह-के-लिए-बाइक-बुक-करने-के-चरण/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/पिकअप-समय-बदलना-हो-तो-क्या-करें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-के-व्यस्त-चौराहों-पर-सावधानी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/ba-đình-में-दैनिक-बाइक-किराया-चुनना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-से-लॉन्ग-बिएन-बाइक-वापसी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/वाहन-दस्तावेज़-मिलने-पर-क्या-सत्यापित-करें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/किराये-के-वाहन-को-शहर-से-बाहर-ले-जाने-की-शर्तें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/शहरी-रूट-में-पुलों-का-चुनाव/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/लंबी-यात्रा-में-फोन-नेविगेशन-की-सुरक्षित-आदत/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-का-चार्जर-लेते-समय-पूछें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/लंबे-किराये-में-गियर-मोटरबाइक-की-देखभाल/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-का-ईंधन-स्तर-लेते-समय-कैसे-जाँचें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-वाहन-की-वापसी-के-समय-निरीक्षण/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-बाइक-की-वापसी-में-चार्ज-स्तर-की-शर्तें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/एक-दिन-की-यात्रा-का-ईंधन-बजट-कैसे-सोचें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/एक-सप्ताह-का-किराया-बढ़ाना-हो-तो-प्रक्रिया/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/लंबी-अवधि-पर-किराया-दर-की-पुष्टि-कैसे-लें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/ओल्ड-क्वार्टर-से-बाइक-लौटाने-का-स्थान-तय-करना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/लॉन्ग-बिएन-से-एयरपोर्ट-यात्रा-पर-वाहन-नियम/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-में-स्कूटर-चुनते-समय-विचार/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/ताय-हो-पते-पर-वाहन-डिलीवरी-पूछने-के-सवाल/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/बीमा-और-ड्राइविंग-पात्रता-के-संबंध-में-सवाल/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/हेलमेट-की-फिटिंग-और-पट्टी-की-जाँच/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/किराया-अवधि-बढ़ाने-पर-जमा-का-क्या-होता-है/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/बुकिंग-में-हेलमेट-और-अतिरिक्त-सामान-पूछें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/बाइक-लेने-और-लौटाने-के-रिकॉर्ड-रखना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-और-long-biên-के-पते-में-अंतर/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/ba-đình-में-पैदल-यात्रियों-के-पास-सावधानी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-में-लाइसेंस-पात्रता-की-जाँच/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/बाइक-के-मीटर-की-स्थिति-नोट-करना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/अनुबंध-में-भुगतान-की-राशि-की-पुष्टि/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/हनोई-यात्रा-में-ईंधन-भरवाने-की-योजना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/शहर-से-बाहर-जाने-के-लिए-लाइसेंस-सत्यापन/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-के-टायर-और-लाइट-जाँचना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/गियर-बाइक-लौटाने-से-पहले-क्या-जाँचें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-की-लंबी-अवधि-किराये-की-तैयारी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-स्कूटर-किराये-के-अनुबंध-में-वाहन-विवरण/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-मोटरबाइक-के-लिए-लागू-वाहन-नियम/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/दैनिक-किराये-की-रसीद-में-जाँचने-योग्य-बातें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/साप्ताहिक-किराये-में-दस्तावेज़-और-अनुबंध/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/एक-महीने-के-मोटरबाइक-किराये-का-रिकॉर्ड/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/हनोई-ओल्ड-क्वार्टर-में-नए-चालक-की-सावधानियाँ/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/लॉन्ग-बिएन-में-बाइक-वापसी-और-जमा/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-के-पास-बाइक-वापस-कहाँ-करें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/वेस्ट-लेक-से-बाइक-लौटाने-का-समय-तय-करें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/किराये-से-पहले-आधिकारिक-स्रोत-कैसे-पढ़ें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/सुरक्षित-मोटरबाइक-पार्किंग-की-आदतें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/जमा-विवाद-होने-पर-अनुबंध-में-क्या-देखें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/बुकिंग-बदलने-या-रद्द-करने-की-शर्तें-जाँचें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/डिलीवरी-के-समय-दस्तावेज़-और-भुगतान/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-में-50cc-वाहन-के-बारे-में-पूछें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/बा-दिन्ह-में-मौसम-के-आधार-पर-यात्रा-बदलना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-में-रात-की-सवारी-की-सावधानी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/किराये-पर-ली-बाइक-लौटाने-की-जाँच-सूची/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/बाइक-किराये-में-नुकसान-की-जिम्मेदारी-समझना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/शहर-में-लौटते-समय-वाहन-की-समय-सीमा/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/लंबे-रूट-से-लौटने-की-समय-योजना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-वापसी-में-जमा-की-शर्तें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/गियर-बाइक-में-गलत-गियर-पर-चलने-के-संकेत/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-किराये-से-पहले-सवार-की-ऊँचाई-और-आराम/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-बाइक-के-वास्तविक-इंजन-विवरण-की-पुष्टि/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-बाइक-में-चार्ज-प्रतिशत-और-अनुमानित-दूरी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/दिन-भर-बाइक-किराये-में-वापसी-समय-तय-करें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/साप्ताहिक-किराये-में-अचानक-यात्रा-बदलाव/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/मासिक-बाइक-किराये-में-जमा-वापसी-का-रिकॉर्ड/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/ओल्ड-क्वार्टर-में-बाइक-के-साथ-सामान-सुरक्षित-रखें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/long-biên-से-hoàn-kiếm-पुल-मार्ग-पर-योजना/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/hoàn-kiếm-में-समय-बदलते-सड़क-प्रतिबंध/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/tây-hồ-इलाके-में-पार्किंग-संकेत-कैसे-पढ़ें/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/आधिकारिक-लाइसेंस-नियमों-का-अनुवाद-समझते-समय-सावधानी/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "SUPPORT"
-        }
-      ],
+      "incomingLinks": [],
       "anchorText": [
         "सभी बाइक देखें ↗",
         "विवरण ↗",
@@ -1776,8 +100,8 @@
       "recommendedLink": [],
       "counts": {
         "outgoing": 13,
-        "incoming": 335,
-        "incomingSupport": 300
+        "incoming": 0,
+        "incomingSupport": 0
       }
     },
     {
@@ -1785,11 +109,6 @@
       "role": "HUB",
       "cluster": "/बाइक-के-प्रकार/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/",
           "anchorText": "↗ गियर वाली बाइक Honda Wave जैसे गियर वाले विकल्प उन सवारों के लिए हैं जो गियर चलाने से परिचित हैं। अधिक जानें →",
@@ -1869,17 +188,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/",
-          "anchorText": "बाइक के प्रकार",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/",
           "anchorText": "बाइक के प्रकार की पूरी विषय सूची ↗",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/",
-          "anchorText": "बाइक के प्रकार",
           "role": "SILO"
         },
         {
@@ -1889,17 +198,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/",
-          "anchorText": "बाइक के प्रकार",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/",
           "anchorText": "बाइक के प्रकार की पूरी विषय सूची ↗",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/",
-          "anchorText": "बाइक के प्रकार",
           "role": "SILO"
         },
         {
@@ -1934,27 +233,12 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/",
-          "anchorText": "बाइक के प्रकार",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/",
           "anchorText": "बाइक के प्रकार की पूरी विषय सूची ↗",
           "role": "SILO"
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/हनोई-के-यातायात-में-गियर-वाली-बाइक-किसे-चुननी-चाहिए/",
-          "anchorText": "बाइक के प्रकार",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/हनोई-के-यातायात-में-गियर-वाली-बाइक-किसे-चुननी-चाहिए/",
           "anchorText": "बाइक के प्रकार ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/हनोई-में-ऑटोमैटिक-स्कूटर-के-फायदे-और-सीमाएँ/",
-          "anchorText": "बाइक के प्रकार",
           "role": "SUPPORT"
         },
         {
@@ -1964,17 +248,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-स्कूटर-के-तकनीकी-वर्ग-को-कैसे-पहचानें/",
-          "anchorText": "बाइक के प्रकार",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-स्कूटर-के-तकनीकी-वर्ग-को-कैसे-पहचानें/",
           "anchorText": "बाइक के प्रकार ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-मोटरबाइक-की-घोषित-रेंज-कैसे-जाँचें/",
-          "anchorText": "बाइक के प्रकार",
           "role": "SUPPORT"
         },
         {
@@ -2514,17 +788,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-का-चार्जर-लेते-समय-पूछें/",
-          "anchorText": "बाइक के प्रकार",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-का-चार्जर-लेते-समय-पूछें/",
           "anchorText": "बाइक के प्रकार ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/लंबे-किराये-में-गियर-मोटरबाइक-की-देखभाल/",
-          "anchorText": "बाइक के प्रकार",
           "role": "SUPPORT"
         },
         {
@@ -2534,17 +798,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-का-ईंधन-स्तर-लेते-समय-कैसे-जाँचें/",
-          "anchorText": "बाइक के प्रकार",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-का-ईंधन-स्तर-लेते-समय-कैसे-जाँचें/",
           "anchorText": "बाइक के प्रकार ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-वाहन-की-वापसी-के-समय-निरीक्षण/",
-          "anchorText": "बाइक के प्रकार",
           "role": "SUPPORT"
         },
         {
@@ -2554,17 +808,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-बाइक-की-वापसी-में-चार्ज-स्तर-की-शर्तें/",
-          "anchorText": "बाइक के प्रकार",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-बाइक-की-वापसी-में-चार्ज-स्तर-की-शर्तें/",
           "anchorText": "बाइक के प्रकार ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-के-टायर-और-लाइट-जाँचना/",
-          "anchorText": "बाइक के प्रकार",
           "role": "SUPPORT"
         },
         {
@@ -2574,17 +818,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/गियर-बाइक-लौटाने-से-पहले-क्या-जाँचें/",
-          "anchorText": "बाइक के प्रकार",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/गियर-बाइक-लौटाने-से-पहले-क्या-जाँचें/",
           "anchorText": "बाइक के प्रकार ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-की-लंबी-अवधि-किराये-की-तैयारी/",
-          "anchorText": "बाइक के प्रकार",
           "role": "SUPPORT"
         },
         {
@@ -2594,17 +828,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-स्कूटर-किराये-के-अनुबंध-में-वाहन-विवरण/",
-          "anchorText": "बाइक के प्रकार",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-स्कूटर-किराये-के-अनुबंध-में-वाहन-विवरण/",
           "anchorText": "बाइक के प्रकार ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-मोटरबाइक-के-लिए-लागू-वाहन-नियम/",
-          "anchorText": "बाइक के प्रकार",
           "role": "SUPPORT"
         },
         {
@@ -2614,17 +838,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-वापसी-में-जमा-की-शर्तें/",
-          "anchorText": "बाइक के प्रकार",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-वापसी-में-जमा-की-शर्तें/",
           "anchorText": "बाइक के प्रकार ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/गियर-बाइक-में-गलत-गियर-पर-चलने-के-संकेत/",
-          "anchorText": "बाइक के प्रकार",
           "role": "SUPPORT"
         },
         {
@@ -2634,27 +848,12 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-किराये-से-पहले-सवार-की-ऊँचाई-और-आराम/",
-          "anchorText": "बाइक के प्रकार",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-किराये-से-पहले-सवार-की-ऊँचाई-और-आराम/",
           "anchorText": "बाइक के प्रकार ↗",
           "role": "SUPPORT"
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-बाइक-के-वास्तविक-इंजन-विवरण-की-पुष्टि/",
-          "anchorText": "बाइक के प्रकार",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-बाइक-के-वास्तविक-इंजन-विवरण-की-पुष्टि/",
           "anchorText": "बाइक के प्रकार ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-बाइक-में-चार्ज-प्रतिशत-और-अनुमानित-दूरी/",
-          "anchorText": "बाइक के प्रकार",
           "role": "SUPPORT"
         },
         {
@@ -2664,7 +863,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
         "↗ गियर वाली बाइक Honda Wave जैसे गियर वाले विकल्प उन सवारों के लिए हैं जो गियर चलाने से परिचित हैं। अधिक जानें →",
         "↗ ऑटोमैटिक स्कूटर Honda Vision, Air Blade और Honda Click / Yamaha Mio जैसे स्कूटर शहर के रास्तों के लिए लोकप्रिय श्रेणी हैं। अधिक जानें →",
         "↗ 50cc बाइक और स्कूटर 50cc वाहन विकल्पों और उनके लिए लागू शर्तों को समझें; नियम और दस्तावेज़ वाहन के प्रकार पर निर्भर करते हैं। अधिक जानें →",
@@ -2692,9 +890,9 @@
         }
       ],
       "counts": {
-        "outgoing": 14,
-        "incoming": 161,
-        "incomingSupport": 144
+        "outgoing": 13,
+        "incoming": 137,
+        "incomingSupport": 125
       }
     },
     {
@@ -2702,16 +900,6 @@
       "role": "SILO",
       "cluster": "/बाइक-के-प्रकार/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/",
-          "anchorText": "बाइक के प्रकार",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/हनोई-के-यातायात-में-गियर-वाली-बाइक-किसे-चुननी-चाहिए/",
           "anchorText": "हनोई के यातायात में गियर वाली बाइक किसे चुननी चाहिए हनोई में गियर वाली बाइक चुनने से पहले अनुभव, Honda Wave की तकनीकी जानकारी, सुरक्षा जाँच, किराया और स्थानीय लाइसेंस नियम समझें। पूरा लेख पढ़ें →",
@@ -2901,11 +1089,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/गियर-बदलते-समय-आम-शुरुआती-गलतियाँ/",
-          "anchorText": "गियर वाली बाइक",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/गियर-बदलते-समय-आम-शुरुआती-गलतियाँ/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -3016,11 +1199,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/लंबे-किराये-में-गियर-मोटरबाइक-की-देखभाल/",
-          "anchorText": "गियर वाली बाइक",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/लंबे-किराये-में-गियर-मोटरबाइक-की-देखभाल/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -3042,11 +1220,6 @@
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/गियर-बाइक-लौटाने-से-पहले-क्या-जाँचें/",
           "anchorText": "गियर वाली बाइक ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/गियर-बाइक-में-गलत-गियर-पर-चलने-के-संकेत/",
-          "anchorText": "गियर वाली बाइक",
           "role": "SUPPORT"
         },
         {
@@ -3061,8 +1234,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "बाइक के प्रकार",
         "हनोई के यातायात में गियर वाली बाइक किसे चुननी चाहिए हनोई में गियर वाली बाइक चुनने से पहले अनुभव, Honda Wave की तकनीकी जानकारी, सुरक्षा जाँच, किराया और स्थानीय लाइसेंस नियम समझें। पूरा लेख पढ़ें →",
         "Honda Wave लेने से पहले क्लच और गियर का अनुभव Honda Wave लेने से पहले क्लच लीवर, गियर पैटर्न और न्यूट्रल का अनुभव कैसे जाँचें, परीक्षण सवारी में क्या देखें और कब तक अभ्यास ज़रूरी है। पूरा लेख पढ़ें →",
         "गियर वाली मोटरबाइक पर धीमी रफ्तार में नियंत्रण गियर वाली मोटरबाइक को भीड़ और धीमी रफ़्तार में साँसले नियंत्रण में रखने की व्यावहारिक गाइड — क्लच, बैलेंस और अभ्यास की जानकारी। पूरा लेख पढ़ें →",
@@ -3103,9 +1274,9 @@
         }
       ],
       "counts": {
-        "outgoing": 23,
-        "incoming": 48,
-        "incomingSupport": 41
+        "outgoing": 21,
+        "incoming": 45,
+        "incomingSupport": 38
       }
     },
     {
@@ -3113,16 +1284,6 @@
       "role": "SILO",
       "cluster": "/बाइक-के-प्रकार/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/",
-          "anchorText": "बाइक के प्रकार",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/हनोई-में-ऑटोमैटिक-स्कूटर-के-फायदे-और-सीमाएँ/",
           "anchorText": "हनोई में ऑटोमैटिक स्कूटर के फायदे और सीमाएँ हनोई में ऑटोमैटिक स्कूटर की सुविधा और सीमाएँ समझें: Honda Vision जैसे मॉडल, ब्रेक, बैठने का आराम, सुरक्षा, किराया और जमा। पूरा लेख पढ़ें →",
@@ -3482,11 +1643,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-का-ईंधन-स्तर-लेते-समय-कैसे-जाँचें/",
-          "anchorText": "ऑटोमैटिक स्कूटर",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-का-ईंधन-स्तर-लेते-समय-कैसे-जाँचें/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -3508,11 +1664,6 @@
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-की-लंबी-अवधि-किराये-की-तैयारी/",
           "anchorText": "ऑटोमैटिक स्कूटर ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-किराये-से-पहले-सवार-की-ऊँचाई-और-आराम/",
-          "anchorText": "ऑटोमैटिक स्कूटर",
           "role": "SUPPORT"
         },
         {
@@ -3527,8 +1678,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "बाइक के प्रकार",
         "हनोई में ऑटोमैटिक स्कूटर के फायदे और सीमाएँ हनोई में ऑटोमैटिक स्कूटर की सुविधा और सीमाएँ समझें: Honda Vision जैसे मॉडल, ब्रेक, बैठने का आराम, सुरक्षा, किराया और जमा। पूरा लेख पढ़ें →",
         "Honda Vision और Air Blade किस जरूरत के लिए अलग हैं Honda Vision और Air Blade किराये में किस ज़रूरत के लिए सही हैं — आकार, सीट, स्टोरेज, पिक-अप और मासिक दर के आधार पर दोनों की तुलना और चुनाव का तरीका। पूरा लेख पढ़ें →",
         "स्कूटर चलाने से पहले ब्रेक की पहचान किराए का ऑटोमैटिक स्कूटर लेते समय आगे-पीछे के ब्रेक की पहचान और जाँच की व्यावहारिक गाइड — सुरक्षित सवारी का पहला क़दम। पूरा लेख पढ़ें →",
@@ -3569,9 +1718,9 @@
         }
       ],
       "counts": {
-        "outgoing": 23,
-        "incoming": 59,
-        "incomingSupport": 52
+        "outgoing": 21,
+        "incoming": 57,
+        "incomingSupport": 50
       }
     },
     {
@@ -3579,16 +1728,6 @@
       "role": "SILO",
       "cluster": "/बाइक-के-प्रकार/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/",
-          "anchorText": "बाइक के प्रकार",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-स्कूटर-के-तकनीकी-वर्ग-को-कैसे-पहचानें/",
           "anchorText": "50cc स्कूटर के तकनीकी वर्ग को कैसे पहचानें 50cc स्कूटर की सही तकनीकी श्रेणी पहचानें: इंजन क्षमता, डिजाइन गति, पंजीकरण दस्तावेज़, चालक नियम और किराया जाँचने की सूची। पूरा लेख पढ़ें →",
@@ -3898,11 +2037,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-वाहन-की-वापसी-के-समय-निरीक्षण/",
-          "anchorText": "50cc बाइक और स्कूटर",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-वाहन-की-वापसी-के-समय-निरीक्षण/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -3933,11 +2067,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-बाइक-के-वास्तविक-इंजन-विवरण-की-पुष्टि/",
-          "anchorText": "50cc बाइक और स्कूटर",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/पचास-सीसी/50cc-बाइक-के-वास्तविक-इंजन-विवरण-की-पुष्टि/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -3948,8 +2077,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "बाइक के प्रकार",
         "50cc स्कूटर के तकनीकी वर्ग को कैसे पहचानें 50cc स्कूटर की सही तकनीकी श्रेणी पहचानें: इंजन क्षमता, डिजाइन गति, पंजीकरण दस्तावेज़, चालक नियम और किराया जाँचने की सूची। पूरा लेख पढ़ें →",
         "50cc बाइक और बड़े इंजन वाली बाइक में अंतर 50cc बाइक और बड़े इंजन वाली बाइक में रफ़्तार, भार, लाइसेंस श्रेणी, नियम और किराये के हिसाब से अंतर समझें और हनोई के लिए सही वाहन चुनें। पूरा लेख पढ़ें →",
         "50cc किराये की कीमत और जमा अलग कैसे देखें 50cc स्कूटर किराये में दैनिक कीमत और सुरक्षा जमा को अलग-अलग समझने, लिखित पुष्टि लेने और वापसी की शर्तें जाँचने की व्यावहारिक जानकारी। पूरा लेख पढ़ें →",
@@ -3990,9 +2117,9 @@
         }
       ],
       "counts": {
-        "outgoing": 23,
-        "incoming": 50,
-        "incomingSupport": 43
+        "outgoing": 21,
+        "incoming": 48,
+        "incomingSupport": 41
       }
     },
     {
@@ -4000,16 +2127,6 @@
       "role": "SILO",
       "cluster": "/बाइक-के-प्रकार/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/",
-          "anchorText": "बाइक के प्रकार",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-मोटरबाइक-की-घोषित-रेंज-कैसे-जाँचें/",
           "anchorText": "इलेक्ट्रिक मोटरबाइक की घोषित रेंज कैसे जाँचें इलेक्ट्रिक मोटरबाइक की घोषित रेंज कैसे जाँचें: परीक्षण शर्तें, वास्तविक दूरी पर असर, बैटरी जाँच, चार्जिंग और किराये से पहले पूछने योग्य सवाल। पूरा लेख पढ़ें →",
@@ -4204,11 +2321,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-वाहन-का-चार्जर-मिलने-पर-क्या-पूछें/",
-          "anchorText": "इलेक्ट्रिक बाइक",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-वाहन-का-चार्जर-मिलने-पर-क्या-पूछें/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -4324,11 +2436,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-बाइक-की-वापसी-में-चार्ज-स्तर-की-शर्तें/",
-          "anchorText": "इलेक्ट्रिक बाइक",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-बाइक-की-वापसी-में-चार्ज-स्तर-की-शर्तें/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -4350,11 +2457,6 @@
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-मोटरबाइक-के-लिए-लागू-वाहन-नियम/",
           "anchorText": "इलेक्ट्रिक बाइक ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/इलेक्ट्रिक-बाइक-में-चार्ज-प्रतिशत-और-अनुमानित-दूरी/",
-          "anchorText": "इलेक्ट्रिक बाइक",
           "role": "SUPPORT"
         },
         {
@@ -4369,8 +2471,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "बाइक के प्रकार",
         "इलेक्ट्रिक मोटरबाइक की घोषित रेंज कैसे जाँचें इलेक्ट्रिक मोटरबाइक की घोषित रेंज कैसे जाँचें: परीक्षण शर्तें, वास्तविक दूरी पर असर, बैटरी जाँच, चार्जिंग और किराये से पहले पूछने योग्य सवाल। पूरा लेख पढ़ें →",
         "इलेक्ट्रिक बाइक लेते समय बैटरी स्तर की जाँच इलेक्ट्रिक बाइक किराये पर लेते और लौटाते समय बैटरी स्तर, चार्जर, मीटर की पढ़ाई और अनुबंध की शर्तें कैसे जाँचें — पूरी क्रमबद्ध जाँच इस लेख में। पूरा लेख पढ़ें →",
         "इलेक्ट्रिक मोटरबाइक और इलेक्ट्रिक साइकिल का अंतर इलेक्ट्रिक मोटरबाइक और इलेक्ट्रिक साइकिल की श्रेणी, रेंज, चार्जिंग और कानूनी दस्तावेज़ों में अंतर समझकर किराये के लिए सही विकल्प चुनने की जानकारी। पूरा लेख पढ़ें →",
@@ -4411,9 +2511,9 @@
         }
       ],
       "counts": {
-        "outgoing": 23,
-        "incoming": 50,
-        "incomingSupport": 43
+        "outgoing": 21,
+        "incoming": 47,
+        "incomingSupport": 40
       }
     },
     {
@@ -4421,11 +2521,6 @@
       "role": "HUB",
       "cluster": "/किराया-और-कीमतें/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/",
           "anchorText": "↗ दैनिक किराया एक या कुछ दिनों की यात्रा के लिए दैनिक किराये और जमा की जानकारी देखें। अधिक जानें →",
@@ -4490,27 +2585,12 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/",
-          "anchorText": "किराया और कीमतें",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/",
           "anchorText": "किराया और कीमतें की पूरी विषय सूची ↗",
           "role": "SILO"
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/",
-          "anchorText": "किराया और कीमतें",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/",
           "anchorText": "किराया और कीमतें की पूरी विषय सूची ↗",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/",
-          "anchorText": "किराया और कीमतें",
           "role": "SILO"
         },
         {
@@ -4860,17 +2940,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/मासिक-स्कूटर-किराये-पर-वाहन-वापसी/",
-          "anchorText": "किराया और कीमतें",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/मासिक-स्कूटर-किराये-पर-वाहन-वापसी/",
           "anchorText": "किराया और कीमतें ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/किराये-के-दिन-में-देरी-होने-पर-क्या-पूछें/",
-          "anchorText": "किराया और कीमतें",
           "role": "SUPPORT"
         },
         {
@@ -4880,17 +2950,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/साप्ताहिक-गियर-बाइक-किराये-में-क्या-देखें/",
-          "anchorText": "किराया और कीमतें",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/साप्ताहिक-गियर-बाइक-किराये-में-क्या-देखें/",
           "anchorText": "किराया और कीमतें ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/मासिक-किराये-में-खराबी-की-सूचना-कैसे-दें/",
-          "anchorText": "किराया और कीमतें",
           "role": "SUPPORT"
         },
         {
@@ -4995,11 +3055,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/एक-सप्ताह-का-किराया-बढ़ाना-हो-तो-प्रक्रिया/",
-          "anchorText": "किराया और कीमतें",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/एक-सप्ताह-का-किराया-बढ़ाना-हो-तो-प्रक्रिया/",
           "anchorText": "किराया और कीमतें ↗",
           "role": "SUPPORT"
         },
@@ -5025,17 +3080,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/दैनिक-किराये-की-रसीद-में-जाँचने-योग्य-बातें/",
-          "anchorText": "किराया और कीमतें",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/दैनिक-किराये-की-रसीद-में-जाँचने-योग्य-बातें/",
           "anchorText": "किराया और कीमतें ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/साप्ताहिक-किराये-में-दस्तावेज़-और-अनुबंध/",
-          "anchorText": "किराया और कीमतें",
           "role": "SUPPORT"
         },
         {
@@ -5045,27 +3090,12 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/एक-महीने-के-मोटरबाइक-किराये-का-रिकॉर्ड/",
-          "anchorText": "किराया और कीमतें",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/एक-महीने-के-मोटरबाइक-किराये-का-रिकॉर्ड/",
           "anchorText": "किराया और कीमतें ↗",
           "role": "SUPPORT"
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/दिन-भर-बाइक-किराये-में-वापसी-समय-तय-करें/",
-          "anchorText": "किराया और कीमतें",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/दिन-भर-बाइक-किराये-में-वापसी-समय-तय-करें/",
           "anchorText": "किराया और कीमतें ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/साप्ताहिक-किराये-में-अचानक-यात्रा-बदलाव/",
-          "anchorText": "किराया और कीमतें",
           "role": "SUPPORT"
         },
         {
@@ -5085,7 +3115,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
         "↗ दैनिक किराया एक या कुछ दिनों की यात्रा के लिए दैनिक किराये और जमा की जानकारी देखें। अधिक जानें →",
         "↗ साप्ताहिक किराया लगातार कई दिनों के लिए बाइक चाहिए तो साप्ताहिक दरों की तुलना करना उपयोगी है। अधिक जानें →",
         "↗ मासिक किराया लंबे प्रवास के लिए अलग मासिक दरें उपलब्ध हो सकती हैं। अधिक जानें →",
@@ -5109,9 +3138,9 @@
         }
       ],
       "counts": {
-        "outgoing": 10,
-        "incoming": 122,
-        "incomingSupport": 102
+        "outgoing": 9,
+        "incoming": 109,
+        "incomingSupport": 92
       }
     },
     {
@@ -5119,16 +3148,6 @@
       "role": "SILO",
       "cluster": "/किराया-और-कीमतें/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/",
-          "anchorText": "किराया और कीमतें",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/एक-दिन-की-बाइक-किराये-में-क्या-शामिल-पूछें/",
           "anchorText": "एक दिन की बाइक किराये में क्या शामिल पूछें एक दिन की बाइक किराये में क्या शामिल पूछें: हेलमेट, बीमा, दस्तावेज़, जमा, वापसी समय और ईंधन से जुड़े ठोस सवालों की जाँच सूची। पूरा लेख पढ़ें →",
@@ -5373,11 +3392,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/दैनिक-किराये-में-सुरक्षा-जमा-का-अलग-हिसाब/",
-          "anchorText": "दैनिक किराया",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/दैनिक-किराये-में-सुरक्षा-जमा-का-अलग-हिसाब/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -5588,8 +3602,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "किराया और कीमतें",
         "एक दिन की बाइक किराये में क्या शामिल पूछें एक दिन की बाइक किराये में क्या शामिल पूछें: हेलमेट, बीमा, दस्तावेज़, जमा, वापसी समय और ईंधन से जुड़े ठोस सवालों की जाँच सूची। पूरा लेख पढ़ें →",
         "आधे दिन और पूरे दिन की किराया अवधि कैसे समझें आधे दिन और पूरे दिन की बाइक किराया अवधि में फ़र्क़, दुकानों की अलग परिभाषाएँ, देर से लौटने की शर्तें और बुकिंग से पहले पूछने लायक सवाल समझें। पूरा लेख पढ़ें →",
         "दैनिक बाइक किराये की शुरुआत का समय तय करना दैनिक बाइक किराये में वाहन लेने का समय चुनने, दिन की गणना, दुकान के घंटों और हनोई की भीड़ के हिसाब से वापसी की योजना बनाने की जानकारी। पूरा लेख पढ़ें →",
@@ -5628,9 +3640,9 @@
         }
       ],
       "counts": {
-        "outgoing": 21,
-        "incoming": 72,
-        "incomingSupport": 57
+        "outgoing": 19,
+        "incoming": 71,
+        "incomingSupport": 56
       }
     },
     {
@@ -5638,16 +3650,6 @@
       "role": "SILO",
       "cluster": "/किराया-और-कीमतें/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/",
-          "anchorText": "किराया और कीमतें",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/सात-दिनों-के-किराये-का-कुल-भुगतान-कैसे-समझें/",
           "anchorText": "सात दिनों के किराये का कुल भुगतान कैसे समझें सात दिनों के बाइक किराये का कुल भुगतान कैसे समझें: साप्ताहिक दर, दैनिक दर से तुलना, जमा, ईंधन और अनुबंध की लिखित शर्तें। पूरा लेख पढ़ें →",
@@ -5813,11 +3815,6 @@
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/साप्ताहिक-किराये-में-जमा-कब-तय-करना-चाहिए/",
           "anchorText": "साप्ताहिक किराया ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/हनोई-में-एक-सप्ताह-के-लिए-मॉडल-चयन/",
-          "anchorText": "साप्ताहिक किराया",
           "role": "SUPPORT"
         },
         {
@@ -5992,8 +3989,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "किराया और कीमतें",
         "सात दिनों के किराये का कुल भुगतान कैसे समझें सात दिनों के बाइक किराये का कुल भुगतान कैसे समझें: साप्ताहिक दर, दैनिक दर से तुलना, जमा, ईंधन और अनुबंध की लिखित शर्तें। पूरा लेख पढ़ें →",
         "साप्ताहिक बाइक पैकेज बनाम दैनिक दर तुलना साप्ताहिक बाइक पैकेज और दैनिक दर में प्रति दिन लागत का हिसाब, संतुलन बिंदु, छिपी शर्तें और वह ढाँचा जिससे हफ़्ते भर की यात्रा में सही विकल्प चुनें। पूरा लेख पढ़ें →",
         "साप्ताहिक किराये में जमा कब तय करना चाहिए साप्ताहिक बाइक किराये में सुरक्षा जमा की राशि और शर्तें किस चरण में तय करनी चाहिए और लिखित पुष्टि कैसे लें, इसकी व्यावहारिक जानकारी। पूरा लेख पढ़ें →",
@@ -6032,9 +4027,9 @@
         }
       ],
       "counts": {
-        "outgoing": 21,
-        "incoming": 49,
-        "incomingSupport": 45
+        "outgoing": 19,
+        "incoming": 48,
+        "incomingSupport": 44
       }
     },
     {
@@ -6042,16 +4037,6 @@
       "role": "SILO",
       "cluster": "/किराया-और-कीमतें/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/",
-          "anchorText": "किराया और कीमतें",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/एक-महीने-की-बाइक-किराये-के-खर्च-की-तुलना/",
           "anchorText": "एक महीने की बाइक किराये के खर्च की तुलना हनोई में एक महीने की बाइक किराये की लागत की तुलना: मॉडल अनुसार संदर्भ कीमतें, जमा, ईंधन और अनुबंध की शर्तें समझें और सही निर्णय लें। पूरा लेख पढ़ें →",
@@ -6226,11 +4211,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/लंबे-प्रवास-के-लिए-बाइक-चुनने-के-संकेत/",
-          "anchorText": "मासिक किराया",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/लंबे-प्रवास-के-लिए-बाइक-चुनने-के-संकेत/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -6341,11 +4321,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/लंबी-अवधि-पर-किराया-दर-की-पुष्टि-कैसे-लें/",
-          "anchorText": "मासिक किराया",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/लंबी-अवधि-पर-किराया-दर-की-पुष्टि-कैसे-लें/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -6376,11 +4351,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/मासिक-बाइक-किराये-में-जमा-वापसी-का-रिकॉर्ड/",
-          "anchorText": "मासिक किराया",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/मासिक-किराया/मासिक-बाइक-किराये-में-जमा-वापसी-का-रिकॉर्ड/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -6391,8 +4361,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "किराया और कीमतें",
         "एक महीने की बाइक किराये के खर्च की तुलना हनोई में एक महीने की बाइक किराये की लागत की तुलना: मॉडल अनुसार संदर्भ कीमतें, जमा, ईंधन और अनुबंध की शर्तें समझें और सही निर्णय लें। पूरा लेख पढ़ें →",
         "मासिक Honda Wave और Vision किराया अंतर मासिक किराये में Honda Wave और Vision की दर, सुरक्षा जमा और कुल लागत का अंतर समझें — लंबी अवधि के लिए कौन-सा मॉडल किस यात्री के लिए सही है। पूरा लेख पढ़ें →",
         "मासिक किराये में जमा और नकदी योजना मासिक बाइक किराये में जमा और किराये की नकदी की अलग योजना, संदर्भ दरें, भुगतान का रिकॉर्ड और पूरे महीने का बजट बनाने की जानकारी। पूरा लेख पढ़ें →",
@@ -6431,9 +4399,9 @@
         }
       ],
       "counts": {
-        "outgoing": 21,
-        "incoming": 48,
-        "incomingSupport": 44
+        "outgoing": 19,
+        "incoming": 45,
+        "incomingSupport": 41
       }
     },
     {
@@ -6441,11 +4409,6 @@
       "role": "HUB",
       "cluster": "/जमा-और-बुकिंग/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/",
           "anchorText": "↗ सुरक्षा जमा अलग-अलग मॉडल के लिए सुरक्षा जमा समझें और अनुबंध में किन बातों की पुष्टि करनी है, यह जानें। अधिक जानें →",
@@ -6535,27 +4498,12 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/",
-          "anchorText": "जमा और बुकिंग",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/",
           "anchorText": "जमा और बुकिंग की पूरी विषय सूची ↗",
           "role": "SILO"
         },
         {
           "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
-          "anchorText": "जमा और बुकिंग",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
           "anchorText": "जमा और बुकिंग की पूरी विषय सूची ↗",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/",
-          "anchorText": "जमा और बुकिंग",
           "role": "SILO"
         },
         {
@@ -7070,27 +5018,12 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/जमा-विवाद-होने-पर-अनुबंध-में-क्या-देखें/",
-          "anchorText": "जमा और बुकिंग",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/जमा-विवाद-होने-पर-अनुबंध-में-क्या-देखें/",
           "anchorText": "जमा और बुकिंग ↗",
           "role": "SUPPORT"
         },
         {
           "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/बुकिंग-बदलने-या-रद्द-करने-की-शर्तें-जाँचें/",
-          "anchorText": "जमा और बुकिंग",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/बुकिंग-बदलने-या-रद्द-करने-की-शर्तें-जाँचें/",
           "anchorText": "जमा और बुकिंग ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/डिलीवरी-के-समय-दस्तावेज़-और-भुगतान/",
-          "anchorText": "जमा और बुकिंग",
           "role": "SUPPORT"
         },
         {
@@ -7125,7 +5058,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
         "↗ सुरक्षा जमा अलग-अलग मॉडल के लिए सुरक्षा जमा समझें और अनुबंध में किन बातों की पुष्टि करनी है, यह जानें। अधिक जानें →",
         "↗ बुकिंग की प्रक्रिया सही बाइक चुनने से लेकर किराया, दस्तावेज़ और अनुबंध की पुष्टि तक व्यवस्थित चरण देखें। अधिक जानें →",
         "↗ डिलीवरी और वापसी डिलीवरी की उपलब्धता, मिलने का स्थान, किराये की अवधि और वापसी के समय का व्यावहारिक मार्गदर्शन। अधिक जानें →",
@@ -7149,9 +5081,9 @@
         }
       ],
       "counts": {
-        "outgoing": 10,
-        "incoming": 126,
-        "incomingSupport": 112
+        "outgoing": 9,
+        "incoming": 120,
+        "incomingSupport": 109
       }
     },
     {
@@ -7159,11 +5091,6 @@
       "role": "HUB",
       "cluster": "/हनोई-के-इलाके/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/",
           "anchorText": "↗ ओल्ड क्वार्टर पुराने शहर की संकरी गलियों और व्यस्त रास्तों के लिए पहले से यात्रा योजना बनाना उपयोगी है। अधिक जानें →",
@@ -7258,17 +5185,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/",
-          "anchorText": "हनोई के इलाके",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/",
           "anchorText": "हनोई के इलाके की पूरी विषय सूची ↗",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/",
-          "anchorText": "हनोई के इलाके",
           "role": "SILO"
         },
         {
@@ -7278,17 +5195,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/",
-          "anchorText": "हनोई के इलाके",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/",
           "anchorText": "हनोई के इलाके की पूरी विषय सूची ↗",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/",
-          "anchorText": "हनोई के इलाके",
           "role": "SILO"
         },
         {
@@ -7303,27 +5210,12 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/",
-          "anchorText": "हनोई के इलाके",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/",
           "anchorText": "हनोई के इलाके की पूरी विषय सूची ↗",
           "role": "SILO"
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/",
-          "anchorText": "हनोई के इलाके",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/",
           "anchorText": "हनोई के इलाके की पूरी विषय सूची ↗",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/",
-          "anchorText": "हनोई के इलाके",
           "role": "SILO"
         },
         {
@@ -7938,17 +5830,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/लॉन्ग-बिएन-से-ओल्ड-क्वार्टर-जाने-का-रूट/",
-          "anchorText": "हनोई के इलाके",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/लॉन्ग-बिएन-से-ओल्ड-क्वार्टर-जाने-का-रूट/",
           "anchorText": "हनोई के इलाके ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-क्षेत्र-के-लिए-हेलमेट-चेकलिस्ट/",
-          "anchorText": "हनोई के इलाके",
           "role": "SUPPORT"
         },
         {
@@ -8243,17 +6125,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/हनोई-ओल्ड-क्वार्टर-में-नए-चालक-की-सावधानियाँ/",
-          "anchorText": "हनोई के इलाके",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/हनोई-ओल्ड-क्वार्टर-में-नए-चालक-की-सावधानियाँ/",
           "anchorText": "हनोई के इलाके ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/लॉन्ग-बिएन-में-बाइक-वापसी-और-जमा/",
-          "anchorText": "हनोई के इलाके",
           "role": "SUPPORT"
         },
         {
@@ -8263,17 +6135,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-के-पास-बाइक-वापस-कहाँ-करें/",
-          "anchorText": "हनोई के इलाके",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-के-पास-बाइक-वापस-कहाँ-करें/",
           "anchorText": "हनोई के इलाके ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/वेस्ट-लेक-से-बाइक-लौटाने-का-समय-तय-करें/",
-          "anchorText": "हनोई के इलाके",
           "role": "SUPPORT"
         },
         {
@@ -8288,17 +6150,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-में-50cc-वाहन-के-बारे-में-पूछें/",
-          "anchorText": "हनोई के इलाके",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-में-50cc-वाहन-के-बारे-में-पूछें/",
           "anchorText": "हनोई के इलाके ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/बा-दिन्ह-में-मौसम-के-आधार-पर-यात्रा-बदलना/",
-          "anchorText": "हनोई के इलाके",
           "role": "SUPPORT"
         },
         {
@@ -8363,7 +6215,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
         "↗ ओल्ड क्वार्टर पुराने शहर की संकरी गलियों और व्यस्त रास्तों के लिए पहले से यात्रा योजना बनाना उपयोगी है। अधिक जानें →",
         "↗ लॉन्ग बिएन Nguyễn Tú का सूचीबद्ध पता लॉन्ग बिएन के Bồ Đề इलाके में है। अधिक जानें →",
         "↗ होआन कीएम हनोई के केंद्रीय क्षेत्र में घूमने से पहले स्थानीय यातायात प्रतिबंध और पार्किंग व्यवस्थाएँ देखें। अधिक जानें →",
@@ -8395,9 +6246,9 @@
         }
       ],
       "counts": {
-        "outgoing": 18,
-        "incoming": 222,
-        "incomingSupport": 205
+        "outgoing": 17,
+        "incoming": 207,
+        "incomingSupport": 197
       }
     },
     {
@@ -8405,16 +6256,6 @@
       "role": "SILO",
       "cluster": "/हनोई-के-इलाके/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/",
-          "anchorText": "हनोई के इलाके",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/हनोई-ओल्ड-क्वार्टर-में-एकतरफा-सड़कें-कैसे-पहचानें/",
           "anchorText": "हनोई ओल्ड क्वार्टर में एकतरफा सड़कें कैसे पहचानें हनोई ओल्ड क्वार्टर की संकरी गलियों में एकतरफा सड़कें पहचानने के व्यावहारिक तरीके, संकेत पट्ट, प्रतिबंधित समय और बाइक सवारों के लिए सावधानियाँ। पूरा लेख पढ़ें →",
@@ -8774,11 +6615,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/ओल्ड-क्वार्टर-से-बाइक-लौटाने-का-स्थान-तय-करना/",
-          "anchorText": "ओल्ड क्वार्टर",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/ओल्ड-क्वार्टर-से-बाइक-लौटाने-का-स्थान-तय-करना/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -8809,11 +6645,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/ओल्ड-क्वार्टर-में-बाइक-के-साथ-सामान-सुरक्षित-रखें/",
-          "anchorText": "ओल्ड क्वार्टर",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/ओल्ड-क्वार्टर/ओल्ड-क्वार्टर-में-बाइक-के-साथ-सामान-सुरक्षित-रखें/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -8824,8 +6655,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "हनोई के इलाके",
         "हनोई ओल्ड क्वार्टर में एकतरफा सड़कें कैसे पहचानें हनोई ओल्ड क्वार्टर की संकरी गलियों में एकतरफा सड़कें पहचानने के व्यावहारिक तरीके, संकेत पट्ट, प्रतिबंधित समय और बाइक सवारों के लिए सावधानियाँ। पूरा लेख पढ़ें →",
         "ओल्ड क्वार्टर से बाइक यात्रा शुरू करने की तैयारी हनोई के ओल्ड क्वार्टर से बाइक यात्रा शुरू करने से पहले गाड़ी की जाँच, भीड़ की तैयारी, रास्ते की सोच और पहली सवारी का क्रम कैसे रखें। पूरा लेख पढ़ें →",
         "पुराने शहर में बाइक पार्किंग से जुड़े सवाल हनोई के पुराने शहर में बाइक पार्किंग कहाँ मिलती है, किन घंटों में पैदल क्षेत्र लागू होते हैं और वाहन सुरक्षित रखने की क्या आदतें काम आती हैं। पूरा लेख पढ़ें →",
@@ -8866,9 +6695,9 @@
         }
       ],
       "counts": {
-        "outgoing": 23,
-        "incoming": 60,
-        "incomingSupport": 52
+        "outgoing": 21,
+        "incoming": 58,
+        "incomingSupport": 50
       }
     },
     {
@@ -8876,16 +6705,6 @@
       "role": "SILO",
       "cluster": "/हनोई-के-इलाके/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/",
-          "anchorText": "हनोई के इलाके",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/लॉन्ग-बिएन-में-किराये-की-बाइक-लेते-समय-पता-जाँचें/",
           "anchorText": "लॉन्ग बिएन में किराये की बाइक लेते समय पता जाँचें लॉन्ग बिएन इलाके में किराये की बाइक लेते समय दुकान का पता, इलाके की पहचान, पहुँच के रास्ते और लिखित पुष्टि से जुड़ी व्यावहारिक जाँच सूची। पूरा लेख पढ़ें →",
@@ -9230,11 +7049,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/लॉन्ग-बिएन-से-एयरपोर्ट-यात्रा-पर-वाहन-नियम/",
-          "anchorText": "लॉन्ग बिएन",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/लॉन्ग-बिएन-से-एयरपोर्ट-यात्रा-पर-वाहन-नियम/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -9265,11 +7079,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/long-biên-से-hoàn-kiếm-पुल-मार्ग-पर-योजना/",
-          "anchorText": "लॉन्ग बिएन",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/long-biên-से-hoàn-kiếm-पुल-मार्ग-पर-योजना/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -9280,8 +7089,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "हनोई के इलाके",
         "लॉन्ग बिएन में किराये की बाइक लेते समय पता जाँचें लॉन्ग बिएन इलाके में किराये की बाइक लेते समय दुकान का पता, इलाके की पहचान, पहुँच के रास्ते और लिखित पुष्टि से जुड़ी व्यावहारिक जाँच सूची। पूरा लेख पढ़ें →",
         "Nguyễn Văn Cừ सड़क से यात्रा की तैयारी हनोई की Nguyễn Văn Cừ सड़क से बाइक यात्रा शुरू करने की तैयारी — पुल का रास्ता, भीड़ के घंटे, गाड़ी की जाँच और शहर के केंद्र तक योजना। पूरा लेख पढ़ें →",
         "लॉन्ग बिएन से हनोई केंद्र जाने के मार्ग चुनना लॉन्ग बिएन और चुरोंग दुओंग पुल की तुलना करते हुए हनोई के केंद्र तक जाने का सही मार्ग, समय, भीड़ और मौसम के हिसाब से चुनने की व्यावहारिक जानकारी। पूरा लेख पढ़ें →",
@@ -9322,9 +7129,9 @@
         }
       ],
       "counts": {
-        "outgoing": 23,
-        "incoming": 57,
-        "incomingSupport": 48
+        "outgoing": 21,
+        "incoming": 55,
+        "incomingSupport": 46
       }
     },
     {
@@ -9332,16 +7139,6 @@
       "role": "SILO",
       "cluster": "/हनोई-के-इलाके/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/",
-          "anchorText": "हनोई के इलाके",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-झील-के-पास-यातायात-नियम-जाँचना/",
           "anchorText": "होआन कीएम झील के पास यातायात नियम जाँचना होआन कीएम झील के आसपास बाइक सवारों के लिए यातायात नियमों की जाँच: पैदल क्षेत्र का समय, एकतरफा सड़कें, हेलमेट और पार्किंग से जुड़ी व्यावहारिक जानकारी। पूरा लेख पढ़ें →",
@@ -9711,11 +7508,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-में-स्कूटर-चुनते-समय-विचार/",
-          "anchorText": "होआन कीएम",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-में-स्कूटर-चुनते-समय-विचार/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -9746,11 +7538,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/hoàn-kiếm-में-समय-बदलते-सड़क-प्रतिबंध/",
-          "anchorText": "होआन कीएम",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/hoàn-kiếm-में-समय-बदलते-सड़क-प्रतिबंध/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -9761,8 +7548,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "हनोई के इलाके",
         "होआन कीएम झील के पास यातायात नियम जाँचना होआन कीएम झील के आसपास बाइक सवारों के लिए यातायात नियमों की जाँच: पैदल क्षेत्र का समय, एकतरफा सड़कें, हेलमेट और पार्किंग से जुड़ी व्यावहारिक जानकारी। पूरा लेख पढ़ें →",
         "होआन कीएम क्षेत्र में पार्किंग कैसे ढूँढें हनोई के होआन कीएम इलाके में बाइक पार्किंग कैसे ढूँढें — सार्वजनिक पार्किंग, शुल्क की जानकारी, गलियों की सीमाएँ और सुरक्षित आदतें। पूरा लेख पढ़ें →",
         "होआन कीएम में पैदल सड़क के समय की पुष्टि होआन कीएम झील के आसपास पैदल सड़क के शाम के घंटों की पुष्टि कैसे करें, वाहन कहाँ खड़ा करें और किराए की बाइक की योजना कैसे बनाएँ, इसकी व्यावहारिक जानकारी। पूरा लेख पढ़ें →",
@@ -9803,9 +7588,9 @@
         }
       ],
       "counts": {
-        "outgoing": 23,
-        "incoming": 62,
-        "incomingSupport": 54
+        "outgoing": 21,
+        "incoming": 60,
+        "incomingSupport": 52
       }
     },
     {
@@ -9813,16 +7598,6 @@
       "role": "SILO",
       "cluster": "/हनोई-के-इलाके/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/",
-          "anchorText": "हनोई के इलाके",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/वेस्ट-लेक-के-आसपास-मोटरबाइक-यात्रा-की-तैयारी/",
           "anchorText": "वेस्ट लेक के आसपास मोटरबाइक यात्रा की तैयारी हनोई की वेस्ट लेक के चारों ओर मोटरबाइक से घूमने से पहले मार्ग, वाहन, लाइसेंस, समय और रुकने की जगहों की व्यावहारिक तैयारी। पूरा लेख पढ़ें →",
@@ -10137,11 +7912,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/ताय-हो-पते-पर-वाहन-डिलीवरी-पूछने-के-सवाल/",
-          "anchorText": "वेस्ट लेक",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/ताय-हो-पते-पर-वाहन-डिलीवरी-पूछने-के-सवाल/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -10182,8 +7952,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "हनोई के इलाके",
         "वेस्ट लेक के आसपास मोटरबाइक यात्रा की तैयारी हनोई की वेस्ट लेक के चारों ओर मोटरबाइक से घूमने से पहले मार्ग, वाहन, लाइसेंस, समय और रुकने की जगहों की व्यावहारिक तैयारी। पूरा लेख पढ़ें →",
         "ताय हो इलाके में बाइक पार्किंग का ध्यान हनोई के ताय हो यानी वेस्ट लेक इलाके में बाइक पार्किंग की तैयारी — झील के किनारे, मंदिरों और कैफ़े के पास जगह ढूँढने की आदतें और सुरक्षा। पूरा लेख पढ़ें →",
         "वेस्ट लेक के पास बारिश में सावधानी वेस्ट लेक के आसपास बारिश के मौसम में मोटरबाइक चलाते समय सड़क, दृश्य और गति से जुड़ी सावधानियाँ और योजना बनाने की व्यावहारिक जानकारी। पूरा लेख पढ़ें →",
@@ -10224,9 +7992,9 @@
         }
       ],
       "counts": {
-        "outgoing": 23,
-        "incoming": 50,
-        "incomingSupport": 42
+        "outgoing": 21,
+        "incoming": 49,
+        "incomingSupport": 41
       }
     },
     {
@@ -10234,11 +8002,6 @@
       "role": "HUB",
       "cluster": "/किराये-की-गाइड/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/",
           "anchorText": "↗ दस्तावेज़ और लाइसेंस सही ड्राइविंग पात्रता की जाँच के बिना किसी बाइक को उपयोग करने योग्य न मानें। अधिक जानें →",
@@ -10303,17 +8066,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/",
-          "anchorText": "किराये की गाइड",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/",
           "anchorText": "किराये की गाइड की पूरी विषय सूची ↗",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/",
-          "anchorText": "किराये की गाइड",
           "role": "SILO"
         },
         {
@@ -10323,17 +8076,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/",
-          "anchorText": "किराये की गाइड",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/",
           "anchorText": "किराये की गाइड की पूरी विषय सूची ↗",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/",
-          "anchorText": "किराये की गाइड",
           "role": "SILO"
         },
         {
@@ -10423,11 +8166,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/किराया-अनुबंध-में-तारीख-और-समय-कैसे-पढ़ें/",
-          "anchorText": "किराये की गाइड",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/किराया-अनुबंध-में-तारीख-और-समय-कैसे-पढ़ें/",
           "anchorText": "किराये की गाइड ↗",
           "role": "SUPPORT"
         },
@@ -10469,11 +8207,6 @@
         {
           "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/बाइक-के-दोनों-शीशे-ठीक-हैं-या-नहीं/",
           "anchorText": "किराये की गाइड ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/अनुबंध-में-जमा-वापसी-की-शर्तें/",
-          "anchorText": "किराये की गाइड",
           "role": "SUPPORT"
         },
         {
@@ -10773,11 +8506,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/बाइक-वापसी-में-देरी-पर-अनुबंध-पढ़ना/",
-          "anchorText": "किराये की गाइड",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/बाइक-वापसी-में-देरी-पर-अनुबंध-पढ़ना/",
           "anchorText": "किराये की गाइड ↗",
           "role": "SUPPORT"
         },
@@ -10993,27 +8721,12 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/किराये-से-पहले-आधिकारिक-स्रोत-कैसे-पढ़ें/",
-          "anchorText": "किराये की गाइड",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/किराये-से-पहले-आधिकारिक-स्रोत-कैसे-पढ़ें/",
           "anchorText": "किराये की गाइड ↗",
           "role": "SUPPORT"
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/सुरक्षित-मोटरबाइक-पार्किंग-की-आदतें/",
-          "anchorText": "किराये की गाइड",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/सुरक्षित-मोटरबाइक-पार्किंग-की-आदतें/",
           "anchorText": "किराये की गाइड ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/किराये-पर-ली-बाइक-लौटाने-की-जाँच-सूची/",
-          "anchorText": "किराये की गाइड",
           "role": "SUPPORT"
         },
         {
@@ -11113,7 +8826,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
         "↗ दस्तावेज़ और लाइसेंस सही ड्राइविंग पात्रता की जाँच के बिना किसी बाइक को उपयोग करने योग्य न मानें। अधिक जानें →",
         "↗ सुरक्षित सवारी व्यस्त सड़कों पर सुरक्षित सवारी के लिए ब्रेक, टायर, हेलमेट और रूट की जाँच करें। अधिक जानें →",
         "↗ वाहन जाँच चेकलिस्ट वाहन की स्थिति को देखकर और दस्तावेज़ समझकर सुरक्षित यात्रा की तैयारी करें। अधिक जानें →",
@@ -11139,9 +8851,9 @@
         }
       ],
       "counts": {
-        "outgoing": 12,
-        "incoming": 163,
-        "incomingSupport": 154
+        "outgoing": 11,
+        "incoming": 153,
+        "incomingSupport": 148
       }
     },
     {
@@ -11149,16 +8861,6 @@
       "role": "SILO",
       "cluster": "/किराये-की-गाइड/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/",
-          "anchorText": "किराये की गाइड",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/वियतनाम-में-मोटरबाइक-लाइसेंस-सत्यापन-की-शुरुआत/",
           "anchorText": "वियतनाम में मोटरबाइक लाइसेंस सत्यापन की शुरुआत वियतनाम में किराये की मोटरबाइक चलाने से पहले लाइसेंस की वैधता, अंतरराष्ट्रीय अनुमतिपत्र की मान्यता और सत्यापन के व्यावहारिक कदमों की जानकारी। पूरा लेख पढ़ें →",
@@ -11613,8 +9315,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "किराये की गाइड",
         "वियतनाम में मोटरबाइक लाइसेंस सत्यापन की शुरुआत वियतनाम में किराये की मोटरबाइक चलाने से पहले लाइसेंस की वैधता, अंतरराष्ट्रीय अनुमतिपत्र की मान्यता और सत्यापन के व्यावहारिक कदमों की जानकारी। पूरा लेख पढ़ें →",
         "अंतरराष्ट्रीय ड्राइविंग परमिट के बारे में जाँचने योग्य बातें हनोई में बाइक किराये से पहले अंतरराष्ट्रीय ड्राइविंग परमिट से जुड़ी जाँचने योग्य बातें — वैधता, श्रेणी, स्थानीय नियम और दुकान से पूछने लायक सवाल। पूरा लेख पढ़ें →",
         "वाहन श्रेणी और लाइसेंस श्रेणी का संबंध वियतनाम में मोटरबाइक की तकनीकी श्रेणी और चालक लाइसेंस की श्रेणी का आपसी संबंध समझकर किराए से पहले सही वाहन चुनने और दस्तावेज़ जाँचने की जानकारी। पूरा लेख पढ़ें →",
@@ -11654,7 +9354,7 @@
         }
       ],
       "counts": {
-        "outgoing": 22,
+        "outgoing": 20,
         "incoming": 70,
         "incomingSupport": 60
       }
@@ -11664,16 +9364,6 @@
       "role": "SILO",
       "cluster": "/किराये-की-गाइड/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/",
-          "anchorText": "किराये की गाइड",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/हनोई-के-चौराहों-पर-मोटरबाइक-सुरक्षा/",
           "anchorText": "हनोई के चौराहों पर मोटरबाइक सुरक्षा हनोई के चौराहों पर मोटरबाइक से सुरक्षित गुज़रने के व्यावहारिक नियम, संकेतों को पढ़ने का तरीका और सावधानी की जाँच सूची। पूरा लेख पढ़ें →",
@@ -12408,8 +10098,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "किराये की गाइड",
         "हनोई के चौराहों पर मोटरबाइक सुरक्षा हनोई के चौराहों पर मोटरबाइक से सुरक्षित गुज़रने के व्यावहारिक नियम, संकेतों को पढ़ने का तरीका और सावधानी की जाँच सूची। पूरा लेख पढ़ें →",
         "बरसात में मोटरबाइक की ब्रेक दूरी समझना बरसात में मोटरबाइक की ब्रेक दूरी क्यों बढ़ती है — भीगी सड़क, टायर की पकड़ और चालक की आदतें समझें और हनोई की बारिश में सुरक्षित सवारी की तैयारी करें। पूरा लेख पढ़ें →",
         "भीड़भाड़ में सुरक्षित अंतर कैसे रखें हनोई की भीड़ भरी सड़कों पर किराए की बाइक चलाते समय सामने के वाहन से सुरक्षित अंतर बनाए रखने, दो सेकंड के नियम और भीड़ में अनुशासन की जानकारी। पूरा लेख पढ़ें →",
@@ -12448,7 +10136,7 @@
         }
       ],
       "counts": {
-        "outgoing": 21,
+        "outgoing": 19,
         "incoming": 127,
         "incomingSupport": 118
       }
@@ -12458,11 +10146,6 @@
       "role": "HUB",
       "cluster": "/सुझाए-गए-रूट/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/",
           "anchorText": "↗ शहर में घूमने की योजना व्यस्त सड़कों पर समय, पार्किंग और सुरक्षित दिशा-निर्देश देखकर अपना शहरी रूट बनाएँ। अधिक जानें →",
@@ -12507,17 +10190,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/",
-          "anchorText": "यात्रा के मार्ग",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/",
           "anchorText": "यात्रा के मार्ग की पूरी विषय सूची ↗",
-          "role": "SILO"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/",
-          "anchorText": "यात्रा के मार्ग",
           "role": "SILO"
         },
         {
@@ -12567,17 +10240,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/शहर-के-पर्यटन-स्थलों-पर-मोटरबाइक-पार्किंग/",
-          "anchorText": "यात्रा के मार्ग",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/शहर-के-पर्यटन-स्थलों-पर-मोटरबाइक-पार्किंग/",
           "anchorText": "यात्रा के मार्ग ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/मोटरबाइक-रोड-ट्रिप-से-पहले-सर्विस-स्थिति/",
-          "anchorText": "यात्रा के मार्ग",
           "role": "SUPPORT"
         },
         {
@@ -12722,17 +10385,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/शहरी-रूट-में-पुलों-का-चुनाव/",
-          "anchorText": "यात्रा के मार्ग",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/शहरी-रूट-में-पुलों-का-चुनाव/",
           "anchorText": "यात्रा के मार्ग ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/लंबी-यात्रा-में-फोन-नेविगेशन-की-सुरक्षित-आदत/",
-          "anchorText": "यात्रा के मार्ग",
           "role": "SUPPORT"
         },
         {
@@ -12742,17 +10395,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/हनोई-यात्रा-में-ईंधन-भरवाने-की-योजना/",
-          "anchorText": "यात्रा के मार्ग",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/हनोई-यात्रा-में-ईंधन-भरवाने-की-योजना/",
           "anchorText": "यात्रा के मार्ग ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/शहर-से-बाहर-जाने-के-लिए-लाइसेंस-सत्यापन/",
-          "anchorText": "यात्रा के मार्ग",
           "role": "SUPPORT"
         },
         {
@@ -12762,17 +10405,7 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/शहर-में-लौटते-समय-वाहन-की-समय-सीमा/",
-          "anchorText": "यात्रा के मार्ग",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/शहर-में-लौटते-समय-वाहन-की-समय-सीमा/",
           "anchorText": "यात्रा के मार्ग ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/लंबे-रूट-से-लौटने-की-समय-योजना/",
-          "anchorText": "यात्रा के मार्ग",
           "role": "SUPPORT"
         },
         {
@@ -12782,7 +10415,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
         "↗ शहर में घूमने की योजना व्यस्त सड़कों पर समय, पार्किंग और सुरक्षित दिशा-निर्देश देखकर अपना शहरी रूट बनाएँ। अधिक जानें →",
         "↗ लंबी यात्रा की तैयारी शहर से बाहर जाने से पहले सही बाइक, सुरक्षा, मौसम और कानूनी शर्तें समझें। अधिक जानें →",
         "सुरक्षित सवारी की तैयारी ↗",
@@ -12804,9 +10436,9 @@
         }
       ],
       "counts": {
-        "outgoing": 8,
-        "incoming": 56,
-        "incomingSupport": 51
+        "outgoing": 7,
+        "incoming": 46,
+        "incomingSupport": 43
       }
     },
     {
@@ -12814,11 +10446,6 @@
       "role": "FAQ",
       "cluster": "CORE-PAGES",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/",
           "anchorText": "किराये की कीमतें देखें ↗",
@@ -12908,7 +10535,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
         "किराये की कीमतें देखें ↗",
         "जमा और बुकिंग समझें ↗",
         "दस्तावेज़ से जुड़े सवाल ↗",
@@ -12935,7 +10561,7 @@
         }
       ],
       "counts": {
-        "outgoing": 8,
+        "outgoing": 7,
         "incoming": 10,
         "incomingSupport": 9
       }
@@ -12945,11 +10571,6 @@
       "role": "UTILITY",
       "cluster": "CORE-PAGES",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/",
           "anchorText": "लॉन्ग बिएन का स्थानीय गाइड ↗",
@@ -12983,7 +10604,6 @@
       ],
       "incomingLinks": [],
       "anchorText": [
-        "मुख्य पृष्ठ",
         "लॉन्ग बिएन का स्थानीय गाइड ↗",
         "व्यवसाय से संपर्क करें ↗",
         "संपर्क जानकारी देखें →",
@@ -13004,7 +10624,7 @@
         }
       ],
       "counts": {
-        "outgoing": 7,
+        "outgoing": 6,
         "incoming": 0,
         "incomingSupport": 0
       }
@@ -13014,11 +10634,6 @@
       "role": "UTILITY",
       "cluster": "CORE-PAGES",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/",
           "anchorText": "मॉडल और अवधि की कीमतें ↗",
@@ -13243,7 +10858,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
         "मॉडल और अवधि की कीमतें ↗",
         "बुकिंग से पहले क्या जानें ↗",
         "बाइक के प्रकार ↗",
@@ -13263,7 +10877,7 @@
         }
       ],
       "counts": {
-        "outgoing": 6,
+        "outgoing": 5,
         "incoming": 39,
         "incomingSupport": 1
       }
@@ -13273,11 +10887,6 @@
       "role": "UTILITY",
       "cluster": "CORE-PAGES",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/नियम-और-शर्तें/",
           "anchorText": "सेवा की शर्तें ↗",
@@ -13317,7 +10926,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
         "सेवा की शर्तें ↗",
         "गोपनीयता के सवाल पर संपर्क ↗",
         "संपर्क जानकारी देखें →",
@@ -13338,7 +10946,7 @@
         }
       ],
       "counts": {
-        "outgoing": 7,
+        "outgoing": 6,
         "incoming": 1,
         "incomingSupport": 0
       }
@@ -13348,11 +10956,6 @@
       "role": "UTILITY",
       "cluster": "CORE-PAGES",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/",
           "anchorText": "सुरक्षा जमा की शर्तें ↗",
@@ -13397,7 +11000,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
         "सुरक्षा जमा की शर्तें ↗",
         "गोपनीयता नीति ↗",
         "संपर्क जानकारी देखें →",
@@ -13418,7 +11020,7 @@
         }
       ],
       "counts": {
-        "outgoing": 7,
+        "outgoing": 6,
         "incoming": 2,
         "incomingSupport": 1
       }
@@ -13428,16 +11030,6 @@
       "role": "SILO",
       "cluster": "/जमा-और-बुकिंग/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/",
-          "anchorText": "जमा और बुकिंग",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/honda-vision-का-जमा-और-किराया-अलग-कैसे-गिनें/",
           "anchorText": "Honda Vision का जमा और किराया अलग कैसे गिनें Honda Vision किराए पर लेते समय दैनिक या मासिक किराया और सुरक्षा जमा को अलग-अलग गिनने, लिखवाने और वापस पाने का पूरा तरीका। पूरा लेख पढ़ें →",
@@ -13942,8 +11534,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "जमा और बुकिंग",
         "Honda Vision का जमा और किराया अलग कैसे गिनें Honda Vision किराए पर लेते समय दैनिक या मासिक किराया और सुरक्षा जमा को अलग-अलग गिनने, लिखवाने और वापस पाने का पूरा तरीका। पूरा लेख पढ़ें →",
         "Honda Wave के जमा दायरे को कैसे समझें Honda Wave किराये की सुरक्षा जमा 2 से 3 मिलियन डोंग के दायरे में क्यों रहती है — अवधि, गाड़ी की दशा और शर्तों से जमा की रक़म को समझने और तय करने का तरीका। पूरा लेख पढ़ें →",
         "Air Blade किराये में जमा के सवाल Honda Air Blade किराए पर लेते समय सुरक्षा जमा की राशि, भुगतान का तरीका, रसीद, कुल नकदी का हिसाब और वापसी की शर्तों से जुड़े सवालों की जानकारी। पूरा लेख पढ़ें →",
@@ -13981,7 +11571,7 @@
         }
       ],
       "counts": {
-        "outgoing": 20,
+        "outgoing": 18,
         "incoming": 82,
         "incomingSupport": 73
       }
@@ -13991,16 +11581,6 @@
       "role": "SILO",
       "cluster": "/जमा-और-बुकिंग/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/",
-          "anchorText": "जमा और बुकिंग",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/पहली-बार-मोटरबाइक-किराये-की-पूछताछ-कैसे-करें/",
           "anchorText": "पहली बार मोटरबाइक किराये की पूछताछ कैसे करें हनोई में पहली बार मोटरबाइक किराए पर लेते समय किराया, जमा, दस्तावेज़ और वाहन की स्थिति के बारे में सही सवाल पूछने की आसान गाइड। पूरा लेख पढ़ें →",
@@ -14520,11 +12100,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/बुकिंग-में-हेलमेट-और-अतिरिक्त-सामान-पूछें/",
-          "anchorText": "बुकिंग की प्रक्रिया",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/बुकिंग-में-हेलमेट-और-अतिरिक्त-सामान-पूछें/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -14555,8 +12130,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "जमा और बुकिंग",
         "पहली बार मोटरबाइक किराये की पूछताछ कैसे करें हनोई में पहली बार मोटरबाइक किराए पर लेते समय किराया, जमा, दस्तावेज़ और वाहन की स्थिति के बारे में सही सवाल पूछने की आसान गाइड। पूरा लेख पढ़ें →",
         "बाइक मॉडल और यात्रा अवधि बताने की चेकलिस्ट बाइक किराये की पूछताछ में मॉडल और यात्रा अवधि सही तरीके से कैसे बताएँ — बुकिंग से पहले तैयार की जाने वाली छोटी चेकलिस्ट और उसके फ़ायदे। पूरा लेख पढ़ें →",
         "किराये की तारीख बदलने पर पुष्टि कैसे लें बाइक किराये की तारीख बढ़ाने या घटाने की स्थिति में दुकान से लिखित पुष्टि, नई दर, जमा की शर्तें और अनुबंध में बदलाव दर्ज कराने का तरीका। पूरा लेख पढ़ें →",
@@ -14594,9 +12167,9 @@
         }
       ],
       "counts": {
-        "outgoing": 20,
-        "incoming": 92,
-        "incomingSupport": 78
+        "outgoing": 18,
+        "incoming": 91,
+        "incomingSupport": 77
       }
     },
     {
@@ -14604,16 +12177,6 @@
       "role": "SILO",
       "cluster": "/जमा-और-बुकिंग/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/",
-          "anchorText": "जमा और बुकिंग",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/होटल-तक-बाइक-डिलीवरी-उपलब्ध-है-या-नहीं/",
           "anchorText": "होटल तक बाइक डिलीवरी उपलब्ध है या नहीं हनोई में होटल तक किराई की मोटरबाइक की डिलीवरी मौजूद है या नहीं, यह जानने और ठीक से बुक कराने के लिए पूछने लायक सवालों की गाइड। पूरा लेख पढ़ें →",
@@ -15253,8 +12816,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "जमा और बुकिंग",
         "होटल तक बाइक डिलीवरी उपलब्ध है या नहीं हनोई में होटल तक किराई की मोटरबाइक की डिलीवरी मौजूद है या नहीं, यह जानने और ठीक से बुक कराने के लिए पूछने लायक सवालों की गाइड। पूरा लेख पढ़ें →",
         "बाइक लेने के स्थान की सही पहचान कैसे करें हनोई में बाइक लेने के स्थान की सही पहचान कैसे करें — पते की जाँच, दुकान की पहचान, पहुँच की योजना और गाड़ी लौटाते समय उसी जगह का ध्यान। पूरा लेख पढ़ें →",
         "डिलीवरी शुल्क पूछने का सरल तरीका होटल तक बाइक डिलीवरी के शुल्क, शर्तें और समय को लेकर दुकान से पूछताछ का सीधा तरीका, ताकि किराए की कुल कीमत में कोई छिपा खर्च न रह जाए। पूरा लेख पढ़ें →",
@@ -15292,7 +12853,7 @@
         }
       ],
       "counts": {
-        "outgoing": 20,
+        "outgoing": 18,
         "incoming": 109,
         "incomingSupport": 95
       }
@@ -15302,16 +12863,6 @@
       "role": "SILO",
       "cluster": "/हनोई-के-इलाके/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/",
-          "anchorText": "हनोई के इलाके",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-में-बाइक-यात्रा-शुरू-करने-के-सवाल/",
           "anchorText": "Gia Lâm में बाइक यात्रा शुरू करने के सवाल हनोई के Gia Lâm इलाके से मोटरबाइक यात्रा शुरू करने से पहले पूछने लायक सवाल, मार्ग की समझ और तैयारी की जाँच सूची। पूरा लेख पढ़ें →",
@@ -15591,22 +13142,12 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-के-व्यस्त-चौराहों-पर-सावधानी/",
-          "anchorText": "गिया लाम",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-के-व्यस्त-चौराहों-पर-सावधानी/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-के-व्यस्त-चौराहों-पर-सावधानी/",
           "anchorText": "गिया लाम ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/गिया-लाम/gia-lâm-और-long-biên-के-पते-में-अंतर/",
-          "anchorText": "गिया लाम",
           "role": "SUPPORT"
         },
         {
@@ -15636,8 +13177,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "हनोई के इलाके",
         "Gia Lâm में बाइक यात्रा शुरू करने के सवाल हनोई के Gia Lâm इलाके से मोटरबाइक यात्रा शुरू करने से पहले पूछने लायक सवाल, मार्ग की समझ और तैयारी की जाँच सूची। पूरा लेख पढ़ें →",
         "Gia Lâm से हनोई केंद्र का रूट चुनना गिया लाम से हनोई के केंद्र तक बाइक से आते समय पुल, समय और भीड़ के आधार पर रूट चुनने की व्यावहारिक जानकारी। पूरा लेख पढ़ें →",
         "Gia Lâm में वाहन डिलीवरी शुल्क पूछें गिया लाम इलाके में होटल या ठहरने की जगह तक बाइक डिलीवरी की उपलब्धता, शुल्क और समय की पुष्टि किराए की दुकान से लेने का तरीका। पूरा लेख पढ़ें →",
@@ -15677,9 +13216,9 @@
         }
       ],
       "counts": {
-        "outgoing": 22,
-        "incoming": 44,
-        "incomingSupport": 38
+        "outgoing": 20,
+        "incoming": 42,
+        "incomingSupport": 36
       }
     },
     {
@@ -15687,16 +13226,6 @@
       "role": "SILO",
       "cluster": "/हनोई-के-इलाके/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/",
-          "anchorText": "हनोई के इलाके",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/ba-đình-में-मोटरबाइक-लेकर-निकलने-की-तैयारी/",
           "anchorText": "Ba Đình में मोटरबाइक लेकर निकलने की तैयारी हनोई के Ba Đình इलाके में किराई की मोटरबाइक लेकर निकलने से पहले मार्ग, पार्किंग, वाहन जाँच और सावधानियों की तैयारी। पूरा लेख पढ़ें →",
@@ -15951,22 +13480,12 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/ba-đình-में-दैनिक-बाइक-किराया-चुनना/",
-          "anchorText": "बा दिन्ह",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/ba-đình-में-दैनिक-बाइक-किराया-चुनना/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/ba-đình-में-दैनिक-बाइक-किराया-चुनना/",
           "anchorText": "बा दिन्ह ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/बा-दिन्ह/ba-đình-में-पैदल-यात्रियों-के-पास-सावधानी/",
-          "anchorText": "बा दिन्ह",
           "role": "SUPPORT"
         },
         {
@@ -15996,8 +13515,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "हनोई के इलाके",
         "Ba Đình में मोटरबाइक लेकर निकलने की तैयारी हनोई के Ba Đình इलाके में किराई की मोटरबाइक लेकर निकलने से पहले मार्ग, पार्किंग, वाहन जाँच और सावधानियों की तैयारी। पूरा लेख पढ़ें →",
         "बा दिन्ह के आसपास पार्किंग की योजना बा दिन्ह इलाके में बाइक से घूमते समय पार्किंग कहाँ और कैसे ढूँढें — देखभाल, नियम और योजना की व्यावहारिक जानकारी। पूरा लेख पढ़ें →",
         "Ba Đình में सड़क प्रतिबंध कैसे जाँचें बा दिन्ह इलाके में सड़क प्रतिबंध, एकतरफा नियम और विशेष घोषणाओं की जाँच के आधिकारिक तरीके और किराए की बाइक की योजना बनाने की जानकारी। पूरा लेख पढ़ें →",
@@ -16037,9 +13554,9 @@
         }
       ],
       "counts": {
-        "outgoing": 22,
-        "incoming": 39,
-        "incomingSupport": 37
+        "outgoing": 20,
+        "incoming": 37,
+        "incomingSupport": 35
       }
     },
     {
@@ -16047,16 +13564,6 @@
       "role": "SILO",
       "cluster": "/हनोई-के-इलाके/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/",
-          "anchorText": "हनोई के इलाके",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-में-मोटरबाइक-यात्रा-की-योजना/",
           "anchorText": "Hai Bà Trưng में मोटरबाइक यात्रा की योजना हनोई के Hai Bà Trưng इलाके में मोटरबाइक यात्रा की योजना, रास्तों की समझ, बुकिंग के सवाल और सावधानियों की जानकारी। पूरा लेख पढ़ें →",
@@ -16306,22 +13813,12 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-से-लॉन्ग-बिएन-बाइक-वापसी/",
-          "anchorText": "हाई बा त्रुंग",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-से-लॉन्ग-बिएन-बाइक-वापसी/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-से-लॉन्ग-बिएन-बाइक-वापसी/",
           "anchorText": "हाई बा त्रुंग ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-में-लाइसेंस-पात्रता-की-जाँच/",
-          "anchorText": "हाई बा त्रुंग",
           "role": "SUPPORT"
         },
         {
@@ -16351,8 +13848,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "हनोई के इलाके",
         "Hai Bà Trưng में मोटरबाइक यात्रा की योजना हनोई के Hai Bà Trưng इलाके में मोटरबाइक यात्रा की योजना, रास्तों की समझ, बुकिंग के सवाल और सावधानियों की जानकारी। पूरा लेख पढ़ें →",
         "Hai Bà Trưng के चौराहों पर ध्यान देने योग्य बातें हाई बा त्रुंग के व्यस्त चौराहों पर बाइक चलाते समय ध्यान रखने योग्य बातें — यातायात, एकतरफ़ा सड़कें और सुरक्षित सवारी की जानकारी। पूरा लेख पढ़ें →",
         "Hai Bà Trưng में पार्किंग नियम जाँचना हाई बा त्रुंग इलाके में बाइक पार्किंग के नियम, वैध जगहें, शुल्क और संकेतों की जाँच के आधिकारिक तरीके और सवारी की योजना बनाने की जानकारी। पूरा लेख पढ़ें →",
@@ -16392,9 +13887,9 @@
         }
       ],
       "counts": {
-        "outgoing": 22,
-        "incoming": 38,
-        "incomingSupport": 36
+        "outgoing": 20,
+        "incoming": 36,
+        "incomingSupport": 34
       }
     },
     {
@@ -16402,16 +13897,6 @@
       "role": "SILO",
       "cluster": "/किराये-की-गाइड/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/",
-          "anchorText": "किराये की गाइड",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/मोटरबाइक-के-दोनों-ब्रेक-जाँचने-का-तरीका/",
           "anchorText": "मोटरबाइक के दोनों ब्रेक जाँचने का तरीका किराई की मोटरबाइक लेते समय सामने और पीछे दोनों ब्रेक जाँचने का आसान तरीका, संकेतों की पहचान और सुरक्षित सवारी की जानकारी। पूरा लेख पढ़ें →",
@@ -16646,11 +14131,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-चलाने-से-पहले-ब्रेक-की-पहचान/",
-          "anchorText": "वाहन जाँच चेकलिस्ट",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/बाइक-के-दोनों-शीशे-ठीक-हैं-या-नहीं/",
           "anchorText": "वाहन जाँच चेकलिस्ट",
           "role": "SUPPORT"
         },
@@ -16911,22 +14391,12 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/वाहन-दस्तावेज़-मिलने-पर-क्या-सत्यापित-करें/",
-          "anchorText": "वाहन जाँच चेकलिस्ट",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/वाहन-दस्तावेज़-मिलने-पर-क्या-सत्यापित-करें/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/वाहन-दस्तावेज़-मिलने-पर-क्या-सत्यापित-करें/",
           "anchorText": "वाहन जाँच चेकलिस्ट ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/बाइक-के-मीटर-की-स्थिति-नोट-करना/",
-          "anchorText": "वाहन जाँच चेकलिस्ट",
           "role": "SUPPORT"
         },
         {
@@ -16966,8 +14436,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "किराये की गाइड",
         "मोटरबाइक के दोनों ब्रेक जाँचने का तरीका किराई की मोटरबाइक लेते समय सामने और पीछे दोनों ब्रेक जाँचने का आसान तरीका, संकेतों की पहचान और सुरक्षित सवारी की जानकारी। पूरा लेख पढ़ें →",
         "टायर के घिसाव और हवा पर ध्यान किराए की मोटरबाइक लेते समय टायर का घिसाव, गहराई और हवा का दबाव कैसे जाँचें — सुरक्षित सवारी की व्यावहारिक जानकारी। पूरा लेख पढ़ें →",
         "बाइक के दोनों शीशे ठीक हैं या नहीं किराए की बाइक लेने से पहले दोनों शीशे जाँचने का सही तरीका, आम खराबियाँ, सेटिंग और समस्या मिलने पर उठाए जाने वाले व्यावहारिक कदमों की जानकारी। पूरा लेख पढ़ें →",
@@ -17006,9 +14474,9 @@
         }
       ],
       "counts": {
-        "outgoing": 21,
-        "incoming": 91,
-        "incomingSupport": 81
+        "outgoing": 19,
+        "incoming": 88,
+        "incomingSupport": 78
       }
     },
     {
@@ -17016,16 +14484,6 @@
       "role": "SILO",
       "cluster": "/किराये-की-गाइड/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/",
-          "anchorText": "किराये की गाइड",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/किराये-के-अनुबंध-में-बाइक-मॉडल-का-महत्व/",
           "anchorText": "किराये के अनुबंध में बाइक मॉडल का महत्व मोटरबाइक किराये के अनुबंध में सही मॉडल का नाम क्यों लिखा जाना चाहिए, यह जमा, लाइसेंस और सेवा से कैसे जुड़ता है, और हस्ताक्षर से पहले क्या जाँचें। पूरा लेख पढ़ें →",
@@ -17430,22 +14888,12 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/किराये-के-वाहन-को-शहर-से-बाहर-ले-जाने-की-शर्तें/",
-          "anchorText": "किराये का अनुबंध",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/किराये-के-वाहन-को-शहर-से-बाहर-ले-जाने-की-शर्तें/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/किराये-के-वाहन-को-शहर-से-बाहर-ले-जाने-की-शर्तें/",
           "anchorText": "किराये का अनुबंध ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/अनुबंध-में-भुगतान-की-राशि-की-पुष्टि/",
-          "anchorText": "किराये का अनुबंध",
           "role": "SUPPORT"
         },
         {
@@ -17490,11 +14938,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/बाइक-किराये-में-नुकसान-की-जिम्मेदारी-समझना/",
-          "anchorText": "किराये का अनुबंध",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/किराया-अनुबंध/बाइक-किराये-में-नुकसान-की-जिम्मेदारी-समझना/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -17505,8 +14948,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "किराये की गाइड",
         "किराये के अनुबंध में बाइक मॉडल का महत्व मोटरबाइक किराये के अनुबंध में सही मॉडल का नाम क्यों लिखा जाना चाहिए, यह जमा, लाइसेंस और सेवा से कैसे जुड़ता है, और हस्ताक्षर से पहले क्या जाँचें। पूरा लेख पढ़ें →",
         "किराया अनुबंध में तारीख और समय कैसे पढ़ें मोटरबाइक किराये के अनुबंध में लिखी तारीख़ें और समय को सही तरीके से पढ़ने, जाँचने और रिकॉर्ड करने की व्यावहारिक जानकारी। पूरा लेख पढ़ें →",
         "अनुबंध में जमा वापसी की शर्तें मोटरबाइक किराया अनुबंध में जमा वापसी की शर्तें, कटौती के कारण, रसीद और दस्तावेज़ की जाँच तथा वापसी के समय की सुरक्षित प्रक्रिया की व्यावहारिक जानकारी। पूरा लेख पढ़ें →",
@@ -17545,9 +14986,9 @@
         }
       ],
       "counts": {
-        "outgoing": 21,
-        "incoming": 76,
-        "incomingSupport": 69
+        "outgoing": 19,
+        "incoming": 73,
+        "incomingSupport": 66
       }
     },
     {
@@ -17555,16 +14996,6 @@
       "role": "SILO",
       "cluster": "/सुझाए-गए-रूट/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/",
-          "anchorText": "यात्रा के मार्ग",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/हनोई-में-एक-दिन-की-बाइक-यात्रा-का-समय-बाँटना/",
           "anchorText": "हनोई में एक दिन की बाइक यात्रा का समय बाँटना हनोई में किराए की बाइक से एक दिन की यात्रा को सुबह, दोपहर और शाम में कैसे बाँटें, भीड़, मौसम और पार्किंग का हिसाब कैसे रखें। पूरा लेख पढ़ें →",
@@ -17684,11 +15115,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-में-मोटरबाइक-यात्रा-की-योजना/",
-          "anchorText": "शहर में घूमने की योजना",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/हनोई-में-एक-दिन-की-बाइक-यात्रा-का-समय-बाँटना/",
           "anchorText": "शहर में घूमने की योजना",
           "role": "SUPPORT"
         },
@@ -18059,22 +15485,12 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/शहरी-रूट-में-पुलों-का-चुनाव/",
-          "anchorText": "शहर में घूमने की योजना",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/शहरी-रूट-में-पुलों-का-चुनाव/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
         {
           "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/शहरी-रूट-में-पुलों-का-चुनाव/",
           "anchorText": "शहर में घूमने की योजना ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/हनोई-यात्रा-में-ईंधन-भरवाने-की-योजना/",
-          "anchorText": "शहर में घूमने की योजना",
           "role": "SUPPORT"
         },
         {
@@ -18099,11 +15515,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/शहर-में-लौटते-समय-वाहन-की-समय-सीमा/",
-          "anchorText": "शहर में घूमने की योजना",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/शहर-की-यात्रा/शहर-में-लौटते-समय-वाहन-की-समय-सीमा/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -18114,8 +15525,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "यात्रा के मार्ग",
         "हनोई में एक दिन की बाइक यात्रा का समय बाँटना हनोई में किराए की बाइक से एक दिन की यात्रा को सुबह, दोपहर और शाम में कैसे बाँटें, भीड़, मौसम और पार्किंग का हिसाब कैसे रखें। पूरा लेख पढ़ें →",
         "शहर घूमते समय ट्रैफ़िक का समय कैसे सोचें हनोई में बाइक से घूमने की योजना में ट्रैफ़िक के घंटों को कैसे जोड़ें — भीड़, मौसम और रूट की लचीली योजना की जानकारी। पूरा लेख पढ़ें →",
         "शहर के पर्यटन स्थलों पर मोटरबाइक पार्किंग हनोई के पर्यटन स्थलों की एक दिन की यात्रा में मोटरबाइक पार्किंग की योजना, वैध जगहें, शुल्क और हेलमेट समेत सामान की सुरक्षा से जुड़ी व्यावहारिक जानकारी। पूरा लेख पढ़ें →",
@@ -18152,9 +15561,9 @@
         }
       ],
       "counts": {
-        "outgoing": 19,
-        "incoming": 92,
-        "incomingSupport": 88
+        "outgoing": 17,
+        "incoming": 88,
+        "incomingSupport": 84
       }
     },
     {
@@ -18162,16 +15571,6 @@
       "role": "SILO",
       "cluster": "/सुझाए-गए-रूट/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/",
-          "anchorText": "यात्रा के मार्ग",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/हनोई-से-दूर-यात्रा-के-लिए-बाइक-उपयुक्तता/",
           "anchorText": "हनोई से दूर यात्रा के लिए बाइक उपयुक्तता हनोई से शहर के बाहर लंबी मोटरबाइक यात्रा के लिए कौन-सा वाहन उपयुक्त है, गियर बाइक, स्कूटर और इलेक्ट्रिक विकल्प की क्षमता कैसे तौलें। पूरा लेख पढ़ें →",
@@ -18316,11 +15715,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/मोटरबाइक-रोड-ट्रिप-से-पहले-सर्विस-स्थिति/",
-          "anchorText": "लंबी यात्रा की तैयारी",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/मोटरबाइक-रोड-ट्रिप-से-पहले-सर्विस-स्थिति/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -18451,11 +15845,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/लंबी-यात्रा-में-फोन-नेविगेशन-की-सुरक्षित-आदत/",
-          "anchorText": "लंबी यात्रा की तैयारी",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/लंबी-यात्रा-में-फोन-नेविगेशन-की-सुरक्षित-आदत/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -18466,22 +15855,12 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/शहर-से-बाहर-जाने-के-लिए-लाइसेंस-सत्यापन/",
-          "anchorText": "लंबी यात्रा की तैयारी",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/शहर-से-बाहर-जाने-के-लिए-लाइसेंस-सत्यापन/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
         {
           "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/शहर-से-बाहर-जाने-के-लिए-लाइसेंस-सत्यापन/",
           "anchorText": "लंबी यात्रा की तैयारी ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/लंबे-रूट-से-लौटने-की-समय-योजना/",
-          "anchorText": "लंबी यात्रा की तैयारी",
           "role": "SUPPORT"
         },
         {
@@ -18496,8 +15875,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "यात्रा के मार्ग",
         "हनोई से दूर यात्रा के लिए बाइक उपयुक्तता हनोई से शहर के बाहर लंबी मोटरबाइक यात्रा के लिए कौन-सा वाहन उपयुक्त है, गियर बाइक, स्कूटर और इलेक्ट्रिक विकल्प की क्षमता कैसे तौलें। पूरा लेख पढ़ें →",
         "लंबी यात्रा में मौसम पूर्वानुमान जाँचें हनोई से लंबी मोटरबाइक यात्रा से पहले मौसम का पूर्वानुमान जाँचने, समझने और योजना में जोड़ने की व्यावहारिक गाइड। पूरा लेख पढ़ें →",
         "मोटरबाइक रोड ट्रिप से पहले सर्विस स्थिति लंबी रोड ट्रिप से पहले किराए की मोटरबाइक की सर्विस स्थिति जानने का तरीका, दुकान से पूछे जाने वाले सवाल, तेल, चेन और ब्रेक की जाँच तथा साक्ष्य रखने की व्यावहारिक जानकारी। पूरा लेख पढ़ें →",
@@ -18534,9 +15911,9 @@
         }
       ],
       "counts": {
-        "outgoing": 19,
-        "incoming": 47,
-        "incomingSupport": 44
+        "outgoing": 17,
+        "incoming": 43,
+        "incomingSupport": 40
       }
     },
     {
@@ -18544,16 +15921,6 @@
       "role": "SILO",
       "cluster": "/बाइक-के-प्रकार/",
       "outgoingLinks": [
-        {
-          "url": "https://hi.rentbikehanoi.com/",
-          "anchorText": "मुख्य पृष्ठ",
-          "role": "PILLAR"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/",
-          "anchorText": "बाइक के प्रकार",
-          "role": "HUB"
-        },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-की-तकनीकी-श्रेणी-कैसे-समझें/",
           "anchorText": "इलेक्ट्रिक साइकिल की तकनीकी श्रेणी कैसे समझें इलेक्ट्रिक साइकिल, इलेक्ट्रिक स्कूटर और इलेक्ट्रिक मोटरबाइक की तकनीकी श्रेणी में फ़र्क़ कैसे पहचानें और किराये से पहले क्या पूछें। पूरा लेख पढ़ें →",
@@ -18728,11 +16095,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-पर-बैटरी-की-जाँच/",
-          "anchorText": "इलेक्ट्रिक साइकिल",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-पर-बैटरी-की-जाँच/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -18833,11 +16195,6 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-का-चार्जर-लेते-समय-पूछें/",
-          "anchorText": "इलेक्ट्रिक साइकिल",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-का-चार्जर-लेते-समय-पूछें/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
@@ -18848,22 +16205,12 @@
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-के-टायर-और-लाइट-जाँचना/",
-          "anchorText": "इलेक्ट्रिक साइकिल",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-के-टायर-और-लाइट-जाँचना/",
           "anchorText": "विषय सूची पर लौटें →",
           "role": "SUPPORT"
         },
         {
           "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-के-टायर-और-लाइट-जाँचना/",
           "anchorText": "इलेक्ट्रिक साइकिल ↗",
-          "role": "SUPPORT"
-        },
-        {
-          "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/इलेक्ट्रिक-साइकिल-वापसी-में-जमा-की-शर्तें/",
-          "anchorText": "इलेक्ट्रिक साइकिल",
           "role": "SUPPORT"
         },
         {
@@ -18878,8 +16225,6 @@
         }
       ],
       "anchorText": [
-        "मुख्य पृष्ठ",
-        "बाइक के प्रकार",
         "इलेक्ट्रिक साइकिल की तकनीकी श्रेणी कैसे समझें इलेक्ट्रिक साइकिल, इलेक्ट्रिक स्कूटर और इलेक्ट्रिक मोटरबाइक की तकनीकी श्रेणी में फ़र्क़ कैसे पहचानें और किराये से पहले क्या पूछें। पूरा लेख पढ़ें →",
         "इलेक्ट्रिक साइकिल किराये की कीमत कैसे पूछें इलेक्ट्रिक साइकिल किराए पर लेना चाहते हैं? कीमत पूछने के सही तरीक़े की गाइड — दरें, जमा, बैटरी और चार्जिंग से जुड़े सवालों की सूची। पूरा लेख पढ़ें →",
         "इलेक्ट्रिक साइकिल पर बैटरी की जाँच किराए की इलेक्ट्रिक साइकिल लेते समय बैटरी की जाँच का तरीका, सेल और पावर के सवाल, चार्जिंग पोर्ट, लॉक और सुरक्षा से जुड़ी व्यावहारिक जानकारी। पूरा लेख पढ़ें →",
@@ -18919,9 +16264,9 @@
         }
       ],
       "counts": {
-        "outgoing": 22,
-        "incoming": 44,
-        "incomingSupport": 38
+        "outgoing": 20,
+        "incoming": 40,
+        "incomingSupport": 34
       }
     }
   ]
