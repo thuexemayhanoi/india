@@ -1408,5 +1408,35 @@
     "gscEvidence": null,
     "collisionStatus": "PASSED_AUTOMATED_QA",
     "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/वेस्ट-लेक-के-पास-बारिश-में-सावधानी/",
+    "slug": "/हनोई-के-इलाके/वेस्ट-लेक/वेस्ट-लेक-के-पास-बारिश-में-सावधानी/",
+    "language": "hi-IN",
+    "keyword": "वेस्ट लेक के पास बारिश में सावधानी",
+    "role": "SUPPORT",
+    "parent": "/हनोई-के-इलाके/वेस्ट-लेक/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/वाहन-श्रेणी-और-लाइसेंस-श्रेणी-का-संबंध/",
+    "slug": "/किराये-की-गाइड/कागजात-और-लाइसेंस/वाहन-श्रेणी-और-लाइसेंस-श्रेणी-का-संबंध/",
+    "language": "hi-IN",
+    "keyword": "वाहन श्रेणी और लाइसेंस श्रेणी का संबंध",
+    "role": "SUPPORT",
+    "parent": "/किराये-की-गाइड/कागजात-और-लाइसेंस/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
   }
 ]

@@ -1131,9 +1131,9 @@
       "searchIntent": "informational",
       "requiresOfficialSources": false,
       "sourcesVerified": false,
-      "status": "PLANNED",
+      "status": "PUBLISHED",
       "topicApproval": "OWNER_APPROVED_SCOPE",
-      "datePublished": null,
+      "datePublished": "2026-10-14T03:33:43.805Z",
       "sourcePolicy": "VERIFIABLE_SOURCES_REQUIRED",
       "language": "hi-IN"
     },
@@ -1150,9 +1150,9 @@
       "searchIntent": "informational",
       "requiresOfficialSources": true,
       "sourcesVerified": false,
-      "status": "PLANNED",
+      "status": "PUBLISHED",
       "topicApproval": "OWNER_APPROVED_SCOPE",
-      "datePublished": null,
+      "datePublished": "2026-10-14T03:33:43.805Z",
       "sourcePolicy": "VERIFIABLE_SOURCES_REQUIRED",
       "language": "hi-IN"
     },
