@@ -11,9 +11,18 @@
     "/किराये-की-गाइड/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Electric_bicycle",
-    "https://en.wikipedia.org/wiki/Renting",
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%99%99i"
+    {
+      "url": "https://www.cpsc.gov/Safety-Education/Safety-Education-Centers/Micromobility-Information-Center",
+      "title": "US Consumer Product Safety Commission — Micromobility Safety and Charging"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Electric_bicycle",
+      "title": "Electric bicycle — Wikipedia"
+    },
+    {
+      "url": "https://vietnam.travel/faqs",
+      "title": "Vietnam Tourism — Frequently Asked Questions on Motorbike Rental and Transport"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,
