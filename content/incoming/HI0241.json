@@ -12,9 +12,18 @@
     "/किराया-और-कीमतें/साप्ताहिक-किराया/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Motorcycle",
-    "https://en.wikipedia.org/wiki/Road_traffic_safety",
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%99i"
+    {
+      "url": "https://cdn.honda.com.vn/motorbike-manual/October2025/BL9BXF5Wbadq3RuAmPpY.pdf",
+      "title": "Honda Vietnam — Motorcycle Owner's Manual: Pre-Ride Inspection and Maintenance"
+    },
+    {
+      "url": "https://www.honda.com.vn/training-material",
+      "title": "Honda Vietnam — Motorcycle Safety Training Materials"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Motorcycle",
+      "title": "Motorcycle — Wikipedia"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,
