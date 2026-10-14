@@ -3778,5 +3778,35 @@
     "gscEvidence": null,
     "collisionStatus": "PASSED_AUTOMATED_QA",
     "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/गियर-बाइक/गियर-बाइक-और-स्कूटर-में-सवारी-के-अनुभव-का-फर्क/",
+    "slug": "/बाइक-के-प्रकार/गियर-बाइक/गियर-बाइक-और-स्कूटर-में-सवारी-के-अनुभव-का-फर्क/",
+    "language": "hi-IN",
+    "keyword": "गियर बाइक और स्कूटर में सवारी के अनुभव का फर्क",
+    "role": "SUPPORT",
+    "parent": "/बाइक-के-प्रकार/गियर-बाइक/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-पार्क-करते-समय-स्टैंड-का-सुरक्षित-उपयोग/",
+    "slug": "/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/स्कूटर-पार्क-करते-समय-स्टैंड-का-सुरक्षित-उपयोग/",
+    "language": "hi-IN",
+    "keyword": "स्कूटर पार्क करते समय स्टैंड का सुरक्षित उपयोग",
+    "role": "SUPPORT",
+    "parent": "/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
   }
 ]
