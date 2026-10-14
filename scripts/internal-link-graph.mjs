@@ -13,7 +13,7 @@ export function generateLinkGraph({groups,articles,files,domain,recommend}){
     if(typeof html!=="string")throw Error("Graph source missing: "+src.path);
     const main=html.match(/<main\b[^>]*>[\s\S]*?<\/main>/i)?.[0];
     if(!main)throw Error("Main landmark missing: "+src.path);
-    const contextual=main.replace(/<nav\\b[^>]*class="[^"]*breadcrumbs[^"]*"[^>]*>[\\s\\S]*?<\\/nav>/gi,"");
+    const contextual=main.replace(/<nav\b[^>]*class="[^"]*breadcrumbs[^"]*"[^>]*>[\s\S]*?<\/nav>/gi,"");
     const matched=[...contextual.matchAll(/<a\b[^>]*\bhref="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi)];
     for(const m of matched){
       const target=decode(m[1]).split(/[?#]/)[0];
