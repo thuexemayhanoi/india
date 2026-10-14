@@ -2,55 +2,38 @@
   "batch": "B01",
   "accepted": [
     {
-      "id": "HI0031",
+      "id": "HI0039",
       "score": 100,
-      "words": 936
+      "words": 926
     },
     {
-      "id": "HI0032",
+      "id": "HI0040",
       "score": 95,
-      "words": 867
-    },
-    {
-      "id": "HI0033",
-      "score": 95,
-      "words": 869
-    },
-    {
-      "id": "HI0034",
-      "score": 100,
-      "words": 925
-    },
-    {
-      "id": "HI0035",
-      "score": 100,
-      "words": 923
-    },
-    {
-      "id": "HI0036",
-      "score": 95,
-      "words": 893
-    },
-    {
-      "id": "HI0037",
-      "score": 95,
-      "words": 872
-    },
-    {
-      "id": "HI0038",
-      "score": 95,
-      "words": 880
+      "words": 860
     }
   ],
   "blocked": [
     {
       "ids": [
-        "HI0039",
-        "HI0040"
+        "HI0041"
       ],
-      "reason": "WAIT_FOR_CONSECUTIVE_PAIR"
+      "reason": "QA_REVIEW",
+      "score": 100,
+      "issues": [
+        "title must equal editorial plan"
+      ]
+    },
+    {
+      "ids": [
+        "HI0042"
+      ],
+      "reason": "QA_REVIEW",
+      "score": 100,
+      "issues": [
+        "title must equal editorial plan"
+      ]
     }
   ],
-  "remaining": 262,
-  "at": "2026-10-14T03:10:54.150Z"
+  "remaining": 260,
+  "at": "2026-10-14T03:17:11.255Z"
 }

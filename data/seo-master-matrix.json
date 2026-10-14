@@ -1108,5 +1108,35 @@
     "gscEvidence": null,
     "collisionStatus": "PASSED_AUTOMATED_QA",
     "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/बाइक-मॉडल-और-यात्रा-अवधि-बताने-की-चेकलिस्ट/",
+    "slug": "/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/बाइक-मॉडल-और-यात्रा-अवधि-बताने-की-चेकलिस्ट/",
+    "language": "hi-IN",
+    "keyword": "बाइक मॉडल और यात्रा अवधि बताने की चेकलिस्ट",
+    "role": "SUPPORT",
+    "parent": "/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/बाइक-लेने-के-स्थान-की-सही-पहचान-कैसे-करें/",
+    "slug": "/जमा-और-बुकिंग/डिलीवरी-और-वापसी/बाइक-लेने-के-स्थान-की-सही-पहचान-कैसे-करें/",
+    "language": "hi-IN",
+    "keyword": "बाइक लेने के स्थान की सही पहचान कैसे करें",
+    "role": "SUPPORT",
+    "parent": "/जमा-और-बुकिंग/डिलीवरी-और-वापसी/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
   }
 ]
