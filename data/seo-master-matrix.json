@@ -3928,5 +3928,35 @@
     "gscEvidence": null,
     "collisionStatus": "PASSED_AUTOMATED_QA",
     "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/वेस्ट-लेक/वेस्ट-लेक-क्षेत्र-में-गर्मी-और-पानी-की-तैयारी/",
+    "slug": "/हनोई-के-इलाके/वेस्ट-लेक/वेस्ट-लेक-क्षेत्र-में-गर्मी-और-पानी-की-तैयारी/",
+    "language": "hi-IN",
+    "keyword": "वेस्ट लेक क्षेत्र में गर्मी और पानी की तैयारी",
+    "role": "SUPPORT",
+    "parent": "/हनोई-के-इलाके/वेस्ट-लेक/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/कागजात-और-लाइसेंस/बिना-सही-दस्तावेज़-वाहन-चलाने-के-जोखिम/",
+    "slug": "/किराये-की-गाइड/कागजात-और-लाइसेंस/बिना-सही-दस्तावेज़-वाहन-चलाने-के-जोखिम/",
+    "language": "hi-IN",
+    "keyword": "बिना सही दस्तावेज़ वाहन चलाने के जोखिम",
+    "role": "SUPPORT",
+    "parent": "/किराये-की-गाइड/कागजात-और-लाइसेंस/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
   }
 ]
