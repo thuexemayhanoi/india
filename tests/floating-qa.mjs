@@ -35,7 +35,7 @@ assert.match(reply("इलेक्ट्रिक बाइक का किर
 assert.match(reply("कहाँ है पता"),/112 Nguyễn Văn Cừ/,"Published India location");
 assert.match(reply("WhatsApp संपर्क"),/wa\.me\/84942467674/,"India WhatsApp");
 assert.match(reply("what is Honda Wave monthly rental price"),/900,000/,"Original EN price memory preserved");
-assert.match(reply("bao nhieu Honda Vision"),/200.000|200,000/,"Original VI price calculator preserved");
+assert.match(reply("bao nhieu Honda Vision mot ngay"),/200\.000|200,000/,"Original VI day price calculator with explicit period preserved");
 const search=new Search();search.data=index;
 assert.ok(search.search("बाइक के प्रकार"),"Hindi site-search ranked indexed data");
 assert.ok(search.search("Honda Wave"),"English/model search ranked Hindi local content");
