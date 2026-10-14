@@ -2,40 +2,57 @@
   "batch": "B01",
   "accepted": [
     {
-      "id": "HI0011",
+      "id": "HI0013",
       "score": 100,
-      "words": 909
+      "words": 968
     },
     {
-      "id": "HI0012",
-      "score": 95,
-      "words": 888
-    }
-  ],
-  "blocked": [
-    {
-      "ids": [
-        "HI0013"
-      ],
-      "reason": "QA_REVIEW",
-      "score": 70,
-      "issues": [
-        "Hindi body word count 806 < 850",
-        "quality/SEO score 70 below 80"
-      ]
+      "id": "HI0014",
+      "score": 100,
+      "words": 908
     },
     {
-      "ids": [
-        "HI0014"
-      ],
-      "reason": "QA_REVIEW",
-      "score": 70,
-      "issues": [
-        "Hindi body word count 849 < 850",
-        "quality/SEO score 70 below 80"
-      ]
+      "id": "HI0015",
+      "score": 100,
+      "words": 940
+    },
+    {
+      "id": "HI0016",
+      "score": 100,
+      "words": 941
+    },
+    {
+      "id": "HI0017",
+      "score": 100,
+      "words": 973
+    },
+    {
+      "id": "HI0018",
+      "score": 100,
+      "words": 923
+    },
+    {
+      "id": "HI0019",
+      "score": 100,
+      "words": 944
+    },
+    {
+      "id": "HI0020",
+      "score": 100,
+      "words": 921
+    },
+    {
+      "id": "HI0021",
+      "score": 100,
+      "words": 904
+    },
+    {
+      "id": "HI0022",
+      "score": 100,
+      "words": 923
     }
   ],
-  "remaining": 288,
-  "at": "2026-10-14T02:55:23.617Z"
+  "blocked": [],
+  "remaining": 278,
+  "at": "2026-10-14T02:59:48.613Z"
 }
