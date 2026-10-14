@@ -12,8 +12,18 @@
     "/जमा-और-बुकिंग/सुरक्षा-जमा/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Long_Biên_Bridge",
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i"
+    {
+      "url": "https://vietnam.travel/node/914",
+      "title": "Vietnam Tourism — Top Instagram spots in Vietnam: Long Biên Bridge"
+    },
+    {
+      "url": "https://www.honda.com.vn/training-material",
+      "title": "Honda Vietnam — Motorcycle Safety Training Materials"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Long_Biên_Bridge",
+      "title": "Long Biên Bridge — Wikipedia"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,
