@@ -1,3 +1,4 @@
+# Re-trigger bootstrap after full AI content QA fix and floating controls responsive improvement.
 name: Hindi AI Local index one-time bootstrap
 on:
   push:

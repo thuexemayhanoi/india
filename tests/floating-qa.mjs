@@ -35,6 +35,7 @@ assert.match(reply("इलेक्ट्रिक बाइक का किर
 assert.match(reply("कहाँ है पता"),/112 Nguyễn Văn Cừ/,"Published India location");
 assert.match(reply("WhatsApp संपर्क"),/wa\.me\/84942467674/,"India WhatsApp");
 assert.match(reply("what is Honda Wave monthly rental price"),/900,000/,"Original EN price memory preserved");
+engine.reset();
 assert.match(reply("bao nhieu Honda Vision"),/200.000|200,000/,"Original VI price calculator preserved");
 const search=new Search();search.data=index;
 assert.ok(search.search("बाइक के प्रकार"),"Hindi site-search ranked indexed data");
@@ -46,3 +47,7 @@ assert.ok(css.includes(".floating-ready .sticky-call")&&css.includes(".chat-pane
 assert.ok(!port.includes('document.getElementById("mobile-nav")'),"Wrong source site menu");
 assert.equal(JSON.parse(read("data/factory-state.json")).publishedCount,published.length,"Factory drift");
 console.log("Hindi full /web AI Local + Quick Call integration QA PASS",published.length,"published posts, indexed entries:",index.e.length);
+
+assert.ok(port.includes("adjustFloatingAvoidance")&&port.includes('window.addEventListener("scroll", positionFloats'),"Floating finder collision avoidance missing");
+assert.ok(css.includes("--floating-avoid-bottom")&&css.includes('grid-template-columns:repeat(2,72px)'),"Compact mobile quick-call grid missing");
+console.log("Obstacle avoidance and iOS floating controls QA PASS");
