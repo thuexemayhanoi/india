@@ -3748,5 +3748,35 @@
     "gscEvidence": null,
     "collisionStatus": "PASSED_AUTOMATED_QA",
     "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/अचानक-मौसम-बदलने-पर-रूट-बदलना/",
+    "slug": "/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/अचानक-मौसम-बदलने-पर-रूट-बदलना/",
+    "language": "hi-IN",
+    "keyword": "अचानक मौसम बदलने पर रूट बदलना",
+    "role": "SUPPORT",
+    "parent": "/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/बैटरी-खत्म-होने-से-पहले-वापसी-योजना/",
+    "slug": "/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/बैटरी-खत्म-होने-से-पहले-वापसी-योजना/",
+    "language": "hi-IN",
+    "keyword": "बैटरी खत्म होने से पहले वापसी योजना",
+    "role": "SUPPORT",
+    "parent": "/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/",
+    "searchIntent": "commercial-support",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
   }
 ]
