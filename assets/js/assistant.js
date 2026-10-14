@@ -1,0 +1,638 @@
+/* ============================================================
+   Hanoi Motorbike Rental — local rule-based assistant.
+   No API calls, no backend, no models. Runs in the browser.
+   - Intent classification BEFORE answering:
+     price, availability, delivery, documents/license, address,
+     hours, contact, deposit, buy/sale, travel, greeting, fallback
+   - English + Vietnamese (with/without diacritics), typo-tolerant
+   - Session memory: model, period, quantity, duration
+   - Single price source: PRICES/BUSINESS from business-config.js
+   - Never invents availability, promotions, deposits, delivery
+     or legal conclusions. Monthly ranges stay ranges.
+   ============================================================ */
+(function (root) {
+  "use strict";
+
+  /* ---------------- helpers ---------------- */
+  var DIACRITICS = /[\u0300-\u036f]/g;
+  function norm(s) {
+    return (s || "")
+      .toLowerCase()
+      .replace(/đ/g, "d").replace(/Đ/g, "d")
+      .normalize("NFD").replace(DIACRITICS, "")
+      .replace(/[^\p{L}\p{M}0-9\s.,+*x-]/gu, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+  var VIET_CHARS = /[ăâêôơưáàảãạấầẩẫậéèẻẽẹếềểễệíìỉĩịóòỏõọốồổỗộớờởỡợúùủũụứừửữựýỳỷỹỵđ]/i;
+  var VN_MARKERS = /(\bxin chao\b|\bchao ban\b|\bcam on\b|\bbao nhieu\b|\bgia (thue|xe|thang|tuan|ngay)\b|\bthue\b|\bcho thue\b|\bcon (xe|khong|co|lai|thang|tuan|ngay|nua)\b|\bo dau\b|\bdia chi\b|\bvi tri\b|\bgio (mo|dong)\b|\bmo cua\b|\bdong cua\b|\blien he\b|\bmua xe\b|\bban xe\b|\bgiao (xe|nhan|hang)\b|\bgiay to\b|\bbang lai\b|\bgiay phep\b|\bduoc khong\b|\bthe nao\b|\bthi sao\b|\bxac nhan\b|\bdat xe\b|\bdat truoc\b|\btien coc\b|\bxe may\b|\bva (thang|tuan|ngay)\b|\bmat bao lau\b)/;
+
+  var NUMBER_WORDS = {
+    one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10,
+    mot: 1, hai: 2, ba: 3, bon: 4, nam: 5, sau: 6, bay: 7, tam: 8, chin: 9, muoi: 10
+  };
+
+  /* ---------------- model detection ----------------
+     Word-boundary matching; "click" only counts as Honda Click
+     when it is not the verb ("click to see", "click here"...). */
+  var MODELS = [
+    { key: "wave",     re: /\bwave(s)?\b/ },
+    { key: "sirius",   re: /\bsirius\b/ },
+    { key: "mio",      re: /\bmio(s)?\b/ },
+    { key: "vision",   re: /\bvision(s)?\b/ },
+    { key: "airblade", re: /\bair ?blade(s)?\b/ },
+    { key: "electric", re: /\b(electric|electric motorbike|xe dien)\b/ },
+    { key: "cc50",     re: /\b50\s?cc\b|\bmoped(s)?\b|\bxe\s+50\b/ }
+  ];
+  var CLICK_MODEL_RE = /\bhonda\s+click\b/;
+  var CLICK_VERB_RE = /\bclick\s+(to|and|here|on|now|for|see|view|the|this|it)\b/;
+  function detectModel(t) {
+    var i, m = null;
+    for (i = 0; i < MODELS.length; i++) {
+      if (MODELS[i].re.test(t)) { m = MODELS[i].key; }
+    }
+    // bare "click": Honda Click only when not used as a UI verb
+    if (CLICK_MODEL_RE.test(t)) return "click";
+    if (/\bclick\b/.test(t) && !CLICK_VERB_RE.test(t)) return "click";
+    return m;
+  }
+
+  /* ---------------- period detection ----------------
+     \bday\b so "today" never counts as a rental period. */
+  function detectPeriod(t) {
+    if (/\b(per month|monthly|month|thang|1 thang)\b/.test(t)) return "month";
+    if (/\b(per week|weekly|week|tuan)\b/.test(t)) return "week";
+    if (/\b(per day|daily|day|days|ngay)\b/.test(t)) return "day";
+    return null;
+  }
+
+  /* ---------------- qty & duration ---------------- */
+  function detectQty(t, modelWord) {
+    var m = t.match(/(\d+|one|two|three|four|five|six|seven|eight|nine|ten|mot|hai|ba|bon|nam|sau|bay|tam|chin|muoi)\s*(?:x\s*)?(?:honda\s+|yamaha\s+|xe\s+)?(?:waves?|sirius|mios?|visions?|clicks?|air ?blades?|electric(?:\s+motorbikes?)?|50\s?cc|mopeds?|bikes?|motorbikes?|scooters?|xe)/);
+    if (m) {
+      var n = parseInt(m[1], 10);
+      if (isNaN(n)) n = NUMBER_WORDS[m[1]];
+      if (n && n >= 1 && n <= 20) return n;
+    }
+    return null;
+  }
+  function detectDuration(t) {
+    var m = t.match(/(\d+|one|two|three|four|five|six|seven|eight|nine|ten|mot|hai|ba|bon|nam|sau|bay|tam|chin|muoi)\s*(days?|ngay|weeks?|tuans?|months?|thangs?)/);
+    if (m) {
+      var n = parseInt(m[1], 10);
+      if (isNaN(n)) n = NUMBER_WORDS[m[1]];
+      if (n && n >= 1 && n <= 90) return { count: n, unit: /^(week|tuan)/.test(m[2]) ? "week" : (/^(month|thang)/.test(m[2]) ? "month" : "day") };
+    }
+    return null;
+  }
+
+  /* ---------------- intent classification (priority order) ---------------- */
+  function detectIntent(t) {
+    if (/\b(for sale|to sell|sell|sale|ban xe|mua xe|muon mua|buy(ing)? (a )?(motor)?bike|buy vs rent|buying vs)\b/.test(t)) return "buy";
+    if (/\b(deliver|delivery|giao (xe|nhan|hang)|giao tan|ship(ping)?|pickup at (hotel|airport)|drop ?off)\b/.test(t)) return "delivery";
+    if (/\b(license|licence|giay to|giay phep|bang lai|gplx|permit|legal|luat|law)\b/.test(t)) return "docs";
+    if (/\b(availab\w*|in stock|do you have|have you got|is there (a|any)|con (xe|khong|co|lai))\b/.test(t)) return "avail";
+    if (/\b(deposit|tien coc|coc (tien|xe)|dat truoc|dat coc)\b/.test(t)) return "deposit";
+    if (/\b(hour|open|close|opening|gio (mo|dong)|mo cua|dong cua|dang mo|dang dong)\b/.test(t)) return "hours";
+    if (/\b(contact|phone|call|email|e-mail|zalo|whatsapp|lien he|so dien thoai|sdt)\b/.test(t)) return "contact";
+    if (/\b(trip|route|travel|du lich|hanh trinh|chuyen di|ninh binh|ba vi|mai chau|ha giang|pho co)\b/.test(t)) return "travel";
+    if (/\b(address|location|where|map|vi tri|o dau|quan long bien|long bien|old quarter)\b/.test(t)) return "where";
+    if (/\b(price|prices|cost|how much|rent(ing)? (for|a|an)|gia|phi|bao nhieu|thue (xe|bao)|per (day|week|month)|weekly|monthly|daily)\b/.test(t)) return "price";
+    return null;
+  }
+
+  var GREETING_RE = /^(hi|hello|hey|good (morning|afternoon|evening)|xin chao|chao (ban|anh|chi))\b[,!.]?\s*/;
+
+  /* ================= Engine ================= */
+  function Engine(cfg) {
+    cfg = cfg || {};
+    this.BUSINESS = cfg.BUSINESS || (typeof BUSINESS !== "undefined" ? BUSINESS : null);
+    this.PRICES = cfg.PRICES || (typeof PRICES !== "undefined" ? PRICES : null);
+    this.state = { model: null, period: null, qty: null, duration: null, lang: "en" };
+    this.nf = { en: new Intl.NumberFormat("en-US"), vi: new Intl.NumberFormat("vi-VN") };
+  }
+
+  Engine.prototype.reset = function () {
+    this.state = { model: null, period: null, qty: null, duration: null, lang: this.state.lang };
+  };
+
+  Engine.prototype.vnd = function (n) {
+    return this.nf[this.state.lang === "vi" ? "vi" : "en"].format(n) + " VND";
+  };
+  Engine.prototype.a = function (href, label, external) {
+    return '<a href="' + href + '"' + (external ? ' target="_blank" rel="noopener"' : "") + ">" + label + "</a>";
+  };
+  Engine.prototype.model = function () {
+    return this.state.model ? this.PRICES[this.state.model] : null;
+  };
+
+  Engine.prototype.priceText = function (m, period) {
+    var vi = this.state.lang === "vi";
+    var p = m[period];
+    if(m.day==null)return m.name+": electric bike rental price is not published. Please contact us for a quote.";
+    var perEn = { day: "per day", week: "per week", month: "per month" };
+    var perVi = { day: "mỗi ngày", week: "mỗi tuần", month: "mỗi tháng" };
+    if (p == null) {
+      var which = period === "week" ? (vi ? "tuần" : "weekly") : (vi ? "tháng" : "monthly");
+      return vi
+        ? this.vnd(m.day) + "/ngày. Chúng tôi chưa có giá " + which + " đã xác minh cho xe " + m.name + " — vui lòng liên hệ để báo giá."
+        : this.vnd(m.day) + " per day. We do not have a verified " + which + " price for the " + m.name + " — contact us for a quote.";
+    }
+    if (Array.isArray(p)) {
+      if (p[0] === p[1]) return m.name + ": " + this.vnd(p[0]) + " " + (vi ? perVi[period] : perEn[period]) + ".";
+      return m.name + ": " + this.vnd(p[0]) + " – " + this.vnd(p[1]) + " " +
+        (vi ? perVi[period] + " (khoảng giá đã xác minh, giá chính xác tùy từng xe — liên hệ để biết chính xác)."
+            : perEn[period] + " (verified range — the exact rate depends on the bike, contact us for a precise quote).");
+    }
+    return m.name + ": " + this.vnd(p) + " " + (vi ? perVi[period] : perEn[period]) + ".";
+  };
+
+  Engine.prototype.totalText = function (m, qty, duration) {
+    var vi = this.state.lang === "vi";
+    if (duration.unit === "day") {
+      var unit = m.day;
+      var total = qty * duration.count * unit;
+      return vi
+        ? this.vnd(total) + " (" + qty + " " + m.name + " × " + duration.count + " ngày × " + this.vnd(unit) + "/ngày)."
+        : this.vnd(total) + " (" + qty + " " + m.name + " × " + duration.count + " days × " + this.vnd(unit) + "/day).";
+    }
+    if (duration.unit === "week") {
+      if (m.week == null) return null;
+      var totalW = qty * duration.count * m.week;
+      return vi
+        ? this.vnd(totalW) + " (" + qty + " " + m.name + " × " + duration.count + " tuần × " + this.vnd(m.week) + "/tuần)."
+        : this.vnd(totalW) + " (" + qty + " " + m.name + " × " + duration.count + " weeks × " + this.vnd(m.week) + "/week).";
+    }
+    // month: verified ranges stay ranges — only compute single totals for fixed prices
+    var pm = m.month;
+    if (pm == null) return null;
+    if (Array.isArray(pm)) {
+      if (pm[0] === pm[1]) {
+        var totalM = qty * duration.count * pm[0];
+        return vi
+          ? this.vnd(totalM) + " (" + qty + " " + m.name + " × " + duration.count + " tháng × " + this.vnd(pm[0]) + "/tháng)."
+          : this.vnd(totalM) + " (" + qty + " " + m.name + " × " + duration.count + " months × " + this.vnd(pm[0]) + "/month).";
+      }
+      // range × qty: show the range, do not invent one number
+      return vi
+        ? m.name + ": " + this.vnd(pm[0]) + " – " + this.vnd(pm[1]) + "/tháng (khoảng giá; liên hệ cho giá " + (qty > 1 ? qty + " xe " : "") + "chính xác)."
+        : m.name + ": " + this.vnd(pm[0]) + " – " + this.vnd(pm[1]) + "/month (verified range — contact us for an exact quote" + (qty > 1 ? " for " + qty + " bikes" : "") + ").";
+    }
+    var totalMs = qty * duration.count * pm;
+    return vi
+      ? this.vnd(totalMs) + " (" + qty + " " + m.name + " × " + duration.count + " tháng × " + this.vnd(pm) + "/tháng)."
+      : this.vnd(totalMs) + " (" + qty + " " + m.name + " × " + duration.count + " months × " + this.vnd(pm) + "/month).";
+  };
+
+  Engine.prototype.replyPrice = function () {
+    var vi = this.state.lang === "vi";
+    var m = this.model();
+    var pricesLink = vi ? this.a("/किराया-और-कीमतें/", "Xem bảng giá") : this.a("/किराया-और-कीमतें/", "View full price table");
+    if (!m) {
+      if (this.state.period) {
+        return vi
+          ? "Bạn muốn hỏi xe nào? Wave, Sirius, Mio, Click, Vision, Air Blade, xe điện hay 50cc?"
+          : "Which bike would you like the price for — Wave, Sirius, Mio, Click, Vision, Air Blade, electric or 50cc?";
+      }
+      return vi
+        ? "Giá thuê từ 150.000 VND/ngày (Wave, Sirius, Mio, Click). Vision, Air Blade và 50cc là 200.000 VND/ngày; xe điện cần hỏi giá riêng. " + pricesLink + "."
+        : "Rental prices start at 150,000 VND/day (Honda Wave, Yamaha Sirius, Yamaha Mio, Honda Click). Honda Vision, Honda Air Blade and 50cc are 200,000 VND/day; ask us for electric bike pricing. " + pricesLink + ".";
+    }
+    var period = this.state.period || "day";
+    var total = null;
+    if (this.state.qty && this.state.duration) {
+      total = this.totalText(m, this.state.qty, this.state.duration);
+      if (total) return total;
+    } else if (this.state.qty && period && !this.state.duration) {
+      // qty × fixed period price (day/week); ranges stay ranges
+      var p = m[period === "month" ? "month" : period];
+      if (Array.isArray(p)) {
+        return vi
+          ? m.name + ": " + this.vnd(p[0]) + " – " + this.vnd(p[1]) + "/tháng mỗi xe (" + this.state.qty + " xe — liên hệ cho báo giá chính xác)."
+          : m.name + ": " + this.vnd(p[0]) + " – " + this.vnd(p[1]) + "/month per bike (" + this.state.qty + " bikes — contact us for an exact quote).";
+      }
+      if (p == null) { return this.priceText(m, period); }
+      return vi
+        ? this.vnd(p * this.state.qty) + " (" + this.state.qty + " × " + m.name + ", " + this.vnd(p) + "/" + (period === "week" ? "tuần" : "ngày") + ")."
+        : this.vnd(p * this.state.qty) + " (" + this.state.qty + " × " + m.name + " at " + this.vnd(p) + "/" + (period === "week" ? "week" : "day") + ").";
+    }
+    var text = this.priceText(m, period);
+    if (period === "day") {
+      var vi2 = this.state.lang === "vi";
+      text += vi2 ? " " + this.a("/किराया-और-कीमतें/", "Xem giá tuần/tháng") : " " + this.a("/किराया-और-कीमतें/", "See weekly/monthly prices");
+    }
+    return text;
+  };
+
+  Engine.prototype.reply = function (raw) {
+    var original = raw || "";
+    var vi = VIET_CHARS.test(original) || VN_MARKERS.test(norm(original));
+    this.state.lang = vi ? "vi" : "en";
+    var t = norm(original);
+    var gm = t.match(GREETING_RE);
+    var greeted = !!gm;
+    if (gm) t = t.slice(gm[0].length);
+
+    var model = detectModel(t);
+    var period = detectPeriod(t);
+    var qty = detectQty(t);
+    var duration = detectDuration(t);
+    var intent = detectIntent(t);
+
+    if (model) this.state.model = model;
+    if (period) this.state.period = period;
+    if (qty) this.state.qty = qty;
+    if (duration) this.state.duration = duration;
+
+    var hi = vi ? "Xin chào! " : "Hi! ";
+    var answer = "";
+
+    if (!intent && greeted) intent = "greet";
+    this.lastIntent = intent || this.lastIntent || "default";
+
+    switch (intent) {
+      case "price":
+        answer = this.replyPrice();
+        break;
+      case "avail":
+        var mName = this.model() ? this.model().name : (vi ? "xe bạn cần" : "the bike");
+        answer = vi
+          ? "Tôi không thể kiểm tra xe còn hay hết tại đây. Vui lòng " + this.a("tel:" + this.BUSINESS.phoneTel, "gọi " + this.BUSINESS.phone) + " hoặc " + this.a("https://wa.me/84942467674", "WhatsApp", true) + " để xác nhận " + mName + " cho ngày bạn cần."
+          : "I can\u2019t check live availability from here. Please " + this.a("tel:" + this.BUSINESS.phoneTel, "call " + this.BUSINESS.phone) + " or " + this.a("https://wa.me/84942467674", "WhatsApp", true) + " to confirm the " + mName + " for your dates.";
+        break;
+      case "delivery":
+        answer = vi
+          ? "Chúng tôi chưa có thông tin giao xe đã xác minh. Vui lòng " + this.a("tel:" + this.BUSINESS.phoneTel, "liên hệ") + " để hỏi về giao nhận tại địa điểm của bạn."
+          : "We don\u2019t have verified delivery details to share here. Please " + this.a("tel:" + this.BUSINESS.phoneTel, "contact us") + " to ask about delivery or pickup for your location.";
+        break;
+      case "docs":
+        answer = vi
+          ? "Về giấy tờ: quy định bằng lái ở Việt Nam có thể thay đổi và tôi không đưa kết luận pháp lý. Xem hướng dẫn " + this.a("/किराये-की-गाइड/कागजात-और-लाइसेंस/", "thuê xe máy ở Việt Nam") + " và xác nhận với cơ quan có thẩm quyền trước khi chạy."
+          : "Licensing rules in Vietnam can change and I can\u2019t give legal advice. See our " + this.a("/किराये-की-गाइड/कागजात-और-लाइसेंस/", "Renting a Motorbike in Vietnam") + " guide and confirm current requirements with official sources before riding.";
+        break;
+      case "hours":
+        var now = new Date();
+        var hourNow = 0;
+        try {
+          var fmtH = new Intl.DateTimeFormat("en-GB", { timeZone: this.BUSINESS.timezone, hour: "2-digit", minute: "2-digit", hour12: false });
+          var parts = fmtH.format(now).split(":");
+          hourNow = parseInt(parts[0], 10) + parseInt(parts[1], 10) / 60;
+        } catch (e) { hourNow = now.getHours() + now.getMinutes() / 60; }
+        var isOpen = hourNow >= this.BUSINESS.openHour && hourNow < this.BUSINESS.closeHour;
+        answer = vi
+          ? "Giờ mở cửa: " + this.BUSINESS.hoursText + " (giờ Việt Nam). Hiện tại " + (isOpen ? "đang mở, đến 21:00." : "đang đóng — mở lại lúc 09:00.")
+          : "Opening hours: " + this.BUSINESS.hoursText + " (Hanoi time). We are " + (isOpen ? "open right now, until 21:00." : "closed right now — we open at 09:00.");
+        break;
+      case "where":
+        if (/old quarter|pho co/.test(t)) {
+          answer = vi
+            ? "Shop ở Long Bien, chỉ cách Phố cổ qua sông Hồng. Xem hướng dẫn " + this.a("/हनोई-के-इलाके/ओल्ड-क्वार्टर/", "thuê xe ở Phố cổ") + ". Địa chỉ: " + this.BUSINESS.address + ". " + this.a(this.BUSINESS.mapsUrl, "Chỉ đường", true)
+            : "We are in Long Bien, a short ride across the Red River from the Old Quarter — see " + this.a("/हनोई-के-इलाके/ओल्ड-क्वार्टर/", "Old Quarter rental guide") + ". Address: " + this.BUSINESS.address + ". " + this.a(this.BUSINESS.mapsUrl, "Get directions", true);
+        } else {
+          answer = vi
+            ? "Địa chỉ: " + this.BUSINESS.address + ". " + this.a(this.BUSINESS.mapsUrl, "Chỉ đường", true)
+            : "We are at " + this.BUSINESS.address + ". " + this.a(this.BUSINESS.mapsUrl, "Open in Google Maps", true);
+        }
+        break;
+      case "contact":
+        answer = vi
+          ? "Gọi " + this.a("tel:" + this.BUSINESS.phoneTel, this.BUSINESS.phone) + " hoặc WhatsApp " + this.a("https://wa.me/84942467674", "WhatsApp", true) + ". Giờ làm việc: " + this.BUSINESS.hoursText + "."
+          : "Call " + this.a("tel:" + this.BUSINESS.phoneTel, this.BUSINESS.phone) + " or WhatsApp " + this.a("https://wa.me/84942467674", "WhatsApp", true) + ". Hours: " + this.BUSINESS.hoursText + ".";
+        break;
+      case "deposit":
+        answer = vi
+          ? "Chúng tôi chưa có thông tin tiền cọc đã xác minh. Vui lòng " + this.a("tel:" + this.BUSINESS.phoneTel, "liên hệ") + " để biết điều khoản cho lần thuê của bạn."
+          : "We don\u2019t have verified deposit terms to share here. Please " + this.a("tel:" + this.BUSINESS.phoneTel, "contact us") + " to confirm the deposit for your rental.";
+        break;
+      case "buy":
+        answer = vi
+          ? "Chúng tôi cho thuê xe máy và chưa có thông tin bán xe đã xác minh. Nếu bạn cân nhắc mua hay thuê, xem hướng dẫn " + this.a("/बाइक-के-प्रकार/", "mua xe hay thuê xe") + "."
+          : "We rent motorbikes and don\u2019t have verified bikes for sale. If you\u2019re weighing buying vs renting, see our " + this.a("/बाइक-के-प्रकार/", "buying vs renting guide") + ".";
+        break;
+      case "travel":
+        answer = vi
+          ? "Gợi ý đường chạy: xem hub " + this.a("/सुझाए-गए-रूट/", "chuyến đi bằng xe máy từ Hà Nội") + " — Ninh Bình, Ba Vì và các cung đường miền Bắc."
+          : "For ride ideas from Hanoi — Ninh Binh, Ba Vi and Northern Vietnam routes — see our " + this.a("/सुझाए-गए-रूट/", "Hanoi Motorbike Trips") + " hub.";
+        break;
+      case "greet":
+        answer = vi
+          ? "Xin chào! Tôi trả lời giá thuê, giờ mở cửa, địa chỉ và các dòng xe. Bạn cần biết gì?"
+          : "Hello! I can help with rental prices, models, our location and opening hours. What would you like to know?";
+        break;
+      default:
+        // model mentioned (or follow-up like "and monthly?") with remembered context → price
+        if (this.state.model && (period || qty || duration || model)) {
+          answer = this.replyPrice();
+        } else {
+          answer = vi
+            ? "Tôi chưa hiểu rõ câu hỏi. Bạn hỏi về giá, giờ mở cửa, địa chỉ hay dòng xe nào (Wave, Vision, 50cc…)?"
+            : "I\u2019m not sure what you\u2019re asking. Do you want prices, opening hours, our location, or a specific bike (Wave, Vision, 50cc\u2026)?";
+        }
+    }
+    return (greeted && intent !== "greet" ? hi : "") + answer;
+  };
+
+
+  /* India Hindi-first adapter over unchanged /web EN/VI engine.
+     State, arithmetic, locally indexed search and follow-up chips remain available. */
+  var webReply=Engine.prototype.reply;
+  Engine.prototype.reply=function(raw){
+    var q=String(raw||""),t=norm(q);
+    if(!/[\u0900-\u097f]/.test(q)){
+      // Published deposits: do not claim no facts exist when they are verified here.
+      var model=detectModel(t)||this.state.model;
+      if(/\b(deposit|tien coc|dat coc)\b/.test(t)){
+        var v=(typeof DEPOSITS!=="undefined"&&model)?DEPOSITS[model]:null;
+        this.lastIntent="deposit";
+        return v?"Published security deposit for "+this.PRICES[model].name+": "+v+". Confirm return conditions in the contract. "+this.a("/जमा-और-बुकिंग/सुरक्षा-जमा/","Deposit guide"):"Deposits vary by model; please check "+this.a("/जमा-और-बुकिंग/सुरक्षा-जमा/","deposit details")+" or contact us.";
+      }
+      return webReply.call(this,raw);
+    }
+    this.state.lang="hi";
+    var m=detectModel(t);
+    if(/वेव|वेव अल्फा/.test(t))m="wave";
+    else if(/विज़न|विजन/.test(t))m="vision";
+    else if(/एयर ब्लेड/.test(t))m="airblade";
+    else if(/मियो/.test(t))m="mio";
+    else if(/क्लिक/.test(t))m="click";
+    else if(/इलेक्ट्रिक|बिजली वाली/.test(t))m="electric";
+    else if(/५०\s*सीसी|50\s*cc|पचास\s*सीसी/.test(t))m="cc50";
+    if(m&&this.PRICES[m])this.state.model=m;
+    if(/महीन|मासिक/.test(t))this.state.period="month";
+    else if(/सप्ताह|हफ्त|साप्ताहिक/.test(t))this.state.period="week";
+    else if(/दिन|दैनिक/.test(t))this.state.period="day";
+    var digits=t.replace(/[०-९]/g,function(ch){return String(ch.charCodeAt(0)-0x966);});
+    var dur=digits.match(/(\d+)\s*(दिन|दिनों|सप्ताह|हफ्ते|हफ्तों|महीने|महीना)/);
+    if(dur){var n=Number(dur[1]);if(n>=1&&n<=90)this.state.duration={count:n,unit:/हफ्त|सप्ताह/.test(dur[2])?"week":/महीन/.test(dur[2])?"month":"day"};}
+    var qty=digits.match(/(\d+)\s*(बाइक|स्कूटर|मोटरबाइक|गाड़िय|वाहन)/);
+    if(qty){var z=Number(qty[1]);if(z>0&&z<=20)this.state.qty=z;}
+    var c=this.a("tel:"+this.BUSINESS.phoneTel,this.BUSINESS.phone);
+    var map=this.a(this.BUSINESS.mapsUrl,"Google Maps",true);
+    var intent="default",answer="",modelPrice=this.state.model?this.PRICES[this.state.model]:null;
+    if(/खरीद|बेचन|बिक्री/.test(t)){
+      intent="buy";answer="यह सेवा बाइक किराये पर देती है; बाइक बिक्री की पुष्टि नहीं है। "+this.a("/बाइक-के-प्रकार/","बाइक के प्रकार");
+    }else if(/डिलीवरी|डिलिवरी|पिकअप|होटल|एयरपोर्ट|लेना|लौटाना/.test(t)){
+      intent="delivery";answer="डिलीवरी तथा वापसी का समय और शुल्क स्थान के अनुसार पुष्टि करें। "+this.a("/जमा-और-बुकिंग/डिलीवरी-और-वापसी/","डिलीवरी गाइड")+" · "+c;
+    }else if(/लाइसेंस|परमिट|कानून|दस्तावेज|पासपोर्ट|नियम|कानूनी/.test(t)){
+      intent="docs";answer="वाहन की श्रेणी के अनुसार वर्तमान लाइसेंस व कानूनी शर्तें आधिकारिक स्रोत से जाँचें। "+this.a("/किराये-की-गाइड/कागजात-और-लाइसेंस/","दस्तावेज़ गाइड")+"। यह कानूनी सलाह नहीं है।";
+    }else if(/उपलब्ध|बुक|रिज़र्व|रिजर्व|मिलेग|स्टॉक/.test(t)){
+      intent="avail";answer="मेरे पास लाइव उपलब्धता नहीं है। तारीख और मॉडल के साथ "+c+" पर पुष्टि करें।";
+    }else if(/जमा|डिपॉजिट|सिक्योरिटी|अग्रिम/.test(t)){
+      intent="deposit";var v=(typeof DEPOSITS!=="undefined"&&this.state.model)?DEPOSITS[this.state.model]:null;
+      answer=v?"प्रकाशित जमा: "+modelPrice.name+" — "+v+"। वापसी की शर्तें पहले पुष्टि करें।":"सुरक्षा जमा मॉडल के अनुसार अलग होता है; किराये से पहले पुष्टि करें।";
+      answer+=" "+this.a("/जमा-और-बुकिंग/सुरक्षा-जमा/","जमा गाइड");
+    }else if(/समय|घंट|खुल|बंद|कब/.test(t)){
+      intent="hours";answer="प्रकाशित समय: "+this.BUSINESS.hoursText+" (हनोई समय)। "+c;
+    }else if(/फोन|संपर्क|व्हाट्स|ज़ालो|वॉट्स|कॉल/.test(t)){
+      intent="contact";answer="फ़ोन: "+c+" · "+this.a("https://wa.me/84942467674","WhatsApp",true)+" · "+this.a("https://zalo.me/0942467674","Zalo",true)+".";
+    }else if(/पता|कहाँ|स्थान|लोकेशन|नक्शा|लॉन्ग बिएन|लोन्ग बिएन/.test(t)){
+      intent="where";answer="पता: "+this.BUSINESS.address+"। "+map;
+    }else if(/यात्रा|घूम|रूट|रास्त|कहाँ जाए/.test(t)){
+      intent="travel";answer="हनोई से सुरक्षित यात्रा और मार्गदर्शन: "+this.a("/सुझाए-गए-रूट/","रूट गाइड")+".";
+    }else if(/कीमत|किराया|कितना|कितने|दर|सस्ता|महंगा|बाइक|स्कूटर|महीन|दिन|सप्ताह/.test(t)||m||this.state.model&&this.state.period){
+      intent="price";
+      if(!modelPrice){
+        answer="दैनिक संदर्भ किराया: Honda Wave, Click और Mio 150,000 VND; Vision, Air Blade और 50cc 200,000 VND। इलेक्ट्रिक बाइक की कीमत पहले पुष्टि करें।";
+      }else{
+        var period=this.state.period||"day",v=modelPrice[period],label={day:"दिन",week:"सप्ताह",month:"महीना"}[period];
+        if(v==null)answer=modelPrice.name+" का "+label+" किराया प्रकाशित नहीं है; कृपया "+c+" पर पूछें।";
+        else if(Array.isArray(v))answer=modelPrice.name+": "+this.vnd(v[0])+" – "+this.vnd(v[1])+" प्रति "+label+" (प्रकाशित सीमा; अंतिम कीमत की पुष्टि करें)।";
+        else{
+          var count=this.state.qty||1,n=(this.state.duration&&this.state.duration.unit===period)?this.state.duration.count:1;
+          answer=modelPrice.name+": "+this.vnd(v*count*n)+" ("+count+" बाइक × "+n+" "+label+" × "+this.vnd(v)+")। अंतिम किराया पूछें।";
+        }
+      }
+      answer+=" "+this.a("/किराया-और-कीमतें/","पूरी कीमत तालिका")+".";
+    }else if(/नमस्ते|हैलो|नमस्कार|हाय|सलाम/.test(t)){
+      intent="greet";answer="नमस्ते! मैं इस वेबसाइट का स्थानीय सहायता बॉट हूँ। किराया, जमा, लोकेशन, बाइक और गाइड में मदद कर सकता हूँ।";
+    }else answer="आप किराया, जमा, मॉडल, दस्तावेज़, समय या लोकेशन पूछ सकते हैं। प्रकाशित लेख भी खोज सकता हूँ।";
+    this.lastIntent=intent;
+    return answer;
+  };
+
+  /* ---------------- Site search over the repo-built index (no API) ----------------
+     Index: /assets/chat/search-index.json — built from published pages only
+     (titles, URLs, headings, paragraphs; diacritics preserved). Loaded lazily
+     on first chat open, never at page load. */
+  var INDEX_URL = "/assets/chat/search-index.json";
+  var INDEX_VERSION = "india";
+  var SYN = {
+    "gia": "price", "cost": "price", "fee": "price", "phi": "price", "bao nhieu": "price", "rates": "price", "rate": "price",
+    "thue": "rent", "rental": "rent", "hire": "hire", "cho thue": "rent",
+    "xe may": "motorbike", "motorbike": "motorbike", "scooter": "scooter", "moped": "50cc", "xe": "bike", "bike": "bike",
+    "thang": "month", "monthly": "month", "long term": "month", "tuan": "week", "weekly": "week",
+    "ngay": "day", "daily": "day",
+    "o dau": "where", "dia chi": "address", "location": "where", "address": "address", "map": "map", "vi tri": "where",
+    "gio mo": "hours", "opening": "hours", "hours": "hours", "mo cua": "hours",
+    "pho co": "old quarter", "old quarter": "old quarter",
+    "trip": "trip", "route": "trip", "chuyen di": "trip",
+    "buy": "buy", "mua": "buy", "ban": "buy"
+  };
+  var STOPWORDS = /^(a|an|the|is|are|do|does|for|of|to|in|at|and|va|cua|co|khong|the|nao|ban|toi|muon|can|it|my|our|you|your|i|me|we|please|hi|hello|का|की|के|को|में|है|हैं|और|या|से|क्या|कितना)$/i;
+
+  function SiteSearch() {
+    this.data = null;   // parsed index
+    this.state = "idle"; // idle | loading | ready | error
+    this.waiters = [];
+  }
+  SiteSearch.prototype.load = function () {
+    var self = this;
+    if (this.state !== "idle") return;
+    this.state = "loading";
+    var done = function (ok, data) {
+      self.state = ok ? "ready" : "error";
+      self.data = ok ? data : null;
+      self.waiters.forEach(function (w) { w(self.state); });
+      self.waiters = [];
+    };
+    if (typeof fetch !== "function") { done(false, null); return; }
+    fetch(INDEX_URL + "?v=" + INDEX_VERSION + "-" + Date.now(), {cache:"no-store"})
+      .then(function (r) { if (!r.ok) throw new Error("http " + r.status); return r.json(); })
+      .then(function (j) { done(!!(j && j.e && j.e.length), j); })
+      .catch(function () { done(false, null); });
+  };
+  /* Browser-side ranking: normalized (accent-insensitive) matching with
+     synonym expansion. Title > heading > body. Returns the best page and
+     section, or null when nothing relevant is found. */
+  SiteSearch.prototype.search = function (q) {
+    if (!this.data) return null;
+    var t = norm(q);
+    if (!t) return null;
+    var terms = t.split(" ").filter(function (w) { return w.length > 1 && !STOPWORDS.test(w); });
+    if (!terms.length) return null;
+    var best = null, bestScore = 0, bestSec = null;
+    for (var i = 0; i < this.data.e.length; i++) {
+      var ent = this.data.e[i];
+      var body = ent.head.join(" ") + " " + ent.s.map(function (s) { return s.h + " " + s.p.join(" "); }).join(" ");
+      var ti = norm(ent.t), hd = norm(ent.head.join(" ")), tx = norm(body);
+      var score = 0;
+      for (var k = 0; k < terms.length; k++) {
+        var w = terms[k], syn = SYN[w] || null;
+        if (ti.indexOf(w) >= 0) score += 3;
+        else if (syn && ti.indexOf(syn) >= 0) score += 2;
+        if (hd.indexOf(w) >= 0 || (syn && hd.indexOf(syn) >= 0)) score += 2;
+        if (tx.indexOf(w) >= 0 || (syn && tx.indexOf(syn) >= 0)) score += 1;
+      }
+      if (score > bestScore) {
+        bestScore = score; best = ent; bestSec = null;
+        var bs = 0;
+        for (var j = 0; j < ent.s.length; j++) {
+          var sec = ent.s[j], st = norm(sec.h + " " + sec.p.join(" ")), ss = 0;
+          for (var k2 = 0; k2 < terms.length; k2++) {
+            var w2 = terms[k2], syn2 = SYN[w2];
+            if (st.indexOf(w2) >= 0) ss += 1;
+            if (syn2 && st.indexOf(syn2) >= 0) ss += 1;
+          }
+          if (ss > bs) { bs = ss; bestSec = sec; }
+        }
+      }
+    }
+    if (!best || bestScore < 2) return null;
+    return { entry: best, section: bestSec, score: bestScore, site: this.data.site || "" };
+  };
+
+  root.MotorbikeAssistant = { Engine: Engine, SiteSearch: SiteSearch, norm: norm };
+  if (typeof module !== "undefined" && module.exports) {
+    module.exports = root.MotorbikeAssistant;
+  }
+
+  /* Topic suggestions shown after each answer (label, question).
+     Max 5 real related topics; chips are follow-ups, session memory intact. */
+  var SUGGEST = {
+    price:    [["Monthly rental", "Monthly motorbike rental prices"], ["50cc rental", "50cc rental price"], ["Scooter prices", "Scooter rental prices"], ["Contact", "Contact"]],
+    where:    [["Old Quarter", "Renting in the Old Quarter"], ["Opening hours", "Opening hours"], ["Contact", "Contact"]],
+    hours:    [["Address", "Address"], ["Contact", "Contact"]],
+    contact:  [["Prices", "Prices"], ["Address", "Address"], ["50cc rental", "50cc rental price"]],
+    travel:   [["Old Quarter", "Renting in the Old Quarter"], ["50cc rental", "50cc rental price"]],
+    docs:     [["50cc rental", "50cc rental price"], ["Contact", "Contact"]],
+    delivery: [["Contact", "Contact"], ["Address", "Address"]],
+    avail:    [["Contact", "Contact"], ["Prices", "Prices"]],
+    deposit:  [["Contact", "Contact"], ["Monthly rental", "Monthly motorbike rental prices"]],
+    buy:      [["Prices", "Prices"], ["Monthly rental", "Monthly motorbike rental prices"]],
+    greet:    [["Prices", "Prices"], ["Monthly rental", "Monthly motorbike rental prices"], ["50cc rental", "50cc rental price"], ["Address", "Address"]],
+    default:  [["Prices", "Prices"], ["Monthly rental", "Monthly motorbike rental prices"], ["50cc rental", "50cc rental price"], ["Opening hours", "Opening hours"], ["Address", "Address"]]
+  };
+
+  var SUGGEST_HI = {
+    price:[["मासिक किराया","मासिक किराया कितना है?"],["50cc","50cc का किराया"],["जमा","सुरक्षा जमा"],["संपर्क","संपर्क"]],
+    where:[["मानचित्र","पता कहाँ है?"],["समय","खुलने का समय"],["संपर्क","संपर्क"]],
+    docs:[["लाइसेंस","लाइसेंस और नियम"],["50cc","50cc का किराया"]],
+    default:[["किराया","किराया कितना है?"],["मासिक","मासिक किराया"],["जमा","सुरक्षा जमा"],["पता","पता कहाँ है?"],["समय","खुलने का समय"]],
+  };
+
+  /* ---------------- DOM wiring ---------------- */
+  function wire() {
+    var panel = document.getElementById("chat-panel");
+    if (!panel) return;
+    var log = panel.querySelector(".chat-log");
+    var form = panel.querySelector(".chat-input");
+    var input = form ? form.querySelector("input") : null;
+    var engine = new Engine();
+    var search = new SiteSearch();
+    var greeted = false;
+
+    function esc(s) {
+      return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+    /* auto-scroll only when the user is already near the bottom */
+    function nearBottom() {
+      return log.scrollHeight - log.scrollTop - log.clientHeight < 80;
+    }
+    function scrollIfNear() {
+      if (nearBottom()) log.scrollTop = log.scrollHeight;
+    }
+    function addMsg(html, who) {
+      var div = document.createElement("div");
+      div.className = "chat-msg " + who;
+      div.innerHTML = html;
+      log.appendChild(div);
+      log.scrollTop = log.scrollHeight;
+    }
+    function addSuggestions(keys) {
+      var list = engine.state.lang === "hi" ? (SUGGEST_HI[keys] || SUGGEST_HI.default) : (SUGGEST[keys] || SUGGEST.default);
+      var seenQ = {};
+      var wrap = document.createElement("div");
+      wrap.className = "chat-suggest";
+      list.slice(0, 5).forEach(function (pair) {
+        if (seenQ[pair[1]]) return;
+        seenQ[pair[1]] = 1;
+        var b = document.createElement("button");
+        b.type = "button";
+        b.textContent = pair[0];
+        b.addEventListener("click", function () { send(pair[1]); });
+        wrap.appendChild(b);
+      });
+      if (wrap.childNodes.length) log.appendChild(wrap);
+      scrollIfNear();
+    }
+    function contactLine(vi) {
+      return vi
+        ? " " + engine.a("tel:" + engine.BUSINESS.phoneTel, "Gọi " + engine.BUSINESS.phone) + " · " + engine.a("https://wa.me/84942467674", "WhatsApp", true) + " · " + engine.a(engine.BUSINESS.mapsUrl, "Bản đồ", true)
+        : " " + engine.a("tel:" + engine.BUSINESS.phoneTel, "Call " + engine.BUSINESS.phone) + " · " + engine.a("https://wa.me/84942467674", "WhatsApp", true) + " · " + engine.a(engine.BUSINESS.mapsUrl, "Maps", true);
+    }
+    /* Append a source link when the index has a matching published page and
+       the answer does not already link to it. Links come only from the
+       built index — nothing is invented. */
+    function enrich(answer, raw, vi) {
+      var hit = search.search(raw);
+      if (!hit) return answer;
+      var url = (hit.site || "") + hit.entry.u;
+      if (answer.indexOf(hit.entry.u) >= 0) return answer;
+      return answer + " " + engine.a(url, engine.state.lang === "hi" ? "पूरा लेख पढ़ें" : (vi ? "Đọc chi tiết" : "Read more"), true);
+    }
+    function indexError(vi) {
+      addMsg(vi
+        ? "Không tải được chỉ mục tìm kiếm. Tôi vẫn trả lời câu hỏi phổ biến về giá, giờ mở cửa, địa chỉ." + contactLine(true)
+        : "I could not load the search index. I can still answer common questions about prices, hours and location." + contactLine(false), "bot");
+      scrollIfNear();
+    }
+    function greet() {
+      if (greeted) return;
+      greeted = true;
+      search.load();
+      addMsg("नमस्ते! मैं hi.rentbikehanoi.com पर प्रकाशित लेखों से जानकारी खोजने वाला स्थानीय बॉट हूँ (बिना बाहरी AI API)। आप हिंदी या English में किराया, जमा, 50cc, पता और समय पूछ सकते हैं।", "bot");
+    }
+    function send(text) {
+      text = (text || "").trim();
+      if (!text) return;
+      addMsg(esc(text), "user");
+      var typing = document.createElement("div");
+      typing.className = "chat-msg bot chat-typing";
+      typing.textContent = "…";
+      log.appendChild(typing);
+      scrollIfNear();
+      setTimeout(function () {
+        typing.remove();
+        var replyText = engine.reply(text);
+        var vi2 = engine.state.lang === "vi";
+        var enriched = enrich(replyText, text, vi2);
+        addMsg(enriched, "bot");
+        if (search.state === "error") indexError(vi2);
+        addSuggestions([engine.lastIntent || "default"]);
+      }, 220);
+    }
+    /* First open: greeting + lazy index load (never at page load) */
+    panel.addEventListener("chat:open", greet);
+    if (form) form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      send(input.value);
+      input.value = "";
+    });
+    var quick = panel.querySelectorAll(".chat-quick button");
+    for (var i = 0; i < quick.length; i++) {
+      (function (b) {
+        b.addEventListener("click", function () {
+          engine.reset(); // quick chips start a fresh question, not a follow-up
+          send(b.getAttribute("data-q") || b.textContent);
+        });
+      })(quick[i]);
+    }
+  }
+  if (typeof document !== "undefined" && typeof document.getElementById === "function" && document.getElementById("chat-panel")) {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", wire);
+    } else {
+      wire();
+    }
+  }
+})(typeof window !== "undefined" ? window : globalThis);
