@@ -12,9 +12,18 @@
     "/किराया-और-कीमतें/दैनिक-किराया/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Scooter_(motorcycle)",
-    "https://en.wikipedia.org/wiki/Renting",
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%99%99i"
+    {
+      "url": "https://www.honda.com.vn/training-material",
+      "title": "Honda Vietnam — Motorcycle Safety Training Materials"
+    },
+    {
+      "url": "https://vietnam.travel/faqs",
+      "title": "Vietnam Tourism — Frequently Asked Questions on Motorbike Rental and Transport"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Scooter_(motorcycle)",
+      "title": "Scooter (motorcycle) — Wikipedia"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,
