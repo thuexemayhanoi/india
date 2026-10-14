@@ -22,6 +22,17 @@ for(const item of pub){const list=groups.get(item.parentSilo)||[];list.push(item
 for(const page of pub){
  const html=fs.readFileSync(page.path.slice(1)+"index.html","utf8");
  const siblings=groups.get(page.parentSilo),pos=siblings.findIndex(x=>x.id===page.id);
+
+ assert.ok(!html.includes('<span aria-current="page">undefined</span>'),"Article breadcrumb undefined: "+page.id);
+ const safeTitle=page.title.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+ assert.ok(html.includes('<span aria-current="page">'+safeTitle+'</span>'),"Article breadcrumb title mismatch: "+page.id);
+ const schemaMatch=html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+ assert.ok(schemaMatch,"Missing schema: "+page.id);
+ const breadcrumb=JSON.parse(schemaMatch[1])["@graph"].find(x=>x["@type"]==="BreadcrumbList");
+ assert.ok(breadcrumb&&breadcrumb.itemListElement.length>=2,"Missing BreadcrumbList: "+page.id);
+ assert.ok(breadcrumb.itemListElement.every(x=>typeof x.name==="string"&&x.name.trim()),"Breadcrumb schema label missing: "+page.id);
+ assert.equal(breadcrumb.itemListElement.at(-1).name,page.title,"Article breadcrumb schema title mismatch: "+page.id);
+
  if(flags.previousNext!==false){
   const previous=siblings[pos-1],next=siblings[pos+1];
   assert.equal((html.match(/class="article-prev-next"/g)||[]).length,siblings.length>1?1:0);
