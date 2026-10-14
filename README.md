@@ -33,3 +33,16 @@ The approved 300-topic editorial plan and deterministic external-writer auto pub
 
 ## External Hindi Writer Factory
 The Editorial Plan has 300 topic briefs (6 batches × 50). Writer pushes pairs of structured Hindi JSON to `writer-inbox/content/incoming/`. GitHub Actions `hindi-factory-publish.yml` imports only allowed IDs, runs deterministic QA and publishes accepted pages automatically to `main`. See `docs/EXTERNAL-WRITER-HI.md`. No article content is copied from `/vanchinh`.
+
+## Hindi Local AI & Quick Contact (shared /web feature port)
+The on-page two floating buttons are ported from `thuexemayhanoi/web`; responsive behaviour is adapted from `thuexemayhanoi/spanish`. The India pages keep blue/navy/gold styling.
+The widgets are injected on every page by existing `assets/site.js`, so all published/future Hindi articles get them without changing URL, canonical, sitemap or SEO markup.
+
+- Quick Contact lower-left: Phone, WhatsApp, Zalo, Maps
+- AI Local lower-right: full English/Vietnamese /web rules + Hindi, stateful model/duration/quantity, VND arithmetic, searchable content, related article links, topic chips, cached index refreshed on open, no external model API
+- Mobile: iOS VisualViewport keyboard protection, no floating controls over menu, mutual exclusion, Escape and click-away, aria-expanded.
+- Business facts from `data/site.json`, prices published only. Electric price unknown; never invent.
+- Search index `assets/chat/search-index.json` auto-rebuilt by `scripts/build.mjs` using **published** articles and Hub/Silo pages (never drafts). It loads lazily when opening chat.
+- WhatsApp and Zalo phone links exist but account activation has not been verified.
+
+Validate: `node scripts/build.mjs && node tests/qa.mjs && node tests/floating-qa.mjs`. Read `docs/INDIA-FLOATING-AI-QUICK-CALL.md`.

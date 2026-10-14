@@ -89,10 +89,24 @@ return `<main id="main"><section class="page-hero"><div class="container">${brea
 
 function outputPath(path){return path==="/"?"index.html":path.slice(1)+"index.html";}
 
+// Local Hindi search index: only currently PUBLISHED site data, never draft content.
+function localChatIndex(){
+ const visible=all.filter(p=>!["/नियम-और-शर्तें/","/गोपनीयता-नीति/"].includes(p.path)).concat(articles);
+ const rows=visible.map(p=>{
+   const raw=p.sections||[];
+   const pairs=raw.map(sec=>Array.isArray(sec)?{h:String(sec[0]||""),p:[String(sec[1]||"")]}:{h:String(sec.heading||""),p:(sec.paragraphs||[]).map(String)});
+   const parts=pairs.filter(x=>x.h&&x.p.length).slice(0,9).map(x=>({h:x.h,p:x.p.filter(Boolean).slice(0,2).map(t=>t.slice(0,360))}));
+   if(!parts.length)parts.push({h:p.label||p.title,p:[String(p.lead||"").slice(0,360)]});
+   return {u:p.path,t:p.title,head:parts.map(x=>x.h),s:parts};
+ });
+ return JSON.stringify({version:"hi-published-"+articles.length,site:DOMAIN,e:rows})+"\n";
+}
+
 function buildSite(){
 const files={};
 for(const p of all)files[outputPath(p.path)]=head(p)+header(p)+(p.path==="/"?homePage(p):regularPage(p))+footer();
 for(const a of articles)files[outputPath(a.path)]=head(a)+header(a)+articlePage(a)+footer();
+files["assets/chat/search-index.json"]=localChatIndex();
 files["sitemap.xml"]='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+[...all,...articles].map(p=>`<url><loc>${e(url(p.path))}</loc></url>`).join("")+"</urlset>\n";
 files["robots.txt"]="User-agent: *\nAllow: /\nSitemap: "+DOMAIN+"/sitemap.xml\n";
 files[".nojekyll"]="";
