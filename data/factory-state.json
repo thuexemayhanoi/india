@@ -4,15 +4,15 @@
   "enabled": true,
   "writerEnabled": true,
   "autoPublish": true,
-  "publishedCount": 194,
+  "publishedCount": 200,
   "checkpoint": {
-    "lastArticleId": "HI0194",
+    "lastArticleId": "HI0200",
     "lastBatch": "B04",
-    "updatedAt": "2026-10-14T08:08:47.409Z"
+    "updatedAt": "2026-10-14T08:18:30.310Z"
   },
   "claimed": [],
   "immutablePublishedUrls": true,
   "transactionPending": false,
-  "updatedAt": "2026-10-14T08:08:47.409Z",
+  "updatedAt": "2026-10-14T08:18:30.310Z",
   "notes": "External writers submit vetted structured Hindi articles; deterministic CI publisher commits only passing pairs, with Git atomic commits and no force pushes."
 }
