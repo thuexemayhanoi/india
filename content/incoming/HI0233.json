@@ -12,9 +12,18 @@
     "/किराये-की-गाइड/कागजात-और-लाइसेंस/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Road_traffic_safety",
-    "https://en.wikipedia.org/wiki/Motorcycle_helmet",
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i"
+    {
+      "url": "https://gialam.hanoi.gov.vn/tin-tuc-su-kien/gia-lam-tang-cuong-ket-noi-nang-cao-chat-luong-dich-vu-du-lich-2773260405180737823.htm",
+      "title": "Gia Lâm tăng cường kết nối, nâng cao chất lượng dịch vụ du lịch"
+    },
+    {
+      "url": "https://www.who.int/publications/i/item/9789240086517/",
+      "title": "WHO — Global status report on road safety 2023"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Road_traffic_safety",
+      "title": "Road traffic safety — Wikipedia"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,

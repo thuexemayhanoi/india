@@ -14,9 +14,22 @@
     "/जमा-और-बुकिंग/सुरक्षा-जमा/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Renting",
-    "https://en.wikipedia.org/wiki/Scooter_(motorcycle)",
-    "https://vi.wikipedia.org/wiki/H%E1%BB%93_T%C3%A2y"
+    {
+      "url": "https://visitbadinh.com.vn/",
+      "title": "Cổng thông tin du lịch Phường Ba Đình — Ba Đình, Hà Nội"
+    },
+    {
+      "url": "https://www.who.int/teams/social-determinants-of-health/safety-and-mobility/road-safety",
+      "title": "World Health Organization — Road safety"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Renting",
+      "title": "Renting — Wikipedia"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Scooter_(motorcycle)",
+      "title": "Scooter (motorcycle) — Wikipedia"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,
