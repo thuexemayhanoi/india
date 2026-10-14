@@ -1,0 +1,58 @@
+name: India Non-Post Link Graph Snapshot (temporary)
+on:
+  push:
+    branches:
+      - feature/india-nonpost-internal-link-graph-20261015
+permissions:
+  contents: write
+concurrency:
+  group: india-nonpost-graph-build
+  cancel-in-progress: false
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Regenerate deterministic pages and graph
+        run: node scripts/build.mjs
+      - name: Verify all SEO guards and internal-link graph
+        run: |
+          node tests/qa.mjs
+          node tests/floating-qa.mjs
+          node tests/reader-ux.mjs
+          node scripts/factory-preflight.mjs
+      - name: Protect 300 published Post HTML pages from edits
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import {execFileSync} from 'node:child_process';
+          const config=JSON.parse(fs.readFileSync('data/site.json','utf8'));
+          const allowed=new Set(config.groups.map(p=>p.path==='/'?'index.html':p.path.slice(1)+'index.html'));
+          allowed.add('reports/india-nonpost-internal-link-graph.json');
+          allowed.add('reports/india-nonpost-internal-link-graph.csv');
+          const changed=execFileSync('git',['status','--porcelain','-uall'],{encoding:'utf8'}).trim().split('\n').filter(Boolean).map(s=>s.slice(3));
+          const unexpected=changed.filter(p=>!allowed.has(p));
+          if(unexpected.length)throw Error('Refusing generated content drift outside non-Post URLs: '+unexpected.join(', '));
+          console.log('Safe non-Post changed paths:',changed.length,'— no published Posts modified.');
+          NODE
+      - name: Commit regenerated non-Post HTML and source-backed graph
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "india-internal-links[bot]"
+          git config user.email "247212094+india-internal-links[bot]@users.noreply.github.com"
+          git add -A -- '*.html' reports/india-nonpost-internal-link-graph.json reports/india-nonpost-internal-link-graph.csv
+          if git diff --cached --quiet; then
+            echo "No new generated changes."
+          else
+            git commit -m "build(hi): 36 non-Post pages and internal-link graph"
+            git push origin HEAD:feature/india-nonpost-internal-link-graph-20261015
+          fi
