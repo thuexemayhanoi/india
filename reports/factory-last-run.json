@@ -1,58 +1,46 @@
 {
-  "batch": "B01",
+  "batch": "B02",
   "accepted": [
     {
-      "id": "HI0041",
-      "score": 100,
-      "words": 922
-    },
-    {
-      "id": "HI0042",
-      "score": 100,
-      "words": 902
-    },
-    {
-      "id": "HI0043",
-      "score": 100,
-      "words": 918
-    },
-    {
-      "id": "HI0044",
-      "score": 100,
-      "words": 917
-    },
-    {
-      "id": "HI0045",
-      "score": 100,
-      "words": 923
-    },
-    {
-      "id": "HI0046",
-      "score": 100,
-      "words": 916
-    },
-    {
-      "id": "HI0047",
+      "id": "HI0051",
       "score": 95,
-      "words": 874
+      "words": 883
     },
     {
-      "id": "HI0048",
+      "id": "HI0052",
       "score": 95,
-      "words": 873
+      "words": 854
     },
     {
-      "id": "HI0049",
+      "id": "HI0053",
       "score": 95,
-      "words": 896
+      "words": 860
     },
     {
-      "id": "HI0050",
-      "score": 100,
-      "words": 934
+      "id": "HI0054",
+      "score": 95,
+      "words": 853
+    },
+    {
+      "id": "HI0055",
+      "score": 95,
+      "words": 853
+    },
+    {
+      "id": "HI0056",
+      "score": 95,
+      "words": 862
     }
   ],
-  "blocked": [],
-  "remaining": 250,
-  "at": "2026-10-14T03:21:43.798Z"
+  "blocked": [
+    {
+      "ids": [
+        "HI0057",
+        "HI0058"
+      ],
+      "reason": "WAIT_FOR_CONSECUTIVE_PAIR"
+    }
+  ],
+  "remaining": 244,
+  "at": "2026-10-14T03:29:44.838Z"
 }
