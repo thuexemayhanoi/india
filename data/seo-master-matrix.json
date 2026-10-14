@@ -3988,5 +3988,35 @@
     "gscEvidence": null,
     "collisionStatus": "PASSED_AUTOMATED_QA",
     "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/एक-सप्ताह-के-लिए-बाइक-बुक-करने-के-चरण/",
+    "slug": "/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/एक-सप्ताह-के-लिए-बाइक-बुक-करने-के-चरण/",
+    "language": "hi-IN",
+    "keyword": "एक सप्ताह के लिए बाइक बुक करने के चरण",
+    "role": "SUPPORT",
+    "parent": "/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/डिलीवरी-और-वापसी/पिकअप-समय-बदलना-हो-तो-क्या-करें/",
+    "slug": "/जमा-और-बुकिंग/डिलीवरी-और-वापसी/पिकअप-समय-बदलना-हो-तो-क्या-करें/",
+    "language": "hi-IN",
+    "keyword": "पिकअप समय बदलना हो तो क्या करें",
+    "role": "SUPPORT",
+    "parent": "/जमा-और-बुकिंग/डिलीवरी-और-वापसी/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
   }
 ]
