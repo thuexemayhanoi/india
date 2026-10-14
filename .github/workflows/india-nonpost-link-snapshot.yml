@@ -38,7 +38,7 @@ jobs:
           const allowed=new Set(config.groups.map(p=>p.path==='/'?'index.html':p.path.slice(1)+'index.html'));
           allowed.add('reports/india-nonpost-internal-link-graph.json');
           allowed.add('reports/india-nonpost-internal-link-graph.csv');
-          const changed=execFileSync('git',['status','--porcelain','-uall'],{encoding:'utf8'}).trim().split('\n').filter(Boolean).map(s=>s.slice(3));
+          const changed=execFileSync('git',['-c','core.quotePath=false','status','--porcelain','-uall'],{encoding:'utf8'}).trim().split('\n').filter(Boolean).map(s=>s.slice(3));
           const unexpected=changed.filter(p=>!allowed.has(p));
           if(unexpected.length)throw Error('Refusing generated content drift outside non-Post URLs: '+unexpected.join(', '));
           console.log('Safe non-Post changed paths:',changed.length,'— no published Posts modified.');
