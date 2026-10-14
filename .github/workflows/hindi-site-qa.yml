@@ -27,6 +27,10 @@ jobs:
           node --check assets/js/assistant.js
           node --check assets/js/business-config.js
           node tests/floating-qa.mjs
+      - name: Validate Smart Search, previous/next and publisher box
+        run: |
+          node --check assets/js/site-search.js
+          node tests/reader-ux.mjs
       - name: Check generated HTML matches committed source
         run: |
-          git diff --exit-code -- '*.html' 'sitemap.xml' 'robots.txt' 'assets/chat/search-index.json'
+          git diff --exit-code -- '*.html' 'sitemap.xml' 'robots.txt' 'assets/chat/search-index.json' 'assets/search/index.json'
