@@ -11,8 +11,14 @@
     "/किराया-और-कीमतें/साप्ताहिक-किराया/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Speed_limit",
-    "https://vi.wikipedia.org/wiki/H%E1%BB%93_T%C3%A2y"
+    {
+      "url": "https://en.wikipedia.org/wiki/Speed_limit",
+      "title": "Speed limit – Wikipedia"
+    },
+    {
+      "url": "https://vi.wikipedia.org/wiki/H%E1%BB%93_T%C3%A2y",
+      "title": "Hồ Tây – Wikipedia tiếng Việt"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,
