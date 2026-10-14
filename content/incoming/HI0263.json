@@ -11,9 +11,22 @@
     "/जमा-और-बुकिंग/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Road_traffic_safety",
-    "https://en.wikipedia.org/wiki/Speed_limit",
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i"
+    {
+      "url": "https://en.wikipedia.org/wiki/Road_traffic_safety",
+      "title": "Road traffic safety – Wikipedia"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Speed_limit",
+      "title": "Speed limit – Wikipedia"
+    },
+    {
+      "url": "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i",
+      "title": "Hà Nội – Wikipedia tiếng Việt"
+    },
+    {
+      "url": "https://xaydungchinhsach.chinhphu.vn/toan-van-luat-trat-tu-an-toan-giao-thong-duong-bo-119240909105718285.htm",
+      "title": "Luật Trật tự, an toàn giao thông đường bộ số 36/2024/QH15 (toàn văn)"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,
