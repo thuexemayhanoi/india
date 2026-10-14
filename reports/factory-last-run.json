@@ -2,25 +2,26 @@
   "batch": "B05",
   "accepted": [
     {
-      "id": "HI0233",
+      "id": "HI0235",
       "score": 100,
-      "words": 941
+      "words": 940
     },
     {
-      "id": "HI0234",
+      "id": "HI0236",
       "score": 100,
-      "words": 935
+      "words": 929
     }
   ],
   "blocked": [
     {
       "ids": [
-        "HI0235"
+        "HI0237"
       ],
       "reason": "QA_REVIEW",
       "score": 85,
       "issues": [
         "minimum two distinct sources",
+        "source requires title and URL",
         "source requires title and URL",
         "source requires title and URL",
         "sources should be from at least two independent hostnames"
@@ -28,19 +29,18 @@
     },
     {
       "ids": [
-        "HI0236"
+        "HI0238"
       ],
       "reason": "QA_REVIEW",
-      "score": 85,
+      "score": 80,
       "issues": [
         "minimum two distinct sources",
-        "source requires title and URL",
         "source requires title and URL",
         "source requires title and URL",
         "sources should be from at least two independent hostnames"
       ]
     }
   ],
-  "remaining": 66,
-  "at": "2026-10-14T12:41:49.365Z"
+  "remaining": 64,
+  "at": "2026-10-14T12:47:44.114Z"
 }

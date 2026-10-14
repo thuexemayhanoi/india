@@ -4048,5 +4048,35 @@
     "gscEvidence": null,
     "collisionStatus": "PASSED_AUTOMATED_QA",
     "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-से-लॉन्ग-बिएन-बाइक-वापसी/",
+    "slug": "/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-से-लॉन्ग-बिएन-बाइक-वापसी/",
+    "language": "hi-IN",
+    "keyword": "Hai Bà Trưng से लॉन्ग बिएन बाइक वापसी",
+    "role": "SUPPORT",
+    "parent": "/हनोई-के-इलाके/हाई-बा-त्रुंग/",
+    "searchIntent": "commercial-support",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/वाहन-दस्तावेज़-मिलने-पर-क्या-सत्यापित-करें/",
+    "slug": "/किराये-की-गाइड/वाहन-जाँच/वाहन-दस्तावेज़-मिलने-पर-क्या-सत्यापित-करें/",
+    "language": "hi-IN",
+    "keyword": "वाहन दस्तावेज़ मिलने पर क्या सत्यापित करें",
+    "role": "SUPPORT",
+    "parent": "/किराये-की-गाइड/वाहन-जाँच/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
   }
 ]
