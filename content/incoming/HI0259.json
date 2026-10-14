@@ -11,9 +11,26 @@
     "/किराये-की-गाइड/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Renting",
-    "https://en.wikipedia.org/wiki/Road_traffic_safety",
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%99%99i"
+    {
+      "url": "https://en.wikipedia.org/wiki/Renting",
+      "title": "Renting – Wikipedia"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Road_traffic_safety",
+      "title": "Road traffic safety – Wikipedia"
+    },
+    {
+      "url": "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i",
+      "title": "Hà Nội – Wikipedia tiếng Việt"
+    },
+    {
+      "url": "https://vov.gov.vn/bang-lai-xe-quoc-te-co-duoc-lai-xe-o-viet-nam-dtnew-494500",
+      "title": "Bằng lái xe quốc tế có được lái xe ở Việt Nam?"
+    },
+    {
+      "url": "https://xaydungchinhsach.chinhphu.vn/toan-van-luat-trat-tu-an-toan-giao-thong-duong-bo-119240909105718285.htm",
+      "title": "Luật Trật tự, an toàn giao thông đường bộ số 36/2024/QH15 (toàn văn)"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,

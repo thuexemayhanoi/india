@@ -11,9 +11,18 @@
     "/किराया-और-कीमतें/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Renting",
-    "https://en.wikipedia.org/wiki/Motorcycle",
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i"
+    {
+      "url": "https://en.wikipedia.org/wiki/Renting",
+      "title": "Renting – Wikipedia"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Motorcycle",
+      "title": "Motorcycle – Wikipedia"
+    },
+    {
+      "url": "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i",
+      "title": "Hà Nội – Wikipedia tiếng Việt"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,

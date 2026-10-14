@@ -11,9 +11,18 @@
     "/जमा-और-बुकिंग/डिलीवरी-और-वापसी/"
   ],
   "sources": [
-    "https://vi.wikipedia.org/wiki/H%E1%BB%93_T%C3%A2y",
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%99%99i",
-    "https://en.wikipedia.org/wiki/Renting"
+    {
+      "url": "https://vi.wikipedia.org/wiki/H%E1%BB%93_T%C3%A2y",
+      "title": "Hồ Tây – Wikipedia tiếng Việt"
+    },
+    {
+      "url": "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i",
+      "title": "Hà Nội – Wikipedia tiếng Việt"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Renting",
+      "title": "Renting – Wikipedia"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,

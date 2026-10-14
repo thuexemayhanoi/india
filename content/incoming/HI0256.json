@@ -11,9 +11,18 @@
     "/जमा-और-बुकिंग/सुरक्षा-जमा/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Renting",
-    "https://en.wikipedia.org/wiki/Road_traffic_safety",
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%99%99i"
+    {
+      "url": "https://en.wikipedia.org/wiki/Renting",
+      "title": "Renting – Wikipedia"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Road_traffic_safety",
+      "title": "Road traffic safety – Wikipedia"
+    },
+    {
+      "url": "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i",
+      "title": "Hà Nội – Wikipedia tiếng Việt"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,

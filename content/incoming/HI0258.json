@@ -1,6 +1,6 @@
 {
   "id": "HI0258",
-  "title": "बा दिन्ह में पैदल यात्रियों के पास सावधानी",
+  "title": "Ba Đình में पैदल यात्रियों के पास सावधानी",
   "language": "hi-IN",
   "description": "हनोई के Ba Đình इलाक़े में पैदल यात्रियों के पास बाइक चलाते समय सावधानी: फ़ुटपाथ की भीड़, स्कूल और दफ़्तर के आसपास, गति और फ़ासले की आदतें।",
   "outputPath": "/हनोई-के-इलाके/बा-दिन्ह/ba-đình-में-पैदल-यात्रियों-के-पास-सावधानी/",
@@ -11,8 +11,14 @@
     "/किराये-की-गाइड/सुरक्षित-सवारी/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Road_traffic_safety",
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i"
+    {
+      "url": "https://en.wikipedia.org/wiki/Road_traffic_safety",
+      "title": "Road traffic safety – Wikipedia"
+    },
+    {
+      "url": "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i",
+      "title": "Hà Nội – Wikipedia tiếng Việt"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,
