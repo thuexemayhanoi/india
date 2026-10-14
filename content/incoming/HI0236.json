@@ -12,9 +12,18 @@
     "/जमा-और-बुकिंग/डिलीवरी-और-वापसी/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Renting",
-    "https://en.wikipedia.org/wiki/Road_traffic_safety",
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i"
+    {
+      "url": "https://vietnam.travel/faqs",
+      "title": "Vietnam Tourism — Frequently Asked Questions on Motorbike Rental and Transport"
+    },
+    {
+      "url": "https://www.honda.com.vn/training-material",
+      "title": "Honda Vietnam — Motorcycle Safety Training Materials"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Renting",
+      "title": "Renting — Wikipedia"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,
