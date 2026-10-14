@@ -2,38 +2,25 @@
   "batch": "B05",
   "accepted": [
     {
-      "id": "HI0211",
+      "id": "HI0213",
       "score": 100,
-      "words": 926
+      "words": 1170
     },
     {
-      "id": "HI0212",
+      "id": "HI0214",
       "score": 100,
-      "words": 905
+      "words": 926
     }
   ],
   "blocked": [
     {
       "ids": [
-        "HI0213"
+        "HI0215",
+        "HI0216"
       ],
-      "reason": "QA_REVIEW",
-      "score": 100,
-      "issues": [
-        "official VN source needed for regulatory topic"
-      ]
-    },
-    {
-      "ids": [
-        "HI0214"
-      ],
-      "reason": "QA_REVIEW",
-      "score": 100,
-      "issues": [
-        "official VN source needed for regulatory topic"
-      ]
+      "reason": "WAIT_FOR_CONSECUTIVE_PAIR"
     }
   ],
-  "remaining": 88,
-  "at": "2026-10-14T09:57:06.251Z"
+  "remaining": 86,
+  "at": "2026-10-14T10:01:29.892Z"
 }
