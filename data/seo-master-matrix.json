@@ -1378,5 +1378,35 @@
     "gscEvidence": null,
     "collisionStatus": "PASSED_AUTOMATED_QA",
     "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/लॉन्ग-बिएन/लॉन्ग-बिएन-से-हनोई-केंद्र-जाने-के-मार्ग-चुनना/",
+    "slug": "/हनोई-के-इलाके/लॉन्ग-बिएन/लॉन्ग-बिएन-से-हनोई-केंद्र-जाने-के-मार्ग-चुनना/",
+    "language": "hi-IN",
+    "keyword": "लॉन्ग बिएन से हनोई केंद्र जाने के मार्ग चुनना",
+    "role": "SUPPORT",
+    "parent": "/हनोई-के-इलाके/लॉन्ग-बिएन/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-में-पैदल-सड़क-के-समय-की-पुष्टि/",
+    "slug": "/हनोई-के-इलाके/होआन-कीएम/होआन-कीएम-में-पैदल-सड़क-के-समय-की-पुष्टि/",
+    "language": "hi-IN",
+    "keyword": "होआन कीएम में पैदल सड़क के समय की पुष्टि",
+    "role": "SUPPORT",
+    "parent": "/हनोई-के-इलाके/होआन-कीएम/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
   }
 ]
