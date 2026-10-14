@@ -99,7 +99,7 @@ function localChatIndex(){
    if(!parts.length)parts.push({h:p.label||p.title,p:[String(p.lead||"").slice(0,360)]});
    return {u:p.path,t:p.title,head:parts.map(x=>x.h),s:parts};
  });
- return JSON.stringify({version:"hi-published-"+articles.length,site:DOMAIN,e:rows})+"\\n";
+ return JSON.stringify({version:"hi-published-"+articles.length,site:DOMAIN,e:rows})+"\n";
 }
 
 function buildSite(){
