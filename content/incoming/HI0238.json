@@ -12,8 +12,18 @@
     "/जमा-और-बुकिंग/डिलीवरी-और-वापसी/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Long_Biên_Bridge",
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i"
+    {
+      "url": "https://vietnam.travel/node/914",
+      "title": "Vietnam Tourism — Top Instagram spots in Vietnam: Long Biên Bridge"
+    },
+    {
+      "url": "https://www.dautuhanoi.hanoi.gov.vn/en/project-detail/cau-giang-bien-va-duong-noi-hai-dau-cau",
+      "title": "Hanoi Investment Map — Giang Bien Bridge and Approach Roads"
+    },
+    {
+      "url": "https://www.who.int/publications/i/item/9789240086517/",
+      "title": "WHO — Global status report on road safety 2023"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,
