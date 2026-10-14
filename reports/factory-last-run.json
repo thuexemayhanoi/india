@@ -2,25 +2,25 @@
   "batch": "B05",
   "accepted": [
     {
-      "id": "HI0223",
+      "id": "HI0225",
       "score": 100,
-      "words": 970
+      "words": 1046
     },
     {
-      "id": "HI0224",
+      "id": "HI0226",
       "score": 100,
-      "words": 958
+      "words": 993
     }
   ],
   "blocked": [
     {
       "ids": [
-        "HI0225",
-        "HI0226"
+        "HI0227",
+        "HI0228"
       ],
       "reason": "WAIT_FOR_CONSECUTIVE_PAIR"
     }
   ],
-  "remaining": 76,
-  "at": "2026-10-14T10:19:04.786Z"
+  "remaining": 74,
+  "at": "2026-10-14T10:21:20.433Z"
 }
