@@ -3958,5 +3958,35 @@
     "gscEvidence": null,
     "collisionStatus": "PASSED_AUTOMATED_QA",
     "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/सुरक्षित-सवारी/अनजान-रास्ते-पर-गति-सीमा-पढ़ना/",
+    "slug": "/किराये-की-गाइड/सुरक्षित-सवारी/अनजान-रास्ते-पर-गति-सीमा-पढ़ना/",
+    "language": "hi-IN",
+    "keyword": "अनजान रास्ते पर गति सीमा पढ़ना",
+    "role": "SUPPORT",
+    "parent": "/किराये-की-गाइड/सुरक्षित-सवारी/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/जमा-और-बुकिंग/सुरक्षा-जमा/वाहन-की-पुरानी-खरोंच-का-रिकॉर्ड-क्यों-रखें/",
+    "slug": "/जमा-और-बुकिंग/सुरक्षा-जमा/वाहन-की-पुरानी-खरोंच-का-रिकॉर्ड-क्यों-रखें/",
+    "language": "hi-IN",
+    "keyword": "वाहन की पुरानी खरोंच का रिकॉर्ड क्यों रखें",
+    "role": "SUPPORT",
+    "parent": "/जमा-और-बुकिंग/सुरक्षा-जमा/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
   }
 ]
