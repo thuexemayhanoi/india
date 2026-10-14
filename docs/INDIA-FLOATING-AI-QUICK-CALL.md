@@ -15,3 +15,6 @@ Responsive/keyboard adaptation: `thuexemayhanoi/spanish` (`assets/js/floating-po
 
 ## QA
 `node scripts/build.mjs`, `node tests/qa.mjs`, `node tests/floating-qa.mjs`, `node tests/factory-integration.mjs`. Test browser mobile drawer, smart chips, pricing, WhatsApp, keyboard, and GA-free lazy index. No more than one writer should own a pending Article ID.
+
+## Mobile obstacle avoidance (2026-10-14)
+The shared positioning manager detects collision with the bike-finder form during scroll/resize; when there is room it moves both launchers above the form. This respects the iOS VisualViewport/keyboard and hides float controls when the menu is open. Quick Call switches to a compact 2×2 touch grid on phones with visible labels; inactive desktop tooltips no longer obscure nearby controls.

@@ -297,3 +297,17 @@ body.chat-keyboard-open .chat-log{
 .chat-head,.qc-main,.chat-fab,.chat-input button,.chat-msg.user{background:linear-gradient(135deg,#c2e9ff,#71b6e5 63%,#467d9e);color:#0b2632}
 @media(max-width:620px){.chat-panel{width:auto;left:12px;right:12px}.chat-panel[data-keyboard-open="true"]{left:8px;right:8px}}
 @media(prefers-reduced-motion:reduce){.quick-contact *,.chat-panel *, .chat-fab{animation:none!important;transition:none!important}}
+
+/* Avoid covering the bike finder; both launchers share a collision-aware lift. */
+.quick-contact,.chat-fab{bottom:calc(17px + env(safe-area-inset-bottom) + var(--floating-avoid-bottom,0px))}
+.chat-panel:not([data-keyboard-open="true"]){bottom:calc(84px + env(safe-area-inset-bottom))}
+@media(min-width:621px){
+  .qc-tip{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .15s}
+  .qc-btn:hover .qc-tip,.qc-btn:focus-visible .qc-tip{opacity:1;visibility:visible}
+}
+@media(max-width:620px){
+  .quick-contact[data-open="true"] .qc-actions{display:grid;grid-template-columns:repeat(2,72px);gap:8px;bottom:calc(56px + 10px)}
+  .qc-btn{width:72px;height:64px;min-width:72px;display:flex;flex-direction:column;gap:1px;border-radius:13px}
+  .qc-tip{position:static;left:auto;top:auto;transform:none;border:0;box-shadow:none;background:transparent;padding:0;font-size:10px;line-height:1.2;color:var(--text);max-width:68px;overflow:hidden;text-overflow:ellipsis}
+  .quick-contact .qc-actions{max-width:calc(100vw - 20px)}
+}

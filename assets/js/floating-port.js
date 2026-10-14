@@ -126,8 +126,34 @@
         document.documentElement.style.removeProperty("--chat-vv-top");
         document.documentElement.style.removeProperty("--chat-vv-height");
       }
+      adjustFloatingAvoidance(vvH,vvTop,keyboardOpen);
     });
   }
+  /* Keep the existing two /web launchers usable without obscuring the interactive finder.
+     Prefer moving BOTH above a crossing finder card; never move under the iOS keyboard.
+     When the card cannot be avoided without hiding navigation, keep the original corner positions. */
+  function adjustFloatingAvoidance(vvH,vvTop,keyboardOpen){
+    var root=document.documentElement;
+    var chatActive=!!(chatPanel&&!chatPanel.hidden);
+    if(keyboardOpen||chatActive){root.style.setProperty("--floating-avoid-bottom","0px");return;}
+    var bottom=vvTop+vvH-17;
+    var top=bottom-56,extra=0;
+    var quickOpen=!!(qc&&qc.getAttribute("data-open")==="true");
+    var requiredTop=quickOpen&&window.innerWidth<621?158:72;
+    var protect=[document.getElementById("bike-finder")];
+    for(var i=0;i<protect.length;i++){
+      var el=protect[i];
+      if(!el||!el.getBoundingClientRect)continue;
+      var rect=el.getBoundingClientRect();
+      if(rect.bottom<=vvTop||rect.top>=vvTop+vvH)continue;
+      if(rect.top<bottom+8&&rect.bottom>top-8){
+        var candidate=Math.max(0,bottom-rect.top+12);
+        if(top-candidate>=vvTop+requiredTop)extra=Math.max(extra,candidate);
+      }
+    }
+    root.style.setProperty("--floating-avoid-bottom",Math.round(extra)+"px");
+  }
+  window.addEventListener("scroll", positionFloats, { passive: true });
   window.addEventListener("resize", positionFloats, { passive: true });
   window.addEventListener("orientationchange", positionFloats, { passive: true });
   if (window.visualViewport) {
