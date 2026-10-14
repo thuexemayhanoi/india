@@ -13,7 +13,8 @@ export function generateLinkGraph({groups,articles,files,domain,recommend}){
     if(typeof html!=="string")throw Error("Graph source missing: "+src.path);
     const main=html.match(/<main\b[^>]*>[\s\S]*?<\/main>/i)?.[0];
     if(!main)throw Error("Main landmark missing: "+src.path);
-    const matched=[...main.matchAll(/<a\b[^>]*\bhref="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi)];
+    const contextual=main.replace(/<nav\\b[^>]*class="[^"]*breadcrumbs[^"]*"[^>]*>[\\s\\S]*?<\\/nav>/gi,"");
+    const matched=[...contextual.matchAll(/<a\b[^>]*\bhref="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi)];
     for(const m of matched){
       const target=decode(m[1]).split(/[?#]/)[0];
       if(!target.startsWith("/")||!byPath.has(target)||target===src.path)continue;
@@ -39,5 +40,5 @@ export function generateLinkGraph({groups,articles,files,domain,recommend}){
   for(const row of nodes){
     csvRows.push([row.URL,row.outgoingLinks.map(x=>x.anchorText+" → "+x.url).join("\n"),row.incomingLinks.map(x=>x.anchorText+" ← "+x.url).join("\n"),row.anchorText.join(" | "),row.cluster,row.recommendedLink.map(x=>x.anchorText+" → "+x.url+" ["+x.status+"]").join("\n"),row.role,row.counts.incomingSupport]);
   }
-  return {json:{repository:"thuexemayhanoi/india",production:domain+"/",scope:"36 existing non-Post routes",method:"Extract main-content links from the generated HTML of 36 non-Post pages and 300 published Posts; header, footer, JS links and external URLs excluded.",counts:{nonPost:groups.length,publishedPosts:articles.length,mainContentEdges:allEdges.length,toNonPost:allEdges.filter(x=>corePaths.has(x.targetUrl.slice(domain.length))).length},nodes},csv:csvRows.map(row=>row.map(csvEscape).join(",")).join("\n")+"\n"};
+  return {json:{repository:"thuexemayhanoi/india",production:domain+"/",scope:"36 existing non-Post routes",method:"Extract main-content links from the generated HTML of 36 non-Post pages and 300 published Posts; header, footer, breadcrumb navigation, JS links and external URLs excluded.",counts:{nonPost:groups.length,publishedPosts:articles.length,mainContentEdges:allEdges.length,toNonPost:allEdges.filter(x=>corePaths.has(x.targetUrl.slice(domain.length))).length},nodes},csv:csvRows.map(row=>row.map(csvEscape).join(",")).join("\n")+"\n"};
 }
