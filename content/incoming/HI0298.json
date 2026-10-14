@@ -11,8 +11,22 @@
     "/किराये-की-गाइड/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Road_traffic_safety",
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i"
+    {
+      "url": "https://en.wikipedia.org/wiki/Road_traffic_safety",
+      "title": "Road traffic safety – Wikipedia"
+    },
+    {
+      "url": "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i",
+      "title": "Hà Nội – Wikipedia tiếng Việt"
+    },
+    {
+      "url": "https://thanglong.chinhphu.vn/dieu-chinh-thoi-gian-hoat-dong-cua-pho-di-bo-ho-hoan-kiem-103241002182747049.htm",
+      "title": "Điều chỉnh thời gian hoạt động của phố đi bộ hồ Hoàn Kiếm"
+    },
+    {
+      "url": "https://thanglong.chinhphu.vn/dieu-chinh-thoi-gian-hoat-dong-cua-khong-gian-di-bo-ho-hoan-kiem-103250307150053069.htm",
+      "title": "Điều chỉnh thời gian hoạt động của không gian đi bộ hồ Hoàn Kiếm"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,

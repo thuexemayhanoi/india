@@ -11,8 +11,22 @@
     "/जमा-और-बुकिंग/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Road_traffic_safety",
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i"
+    {
+      "url": "https://en.wikipedia.org/wiki/Road_traffic_safety",
+      "title": "Road traffic safety – Wikipedia"
+    },
+    {
+      "url": "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i",
+      "title": "Hà Nội – Wikipedia tiếng Việt"
+    },
+    {
+      "url": "https://xaydungchinhsach.chinhphu.vn/toan-van-luat-trat-tu-an-toan-giao-thong-duong-bo-119240909105718285.htm",
+      "title": "Luật Trật tự, an toàn giao thông đường bộ số 36/2024/QH15 (toàn văn)"
+    },
+    {
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=212167&classid=1&orggroupid=2",
+      "title": "Nghị định 168/2024/NĐ-CP – xử phạt vi phạm hành chính về trật tự, an toàn giao thông đường bộ"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,

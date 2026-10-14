@@ -11,8 +11,14 @@
     "/किराये-की-गाइड/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Renting",
-    "https://vi.wikipedia.org/wiki/H%E1%BB%93_T%C3%A2y"
+    {
+      "url": "https://en.wikipedia.org/wiki/Renting",
+      "title": "Renting – Wikipedia"
+    },
+    {
+      "url": "https://vi.wikipedia.org/wiki/H%E1%BB%93_T%C3%A2y",
+      "title": "Hồ Tây – Wikipedia tiếng Việt"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,

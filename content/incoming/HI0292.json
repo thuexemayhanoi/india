@@ -11,8 +11,14 @@
     "/हनोई-के-इलाके/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Electric_bicycle",
-    "https://vi.wikipedia.org/wiki/H%E1%BB%93_T%C3%A2y"
+    {
+      "url": "https://en.wikipedia.org/wiki/Electric_bicycle",
+      "title": "Electric bicycle – Wikipedia"
+    },
+    {
+      "url": "https://vi.wikipedia.org/wiki/H%E1%BB%93_T%C3%A2y",
+      "title": "Hồ Tây – Wikipedia tiếng Việt"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,
