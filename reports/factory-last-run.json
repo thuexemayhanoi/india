@@ -2,25 +2,40 @@
   "batch": "B01",
   "accepted": [
     {
-      "id": "HI0009",
+      "id": "HI0011",
       "score": 100,
-      "words": 961
+      "words": 909
     },
     {
-      "id": "HI0010",
-      "score": 100,
-      "words": 942
+      "id": "HI0012",
+      "score": 95,
+      "words": 888
     }
   ],
   "blocked": [
     {
       "ids": [
-        "HI0011",
-        "HI0012"
+        "HI0013"
       ],
-      "reason": "WAIT_FOR_CONSECUTIVE_PAIR"
+      "reason": "QA_REVIEW",
+      "score": 70,
+      "issues": [
+        "Hindi body word count 806 < 850",
+        "quality/SEO score 70 below 80"
+      ]
+    },
+    {
+      "ids": [
+        "HI0014"
+      ],
+      "reason": "QA_REVIEW",
+      "score": 70,
+      "issues": [
+        "Hindi body word count 849 < 850",
+        "quality/SEO score 70 below 80"
+      ]
     }
   ],
-  "remaining": 290,
-  "at": "2026-10-13T21:10:33.316Z"
+  "remaining": 288,
+  "at": "2026-10-14T02:55:23.617Z"
 }
