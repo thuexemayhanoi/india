@@ -2,35 +2,39 @@
   "batch": "B04",
   "accepted": [
     {
-      "id": "HI0171",
-      "score": 100,
-      "words": 964
-    },
-    {
-      "id": "HI0172",
+      "id": "HI0175",
       "score": 100,
       "words": 947
     },
     {
-      "id": "HI0173",
+      "id": "HI0176",
       "score": 100,
-      "words": 972
+      "words": 907
     },
     {
-      "id": "HI0174",
+      "id": "HI0177",
       "score": 100,
-      "words": 947
+      "words": 912
+    },
+    {
+      "id": "HI0178",
+      "score": 100,
+      "words": 923
     }
   ],
   "blocked": [
     {
       "ids": [
-        "HI0175",
-        "HI0176"
+        "HI0180"
       ],
-      "reason": "WAIT_FOR_CONSECUTIVE_PAIR"
+      "reason": "QA_REVIEW",
+      "score": 100,
+      "issues": [
+        "official VN source needed for regulatory topic",
+        "invalid related path /पूछे-जाने-वाले-सवाल/"
+      ]
     }
   ],
-  "remaining": 126,
-  "at": "2026-10-14T05:52:33.588Z"
+  "remaining": 122,
+  "at": "2026-10-14T05:57:41.705Z"
 }
