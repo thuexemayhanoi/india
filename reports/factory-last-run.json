@@ -2,35 +2,35 @@
   "batch": "B02",
   "accepted": [
     {
-      "id": "HI0079",
+      "id": "HI0083",
       "score": 100,
       "words": 909
     },
     {
-      "id": "HI0080",
+      "id": "HI0084",
       "score": 95,
-      "words": 891
+      "words": 878
     },
     {
-      "id": "HI0081",
+      "id": "HI0085",
       "score": 95,
-      "words": 876
+      "words": 878
     },
     {
-      "id": "HI0082",
-      "score": 100,
-      "words": 914
+      "id": "HI0086",
+      "score": 95,
+      "words": 868
     }
   ],
   "blocked": [
     {
       "ids": [
-        "HI0083",
-        "HI0084"
+        "HI0087",
+        "HI0088"
       ],
       "reason": "WAIT_FOR_CONSECUTIVE_PAIR"
     }
   ],
-  "remaining": 218,
-  "at": "2026-10-14T03:49:28.378Z"
+  "remaining": 214,
+  "at": "2026-10-14T03:55:46.238Z"
 }
