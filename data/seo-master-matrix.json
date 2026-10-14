@@ -3688,5 +3688,35 @@
     "gscEvidence": null,
     "collisionStatus": "PASSED_AUTOMATED_QA",
     "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-क्षेत्र-में-बाइक-लेने-की-चेकलिस्ट/",
+    "slug": "/हनोई-के-इलाके/हाई-बा-त्रुंग/hai-bà-trưng-क्षेत्र-में-बाइक-लेने-की-चेकलिस्ट/",
+    "language": "hi-IN",
+    "keyword": "Hai Bà Trưng क्षेत्र में बाइक लेने की चेकलिस्ट",
+    "role": "SUPPORT",
+    "parent": "/हनोई-के-इलाके/हाई-बा-त्रुंग/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराये-की-गाइड/वाहन-जाँच/लंबी-यात्रा-से-पहले-ईंधन-या-बैटरी-जाँच/",
+    "slug": "/किराये-की-गाइड/वाहन-जाँच/लंबी-यात्रा-से-पहले-ईंधन-या-बैटरी-जाँच/",
+    "language": "hi-IN",
+    "keyword": "लंबी यात्रा से पहले ईंधन या बैटरी जाँच",
+    "role": "SUPPORT",
+    "parent": "/किराये-की-गाइड/वाहन-जाँच/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
   }
 ]

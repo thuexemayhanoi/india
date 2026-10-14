@@ -2,57 +2,38 @@
   "batch": "B05",
   "accepted": [
     {
-      "id": "HI0201",
+      "id": "HI0211",
       "score": 100,
-      "words": 1020
+      "words": 926
     },
     {
-      "id": "HI0202",
+      "id": "HI0212",
       "score": 100,
-      "words": 932
-    },
-    {
-      "id": "HI0203",
-      "score": 95,
-      "words": 863
-    },
-    {
-      "id": "HI0204",
-      "score": 100,
-      "words": 931
-    },
-    {
-      "id": "HI0205",
-      "score": 100,
-      "words": 902
-    },
-    {
-      "id": "HI0206",
-      "score": 95,
-      "words": 862
-    },
-    {
-      "id": "HI0207",
-      "score": 95,
-      "words": 897
-    },
-    {
-      "id": "HI0208",
-      "score": 95,
-      "words": 877
-    },
-    {
-      "id": "HI0209",
-      "score": 95,
-      "words": 860
-    },
-    {
-      "id": "HI0210",
-      "score": 95,
-      "words": 861
+      "words": 905
     }
   ],
-  "blocked": [],
-  "remaining": 90,
-  "at": "2026-10-14T09:45:46.008Z"
+  "blocked": [
+    {
+      "ids": [
+        "HI0213"
+      ],
+      "reason": "QA_REVIEW",
+      "score": 100,
+      "issues": [
+        "official VN source needed for regulatory topic"
+      ]
+    },
+    {
+      "ids": [
+        "HI0214"
+      ],
+      "reason": "QA_REVIEW",
+      "score": 100,
+      "issues": [
+        "official VN source needed for regulatory topic"
+      ]
+    }
+  ],
+  "remaining": 88,
+  "at": "2026-10-14T09:57:06.251Z"
 }
