@@ -11,9 +11,18 @@
     "/किराया-और-कीमतें/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Motorcycle",
-    "https://en.wikipedia.org/wiki/Road_traffic_safety",
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%99%99i"
+    {
+      "url": "https://cdn.honda.com.vn/motorbike-manual/October2025/BL9BXF5Wbadq3RuAmPpY.pdf",
+      "title": "Honda Vietnam — Motorcycle Owner's Manual: Pre-Ride Inspection and Fuel"
+    },
+    {
+      "url": "https://vietnam.travel/faqs",
+      "title": "Vietnam Tourism — Frequently Asked Questions on Transport and Motorcycle Rental"
+    },
+    {
+      "url": "https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries",
+      "title": "World Health Organization — Road traffic injuries"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,
