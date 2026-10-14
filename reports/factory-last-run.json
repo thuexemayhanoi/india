@@ -2,52 +2,17 @@
   "batch": "B05",
   "accepted": [
     {
-      "id": "HI0245",
+      "id": "HI0249",
       "score": 100,
-      "words": 933
+      "words": 962
     },
     {
-      "id": "HI0246",
+      "id": "HI0250",
       "score": 100,
-      "words": 921
-    },
-    {
-      "id": "HI0247",
-      "score": 100,
-      "words": 981
-    },
-    {
-      "id": "HI0248",
-      "score": 100,
-      "words": 923
+      "words": 975
     }
   ],
-  "blocked": [
-    {
-      "ids": [
-        "HI0249"
-      ],
-      "reason": "QA_REVIEW",
-      "score": 100,
-      "issues": [
-        "official VN source needed for regulatory topic"
-      ]
-    },
-    {
-      "ids": [
-        "HI0250"
-      ],
-      "reason": "QA_REVIEW",
-      "score": 85,
-      "issues": [
-        "minimum two distinct sources",
-        "source requires title and URL",
-        "source requires title and URL",
-        "source requires title and URL",
-        "sources should be from at least two independent hostnames"
-      ]
-    }
-  ],
-  "remaining": 52,
-  "at": "2026-10-14T12:51:35.706Z"
+  "blocked": [],
+  "remaining": 50,
+  "at": "2026-10-14T12:52:48.678Z"
 }
