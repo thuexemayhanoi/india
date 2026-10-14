@@ -11,9 +11,18 @@
     "/किराये-की-गाइड/सुरक्षित-सवारी/"
   ],
   "sources": [
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%99%99i",
-    "https://en.wikipedia.org/wiki/Road_traffic_safety",
-    "https://en.wikipedia.org/wiki/Motorcycle_helmet"
+    {
+      "url": "https://noibaiairport.vn/en/-nid825.html",
+      "title": "Noi Bai International Airport — Motorbike Parking at P5 Terminal 2"
+    },
+    {
+      "url": "https://vietnam.travel/faqs",
+      "title": "Vietnam Tourism — Frequently Asked Questions on Motorbike Rental"
+    },
+    {
+      "url": "https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries",
+      "title": "WHO — Road traffic injuries"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,
