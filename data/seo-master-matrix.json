@@ -3838,5 +3838,35 @@
     "gscEvidence": null,
     "collisionStatus": "PASSED_AUTOMATED_QA",
     "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/दैनिक-किराया/दैनिक-किराये-में-डिलीवरी-शुल्क-स्पष्ट-करना/",
+    "slug": "/किराया-और-कीमतें/दैनिक-किराया/दैनिक-किराये-में-डिलीवरी-शुल्क-स्पष्ट-करना/",
+    "language": "hi-IN",
+    "keyword": "दैनिक किराये में डिलीवरी शुल्क स्पष्ट करना",
+    "role": "SUPPORT",
+    "parent": "/किराया-और-कीमतें/दैनिक-किराया/",
+    "searchIntent": "commercial-support",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
+  },
+  {
+    "url": "https://hi.rentbikehanoi.com/किराया-और-कीमतें/साप्ताहिक-किराया/साप्ताहिक-किराये-में-यात्रा-योजना-और-पार्किंग/",
+    "slug": "/किराया-और-कीमतें/साप्ताहिक-किराया/साप्ताहिक-किराये-में-यात्रा-योजना-और-पार्किंग/",
+    "language": "hi-IN",
+    "keyword": "साप्ताहिक किराये में यात्रा योजना और पार्किंग",
+    "role": "SUPPORT",
+    "parent": "/किराया-और-कीमतें/साप्ताहिक-किराया/",
+    "searchIntent": "informational",
+    "status": "PUBLISHED",
+    "decision": "KEEP",
+    "published": true,
+    "gscEvidence": null,
+    "collisionStatus": "PASSED_AUTOMATED_QA",
+    "nextAction": "MONITOR_PERFORMANCE"
   }
 ]
