@@ -1,5 +1,6 @@
 // Hindi SSG, Node.js standard library only. Generated HTML is committed for static hosting.
-import fs from "node:fs";import path from "node:path";
+import fs from "node:fs";
+import {generateLinkGraph} from "./internal-link-graph.mjs";import path from "node:path";
 const config=JSON.parse(fs.readFileSync(new URL("../data/site.json",import.meta.url),"utf8"));
 const DOMAIN=config.baseUrl;const all=config.groups;const BIKES=config.bikes;const FAQ=config.faq;const NAV=config.nav;
 const pubFolder="content/published";
@@ -496,5 +497,9 @@ files["robots.txt"]="User-agent: *\nAllow: /\nSitemap: "+DOMAIN+"/sitemap.xml\n"
 files[".nojekyll"]="";
 return files;
 }
-const generated=buildSite();for(const [relative,html] of Object.entries(generated)){const file=path.resolve(process.cwd(),relative);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,html)}
+const generated=buildSite();
+const nonPostGraph=generateLinkGraph({groups:all,articles,files:generated,domain:DOMAIN,recommend:internalIntentPairs});
+generated["reports/india-nonpost-internal-link-graph.json"]=JSON.stringify(nonPostGraph.json,null,2)+"\n";
+generated["reports/india-nonpost-internal-link-graph.csv"]=nonPostGraph.csv;
+for(const [relative,html] of Object.entries(generated)){const file=path.resolve(process.cwd(),relative);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,html)}
 console.log("Built",Object.keys(generated).length,"static files");
