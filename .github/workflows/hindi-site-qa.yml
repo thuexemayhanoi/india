@@ -20,7 +20,13 @@ jobs:
         run: node scripts/build.mjs
       - name: Validate Hindi URLs, links, metadata, CNAME and sitemap
         run: node tests/qa.mjs
+      - name: Test both floating widgets, Hindi assistant, contacts and site search
+        run: |
+          node --check assets/site.js
+          node --check assets/js/floating-port.js
+          node --check assets/js/assistant.js
+          node --check assets/js/business-config.js
           node tests/floating-qa.mjs
       - name: Check generated HTML matches committed source
         run: |
-          git diff --exit-code -- '*.html' 'sitemap.xml' 'robots.txt'
+          git diff --exit-code -- '*.html' 'sitemap.xml' 'robots.txt' 'assets/chat/search-index.json'
