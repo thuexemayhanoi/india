@@ -1,5 +1,6 @@
 // Hindi SSG, Node.js standard library only. Generated HTML is committed for static hosting.
-import fs from "node:fs";import path from "node:path";
+import fs from "node:fs";
+import {generateLinkGraph} from "./internal-link-graph.mjs";import path from "node:path";
 const config=JSON.parse(fs.readFileSync(new URL("../data/site.json",import.meta.url),"utf8"));
 const DOMAIN=config.baseUrl;const all=config.groups;const BIKES=config.bikes;const FAQ=config.faq;const NAV=config.nav;
 const pubFolder="content/published";
@@ -113,6 +114,339 @@ const topics=["/बाइक-के-प्रकार/","/किराया-�
 return `<main id="main"><section class="hero"><div class="container hero-grid"><div class="hero-copy"><div class="eyebrow">🇻🇳 हनोई, वियतनाम · हिन्दी में गाइड</div><h1>${e(p.title)}<span class="hero-highlight"> अपनी यात्रा, अपने तरीके से।</span></h1><p>${e(p.lead)}</p><div class="hero-points"><span>✓ दिन / सप्ताह / महीना</span><span>✓ स्पष्ट जमा जानकारी</span><span>✓ हिंदी में सहायता गाइड</span></div><a class="hero-link" href="#बाइक-खोजें">बाइक विकल्प देखें <span>↘</span></a></div><div class="hero-illustration">${bikeSvg()}<div class="floating-note"><strong>हनोई राइड गाइड</strong><span>बाइक चुनें • कीमत समझें • संपर्क करें</span></div></div></div></section><div class="container"><form id="bike-finder" class="finder" aria-label="बाइक और अवधि चुनें"><div class="finder-field"><label for="bike-type">बाइक का प्रकार</label><select id="bike-type" name="type"><option value="all">सभी प्रकार</option><option value="gear">गियर बाइक</option><option value="scooter">ऑटोमैटिक स्कूटर</option><option value="50cc">50cc स्कूटर</option><option value="electric">इलेक्ट्रिक बाइक</option></select></div><div class="finder-field"><label for="rental-term">किराये की अवधि</label><select id="rental-term" name="term"><option value="day">प्रतिदिन</option><option value="week">प्रति सप्ताह</option><option value="month">प्रति महीना</option></select></div><button class="btn btn-primary" type="submit">विकल्प देखें →</button></form></div><section class="section" id="बाइक-खोजें"><div class="container"><div class="section-head"><div><span class="section-kicker">बाइक की तुलना</span><h2>अपनी सवारी चुनें</h2><p>संदर्भ दरें और मॉडल; कोई लाइव उपलब्धता या ऑनलाइन बुकिंग का दावा नहीं।</p></div>${a("/बाइक-के-प्रकार/","सभी बाइक देखें ↗","section-link")}</div>${bikeCards()}</div></section><section class="section section-tint"><div class="container"><div class="section-head"><div><span class="section-kicker">विषय के अनुसार</span><h2>जानकारी, जो आपकी यात्रा आसान बनाए</h2><p>वास्तविक सवालों पर आधारित विषय समूह। 300 लेखों का विस्तार बाद के चरण में होगा।</p></div></div>${categoryCards(topics)}</div></section><section class="section"><div class="container split"><div><span class="section-kicker">स्पष्ट किराया</span><h2>बजट बनाते समय जमा भी देखें</h2><p>किराये की दैनिक, साप्ताहिक और मासिक दर मॉडल के अनुसार बदलती है। उदाहरण के लिए Honda Wave की दैनिक संदर्भ दर <span class="money-value notranslate" translate="no">150,000 VND</span> है; सुरक्षा जमा <span class="money-value notranslate" translate="no">2,000,000–3,000,000 VND</span> हो सकता है।</p><p>अंतिम कीमत, अवधि, वाहन की स्थिति और डिलीवरी शुल्क अनुबंध से पहले तय करें।</p>${a("/किराया-और-कीमतें/","पूरी किराया गाइड →","btn btn-dark")}</div><div class="info-panel"><div class="panel-mark notranslate" translate="no">VND</div><strong>कीमतें VND में</strong><p>वियतनामी डोंग में संदर्भ किराया। भारतीय रुपये में अनुमानित रूपांतरण यहाँ नहीं दिखाया गया है।</p><hr><strong>सुरक्षा जमा</strong><p>मॉडल के अनुसार <span class="money-value notranslate" translate="no">2,000,000–5,000,000 VND</span>; वापसी अनुबंध की शर्तों पर आधारित।</p></div></div></section><section class="section section-tint"><div class="container"><div class="section-head"><div><span class="section-kicker">सामान्य सवाल</span><h2>किराये से पहले जान लें</h2></div>${a("/अक्सर-पूछे-जाने-वाले-सवाल/","सभी सवाल ↗","section-link")}</div><div class="faqs">${FAQ.slice(0,4).map(([q,a])=>`<details><summary>${e(q)}</summary><p>${priceSafeText(a)}</p></details>`).join("")}</div></div></section><section class="contact-strip"><div class="container contact-strip-inner"><div><span>यात्रा की योजना तैयार है?</span><h2>मॉडल, तारीख और अवधि बताकर कीमत पूछें</h2><p>Nguyễn Tú · Long Biên, Hà Nội</p></div><a class="btn btn-light" href="tel:+84942467674">☎ +84 942 467 674</a></div></section></main>`;
 }
 
+
+const NONPOST_RECS={
+  "/बाइक-के-प्रकार/": [
+    [
+      "/किराया-और-कीमतें/",
+      "मॉडल के अनुसार किराये की तुलना"
+    ],
+    [
+      "/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
+      "बाइक बुकिंग की प्रक्रिया"
+    ]
+  ],
+  "/किराया-और-कीमतें/": [
+    [
+      "/किराया-और-कीमतें/दैनिक-किराया/",
+      "दैनिक किराये के विकल्प"
+    ],
+    [
+      "/जमा-और-बुकिंग/",
+      "जमा और बुकिंग की शर्तें"
+    ]
+  ],
+  "/जमा-और-बुकिंग/": [
+    [
+      "/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
+      "बुकिंग के मुख्य चरण"
+    ],
+    [
+      "/किराया-और-कीमतें/",
+      "अवधि के अनुसार कीमतें"
+    ]
+  ],
+  "/हनोई-के-इलाके/": [
+    [
+      "/जमा-और-बुकिंग/डिलीवरी-और-वापसी/",
+      "डिलीवरी और वापसी की व्यवस्था"
+    ],
+    [
+      "/किराया-और-कीमतें/दैनिक-किराया/",
+      "दैनिक किराये का बजट"
+    ]
+  ],
+  "/किराये-की-गाइड/": [
+    [
+      "/किराये-की-गाइड/कागजात-और-लाइसेंस/",
+      "लाइसेंस और दस्तावेज़ की जाँच"
+    ],
+    [
+      "/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
+      "बुकिंग से पहले ज़रूरी जाँच"
+    ]
+  ],
+  "/सुझाए-गए-रूट/": [
+    [
+      "/किराये-की-गाइड/सुरक्षित-सवारी/",
+      "सुरक्षित सवारी की तैयारी"
+    ],
+    [
+      "/जमा-और-बुकिंग/डिलीवरी-और-वापसी/",
+      "लेने और लौटाने की योजना"
+    ]
+  ],
+  "/अक्सर-पूछे-जाने-वाले-सवाल/": [
+    [
+      "/किराया-और-कीमतें/",
+      "किराये की कीमतें देखें"
+    ],
+    [
+      "/जमा-और-बुकिंग/",
+      "जमा और बुकिंग समझें"
+    ],
+    [
+      "/किराये-की-गाइड/कागजात-और-लाइसेंस/",
+      "दस्तावेज़ से जुड़े सवाल"
+    ]
+  ],
+  "/हमारे-बारे-में/": [
+    [
+      "/हनोई-के-इलाके/लॉन्ग-बिएन/",
+      "लॉन्ग बिएन का स्थानीय गाइड"
+    ],
+    [
+      "/संपर्क/",
+      "व्यवसाय से संपर्क करें"
+    ]
+  ],
+  "/संपर्क/": [
+    [
+      "/किराया-और-कीमतें/",
+      "मॉडल और अवधि की कीमतें"
+    ],
+    [
+      "/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
+      "बुकिंग से पहले क्या जानें"
+    ]
+  ],
+  "/गोपनीयता-नीति/": [
+    [
+      "/नियम-और-शर्तें/",
+      "सेवा की शर्तें"
+    ],
+    [
+      "/संपर्क/",
+      "गोपनीयता के सवाल पर संपर्क"
+    ]
+  ],
+  "/नियम-और-शर्तें/": [
+    [
+      "/जमा-और-बुकिंग/सुरक्षा-जमा/",
+      "सुरक्षा जमा की शर्तें"
+    ],
+    [
+      "/गोपनीयता-नीति/",
+      "गोपनीयता नीति"
+    ]
+  ],
+  "/बाइक-के-प्रकार/गियर-बाइक/": [
+    [
+      "/किराया-और-कीमतें/दैनिक-किराया/",
+      "गियर बाइक का दैनिक किराया"
+    ],
+    [
+      "/किराये-की-गाइड/कागजात-और-लाइसेंस/",
+      "ड्राइविंग दस्तावेज़ जाँचें"
+    ]
+  ],
+  "/बाइक-के-प्रकार/ऑटोमैटिक-स्कूटर/": [
+    [
+      "/किराया-और-कीमतें/दैनिक-किराया/",
+      "स्कूटर की किराया दरें"
+    ],
+    [
+      "/किराये-की-गाइड/वाहन-जाँच/",
+      "स्कूटर लेने से पहले जाँच"
+    ]
+  ],
+  "/बाइक-के-प्रकार/पचास-सीसी/": [
+    [
+      "/किराये-की-गाइड/कागजात-और-लाइसेंस/",
+      "50cc और लाइसेंस संबंधी जानकारी"
+    ],
+    [
+      "/किराया-और-कीमतें/दैनिक-किराया/",
+      "50cc के किराये की तुलना"
+    ]
+  ],
+  "/बाइक-के-प्रकार/इलेक्ट्रिक-बाइक/": [
+    [
+      "/किराये-की-गाइड/वाहन-जाँच/",
+      "इलेक्ट्रिक वाहन की जाँच"
+    ],
+    [
+      "/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
+      "उपलब्धता पूछकर बुकिंग करें"
+    ]
+  ],
+  "/बाइक-के-प्रकार/इलेक्ट्रिक-साइकिल/": [
+    [
+      "/किराये-की-गाइड/वाहन-जाँच/",
+      "बैटरी और वाहन की जाँच"
+    ],
+    [
+      "/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
+      "उपलब्धता की पुष्टि कैसे करें"
+    ]
+  ],
+  "/किराया-और-कीमतें/दैनिक-किराया/": [
+    [
+      "/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
+      "एक दिन की बुकिंग की प्रक्रिया"
+    ],
+    [
+      "/जमा-और-बुकिंग/सुरक्षा-जमा/",
+      "सुरक्षा जमा जानें"
+    ]
+  ],
+  "/किराया-और-कीमतें/साप्ताहिक-किराया/": [
+    [
+      "/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
+      "साप्ताहिक बुकिंग की तैयारी"
+    ],
+    [
+      "/किराये-की-गाइड/किराया-अनुबंध/",
+      "किराये का अनुबंध"
+    ]
+  ],
+  "/किराया-और-कीमतें/मासिक-किराया/": [
+    [
+      "/किराये-की-गाइड/किराया-अनुबंध/",
+      "मासिक किराये की शर्तें"
+    ],
+    [
+      "/जमा-और-बुकिंग/सुरक्षा-जमा/",
+      "मासिक किराये का जमा"
+    ]
+  ],
+  "/जमा-और-बुकिंग/सुरक्षा-जमा/": [
+    [
+      "/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
+      "जमा तय करने से पहले बुकिंग चरण"
+    ],
+    [
+      "/किराया-और-कीमतें/",
+      "किराये के साथ कुल खर्च"
+    ]
+  ],
+  "/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/": [
+    [
+      "/जमा-और-बुकिंग/सुरक्षा-जमा/",
+      "सुरक्षा जमा की जानकारी"
+    ],
+    [
+      "/किराया-और-कीमतें/",
+      "मॉडल के अनुसार किराया"
+    ]
+  ],
+  "/जमा-और-बुकिंग/डिलीवरी-और-वापसी/": [
+    [
+      "/हनोई-के-इलाके/",
+      "पता और इलाके के अनुसार योजना"
+    ],
+    [
+      "/संपर्क/",
+      "डिलीवरी की पुष्टि के लिए संपर्क"
+    ]
+  ],
+  "/हनोई-के-इलाके/लॉन्ग-बिएन/": [
+    [
+      "/जमा-और-बुकिंग/डिलीवरी-और-वापसी/",
+      "लॉन्ग बिएन में लेने और लौटाने की प्रक्रिया"
+    ],
+    [
+      "/संपर्क/",
+      "पिकअप पते और समय की पुष्टि"
+    ]
+  ],
+  "/किराये-की-गाइड/कागजात-और-लाइसेंस/": [
+    [
+      "/किराये-की-गाइड/वाहन-जाँच/",
+      "बाइक लेने से पहले जाँच"
+    ],
+    [
+      "/जमा-और-बुकिंग/बुकिंग-प्रक्रिया/",
+      "बुकिंग में दस्तावेज़ की पुष्टि"
+    ]
+  ],
+  "/किराये-की-गाइड/सुरक्षित-सवारी/": [
+    [
+      "/किराये-की-गाइड/वाहन-जाँच/",
+      "सवारी से पहले वाहन जाँच"
+    ],
+    [
+      "/सुझाए-गए-रूट/शहर-की-यात्रा/",
+      "शहर में सवारी की योजना"
+    ]
+  ],
+  "/किराये-की-गाइड/वाहन-जाँच/": [
+    [
+      "/जमा-और-बुकिंग/डिलीवरी-और-वापसी/",
+      "वाहन सौंपते और लौटाते समय जाँच"
+    ],
+    [
+      "/किराये-की-गाइड/सुरक्षित-सवारी/",
+      "सवारी की सुरक्षा"
+    ]
+  ],
+  "/किराये-की-गाइड/किराया-अनुबंध/": [
+    [
+      "/जमा-और-बुकिंग/सुरक्षा-जमा/",
+      "अनुबंध में जमा की शर्तें"
+    ],
+    [
+      "/किराया-और-कीमतें/",
+      "किराया और अवधि स्पष्ट करें"
+    ]
+  ],
+  "/सुझाए-गए-रूट/शहर-की-यात्रा/": [
+    [
+      "/किराये-की-गाइड/सुरक्षित-सवारी/",
+      "शहर में सुरक्षित सवारी"
+    ],
+    [
+      "/हनोई-के-इलाके/",
+      "हनोई के इलाके चुनें"
+    ]
+  ],
+  "/सुझाए-गए-रूट/लंबी-यात्रा-की-तैयारी/": [
+    [
+      "/किराये-की-गाइड/सुरक्षित-सवारी/",
+      "लंबी सवारी की सुरक्षा"
+    ],
+    [
+      "/किराये-की-गाइड/कागजात-और-लाइसेंस/",
+      "यात्रा से पहले लाइसेंस देखें"
+    ]
+  ]
+};
+const SILO_FALLBACK={
+  "/हनोई-के-इलाके/": [
+    [
+      "/जमा-और-बुकिंग/डिलीवरी-और-वापसी/",
+      "पिकअप और वापसी तय करें"
+    ],
+    [
+      "/किराया-और-कीमतें/दैनिक-किराया/",
+      "स्थानीय यात्रा के लिए दैनिक किराया"
+    ]
+  ],
+  "/सुझाए-गए-रूट/": [
+    [
+      "/किराये-की-गाइड/सुरक्षित-सवारी/",
+      "सवारी की सुरक्षा"
+    ],
+    [
+      "/जमा-और-बुकिंग/डिलीवरी-और-वापसी/",
+      "बाइक वापसी की योजना"
+    ]
+  ]
+};
+function internalIntentPairs(p){
+ const direct=NONPOST_RECS[p.path]||SILO_FALLBACK[p.parent]||[];
+ const initial=p.role==="SILO"&&p.parent?[[p.parent,(byPath[p.parent]?.label||"मुख्य विषय")+" की पूरी विषय सूची"],...direct]:direct;
+ const seen=new Set();
+ return initial.filter(([target])=>{if(target==="/"||target===p.path||!byPath[target]||seen.has(target))return false;seen.add(target);return true;}).slice(0,4);
+}
+function internalIntentLinks(p){
+ const list=internalIntentPairs(p);
+ if(!list.length)return "";
+ return '<section class="article-section internal-context-links" aria-label="विषय के अनुसार आगे पढ़ें"><h2>विषय के अनुसार आगे पढ़ें</h2><ul class="internal-context-list">'
+ +list.map(([target,anchor])=>'<li><a href="'+e(target)+'">'+e(anchor)+' <span aria-hidden="true">↗</span></a></li>').join("")
+ +'</ul></section>';
+}
+
 function regularPage(p){
 const children=all.filter(x=>x.parent===p.path);
 const siblings=p.parent?all.filter(x=>x.parent===p.parent&&x.path!==p.path).slice(0,4):[];
@@ -124,7 +458,7 @@ const prices=p.path==="/किराया-और-कीमतें/"?`<section
 const articleLinks=p.role==="SILO"?articles.filter(a=>a.parentSilo===p.path):[];
 const publishedCards=articleLinks.length?`<section class="article-section"><h2>इस विषय के प्रकाशित लेख</h2><div class="topic-grid">${articleLinks.map(a=>`<a class="topic-card" href="${e(a.path)}"><h3>${e(a.title)}</h3><p>${e(a.lead)}</p><span class="topic-link">पूरा लेख पढ़ें →</span></a>`).join("")}</div></section>`:"";
 const contact=p.path==="/संपर्क/"?`<div class="info-panel"><p><strong>Cho Thuê Xe Máy Nguyễn Tú</strong></p><p>112 Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội, Việt Nam</p><p>09:00–21:00 · प्रतिदिन</p><p><a href="tel:+84942467674">+84 942 467 674</a> · <a href="https://maps.google.com/maps?cid=7448790013669858019" rel="noopener noreferrer">मानचित्र देखें ↗</a></p></div>`:"";
-return `<main id="main"><section class="page-hero"><div class="container">${breadcrumbs(p)}<span class="section-kicker">हनोई मोटरबाइक रेंटल · ${e(p.role)}</span><h1>${e(p.title)}</h1><p>${e(p.lead)}</p></div></section><section class="section"><div class="container content-layout"><article class="article-body">${content}${prices}${faqs}${contact}${publishedCards}${children.length?`<section class="article-section"><h2>इस विषय के हिस्से</h2>${categoryCards(children.map(x=>x.path))}</section>`:""}<section class="article-section"><h2>अगला कदम</h2><p>किराया, उपलब्धता, जमा और लेने या लौटाने की शर्तें मॉडल तथा अवधि के अनुसार पहले पुष्टि करें। यह वेबसाइट बुकिंग की पुष्टि करने वाला सिस्टम नहीं है।</p><a class="btn btn-primary" href="/संपर्क/">संपर्क जानकारी देखें →</a></section></article><aside class="sidebar"><div class="sidebar-box"><h2>संबंधित विषय</h2>${pathParts.map(x=>a(x,byPath[x].label+" ↗")).join("")}</div><div class="sidebar-box sidebar-cta"><strong>मॉडल चुनना है?</strong><p>फ़ोन पर वर्तमान कीमत और उपलब्धता की पुष्टि करें।</p><a href="tel:+84942467674">+84 942 467 674 →</a></div></aside></div></section></main>`;
+return `<main id="main"><section class="page-hero"><div class="container">${breadcrumbs(p)}<span class="section-kicker">हनोई मोटरबाइक रेंटल · ${e(p.role)}</span><h1>${e(p.title)}</h1><p>${e(p.lead)}</p></div></section><section class="section"><div class="container content-layout"><article class="article-body">${content}${prices}${faqs}${contact}${publishedCards}${children.length?`<section class="article-section"><h2>इस विषय के हिस्से</h2>${categoryCards(children.map(x=>x.path))}</section>`:""}${internalIntentLinks(p)}<section class="article-section"><h2>अगला कदम</h2><p>किराया, उपलब्धता, जमा और लेने या लौटाने की शर्तें मॉडल तथा अवधि के अनुसार पहले पुष्टि करें। यह वेबसाइट बुकिंग की पुष्टि करने वाला सिस्टम नहीं है।</p><a class="btn btn-primary" href="/संपर्क/">संपर्क जानकारी देखें →</a></section></article><aside class="sidebar"><div class="sidebar-box"><h2>संबंधित विषय</h2>${pathParts.map(x=>a(x,byPath[x].label+" ↗")).join("")}</div><div class="sidebar-box sidebar-cta"><strong>मॉडल चुनना है?</strong><p>फ़ोन पर वर्तमान कीमत और उपलब्धता की पुष्टि करें।</p><a href="tel:+84942467674">+84 942 467 674 →</a></div></aside></div></section></main>`;
 }
 
 function articlePage(p){
@@ -163,5 +497,9 @@ files["robots.txt"]="User-agent: *\nAllow: /\nSitemap: "+DOMAIN+"/sitemap.xml\n"
 files[".nojekyll"]="";
 return files;
 }
-const generated=buildSite();for(const [relative,html] of Object.entries(generated)){const file=path.resolve(process.cwd(),relative);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,html)}
+const generated=buildSite();
+const nonPostGraph=generateLinkGraph({groups:all,articles,files:generated,domain:DOMAIN,recommend:internalIntentPairs});
+generated["reports/india-nonpost-internal-link-graph.json"]=JSON.stringify(nonPostGraph.json,null,2)+"\n";
+generated["reports/india-nonpost-internal-link-graph.csv"]=nonPostGraph.csv;
+for(const [relative,html] of Object.entries(generated)){const file=path.resolve(process.cwd(),relative);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,html)}
 console.log("Built",Object.keys(generated).length,"static files");

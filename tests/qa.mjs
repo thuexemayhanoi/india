@@ -78,3 +78,35 @@ const homeFAQ = fs.readFileSync("index.html","utf8");
 assert.ok(homeFAQ.includes("2,000,000–5,000,000 VND"),"Homepage FAQ deposit amount must stay VND");
 assert.ok(homeFAQ.includes('class="money-value notranslate" translate="no">2,000,000–5,000,000 VND</span>'),"Homepage FAQ deposit must not be translated into euros");
 console.log("Homepage FAQ VND QA PASS");
+
+/* Contextual internal-link graph: only existing core pages are modified. */
+const graphFile="reports/india-nonpost-internal-link-graph.json";
+const graphCsv="reports/india-nonpost-internal-link-graph.csv";
+assert.ok(fs.existsSync(graphFile),"core-page internal-link graph missing");
+assert.ok(fs.existsSync(graphCsv),"core-page link graph CSV missing");
+const linkGraph=JSON.parse(fs.readFileSync(graphFile,"utf8"));
+assert.equal(linkGraph.counts.nonPost,ps.length,"non-post graph coverage drift");
+assert.equal(linkGraph.counts.publishedPosts,published.length,"support source graph coverage drift");
+assert.equal(linkGraph.nodes.length,ps.length,"one graph row per existing non-Post URL");
+const graphMap=new Map(linkGraph.nodes.map(x=>[x.URL,x]));
+assert.equal(graphMap.size,ps.length,"duplicate URL graph nodes");
+for(const page of ps){
+ const row=graphMap.get(data.baseUrl+page.path);
+ assert.ok(row,"missing graph node "+page.path);
+ assert.ok(Array.isArray(row.outgoingLinks)&&Array.isArray(row.incomingLinks));
+ assert.ok(Array.isArray(row.anchorText)&&Array.isArray(row.recommendedLink));
+ const file=page.path==="/"?"index.html":page.path.slice(1)+"index.html";
+ const html=fs.readFileSync(file,"utf8");
+ if(page.path!=="/"){
+  assert.ok(html.includes('class="article-section internal-context-links"'),"contextual links missing "+page.path);
+  const panel=html.match(/<section class="article-section internal-context-links"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(panel,"missing semantic link panel "+page.path);
+  assert.ok(!panel.includes('href="/"'),"unrelated contextual homepage link "+page.path);
+  const recs=row.recommendedLink;
+  assert.ok(recs.length>=2&&recs.length<=4,"bounded contextual links "+page.path);
+  for(const link of recs){assert.equal(link.status,"IMPLEMENTED","recommended link not implemented "+page.path+" → "+link.url);}
+ }
+}
+assert.ok(linkGraph.nodes.some(n=>n.counts.incomingSupport>0),"support-to-silo inbound graph absent");
+assert.ok(fs.readFileSync(graphCsv,"utf8").startsWith('"URL","Outgoing Links","Incoming Links","Anchor Text","Cluster","Recommended Link"'),"CSV columns drift");
+console.log("Contextual Graph PASS:",linkGraph.counts.nonPost,"non-Post URLs,",linkGraph.counts.publishedPosts,"Support Posts,",linkGraph.counts.mainContentEdges,"main-content edges");
