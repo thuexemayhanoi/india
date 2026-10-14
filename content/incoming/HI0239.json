@@ -12,9 +12,18 @@
     "/हनोई-के-इलाके/"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Renting",
-    "https://en.wikipedia.org/wiki/Road_traffic_safety",
-    "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i"
+    {
+      "url": "https://www.who.int/publications/i/item/mobile-phone-use-a-growing-problem-of-driver-distraction",
+      "title": "WHO — Mobile phone use: a growing problem of driver distraction"
+    },
+    {
+      "url": "https://www.honda.com.vn/training-material",
+      "title": "Honda Vietnam — Motorcycle Safety Training Materials"
+    },
+    {
+      "url": "https://vietnam.travel/plan-your-trip/health-safety",
+      "title": "Vietnam Tourism — Health and Safety"
+    }
   ],
   "editorialChecks": {
     "factsReviewed": true,
