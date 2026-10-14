@@ -35,12 +35,61 @@ function head(p){let description=(p.lead+" | Cho Thuê Xe Máy Nguyễn Tú").sl
 return `<!doctype html><html lang="hi-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b2632"><meta name="google-site-verification" content="${e(config.googleSiteVerification)}" /><meta name="google-site-verification" content="${e(config.googleSiteVerificationAdditional)}" /><title>${e(p.title)} | Nguyễn Tú</title><meta name="description" content="${e(description)}"><link rel="canonical" href="${e(url(p.path))}"><meta property="og:type" content="website"><meta property="og:locale" content="hi_IN"><meta property="og:title" content="${e(p.title)}"><meta property="og:description" content="${e(description)}"><meta property="og:url" content="${e(url(p.path))}"><link rel="stylesheet" href="/assets/site.css">${schema(p)}</head><body><a class="skip-link" href="#main">मुख्य सामग्री पर जाएँ</a>`;
 }
 
+
+/* WordPress-style reader features: one source-of-truth and published-only relationships. */
+const readerFlags={
+  smartSearch:config.features?.smartSearch!==false,
+  previousNext:config.features?.previousNext!==false,
+  authorBox:config.features?.authorBox!==false
+};
+const siloArticles=new Map();
+for(const item of articles){
+ if(!item.parentSilo)continue;
+ const siblings=siloArticles.get(item.parentSilo)||[];
+ siblings.push(item);
+ siloArticles.set(item.parentSilo,siblings);
+}
+function siteSearchButton(){
+ return '<button id="site-search-toggle" class="site-search-toggle" type="button" aria-expanded="false" aria-controls="site-search-panel" aria-label="पूरी वेबसाइट में खोजें" title="सभी लेख खोजें"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>';
+}
+function siteSearchPanel(){
+ return '<div id="site-search-panel" class="site-search-layer" hidden><section class="site-search-dialog" role="dialog" aria-modal="true" aria-labelledby="site-search-heading"><div class="site-search-heading"><h2 id="site-search-heading">पूरे ब्लॉग में खोजें</h2><button type="button" id="site-search-close" class="site-search-close" aria-label="खोज बंद करें">✕</button></div><label class="site-search-label" for="site-search-input">शीर्षक, कीवर्ड और लेख के विषय खोजें</label><input id="site-search-input" type="search" autocomplete="off" placeholder="जैसे: लाइसेंस, किराया, Honda Wave" aria-describedby="site-search-status"><p id="site-search-status" class="site-search-status" role="status" aria-live="polite">खोज शुरू करने के लिए कोई शब्द लिखें।</p><ul id="site-search-results" class="site-search-results"></ul></section></div>';
+}
+function previousNextNav(article){
+ const siblings=siloArticles.get(article.parentSilo)||[];
+ const position=siblings.findIndex(x=>x.id===article.id);
+ if(position<0||siblings.length<2)return '';
+ const before=siblings[position-1],after=siblings[position+1];
+ function link(item,label,rel){
+  return item?'<a class="article-neighbor" rel="'+rel+'" href="'+e(item.path)+'"><span>'+label+'</span><strong>'+e(item.title)+'</strong></a>':'<span class="article-neighbor-empty" aria-hidden="true"></span>';
+ }
+ return '<nav class="article-prev-next" aria-label="इस श्रेणी के पिछले और अगले लेख">'+link(before,'← पिछला लेख','prev')+link(after,'अगला लेख →','next')+'</nav>';
+}
+function publisherBox(){
+ const p=config.publisher||{};
+ const name=config.brand;
+ const phone=config.contact.phone;
+ const href='tel:'+phone.replace(/[^+0-9]/g,'');
+ return '<section class="article-publisher" aria-label="प्रकाशक की जानकारी"><div class="publisher-mark" aria-hidden="true">'+e(p.logoText||'HANOIRIDE')+'</div><div class="publisher-details"><span class="publisher-kicker">प्रकाशक</span><strong>'+e(name)+'</strong><p>'+e(p.description||'हनोई में मोटरबाइक किराये की उपयोगी जानकारी।')+'</p><p class="publisher-contact"><span>'+e(config.contact.address)+'</span><a href="'+e(href)+'">'+e(phone)+'</a>'+(p.website?'<a href="'+e(p.website)+'" rel="noopener noreferrer">आधिकारिक वेबसाइट ↗</a>':'')+'</p></div></section>';
+}
+function siteSearchIndex(){
+ const plan=JSON.parse(fs.readFileSync("data/editorial-plan.json","utf8"));
+ const keywordById=new Map(plan.items.map(item=>[item.id,String(item.primaryIntent||item.primaryKeyword||"")]));
+ return JSON.stringify({version:1,language:"hi-IN",count:articles.length,e:articles.map(item=>({
+  u:item.path,
+  t:String(item.title||""),
+  d:String((item.lead+" | Cho Thuê Xe Máy Nguyễn Tú").slice(0,195)),
+  k:keywordById.get(item.id)||"",
+  h:(item.sections||[]).flatMap(s=>[s.heading,...(s.subsections||[]).map(x=>x.heading)]).filter(Boolean)
+ }))})+"\n";
+}
+
 function header(p){
  const menu=NAV.map((hubPath,i)=>{
  const hub=byPath[hubPath],children=all.filter(p=>p.parent===hubPath);
  return `<div class="nav-group"><div class="nav-group-main">${a(hub.path,hub.label,"nav-hub-link")}<button class="nav-subtoggle" type="button" aria-expanded="false" aria-controls="nav-child-${i}" aria-label="${e(hub.label)}: उपविषय दिखाएँ">⌄</button></div><div class="nav-panel" id="nav-child-${i}"><a class="nav-panel-all" href="${e(hub.path)}">सभी ${e(hub.label)} →</a>${children.map(p=>a(p.path,p.label,"nav-child-link")).join("")}</div></div>`;
  }).join("");
- return `<header class="site-header"><div class="container header-inner"><a class="brand" href="/" aria-label="हनोई मोटरबाइक किराया - मुख्य पृष्ठ"><span class="brand-icon">↗</span><span><strong>HANOI<span class="accent">RIDE</span></strong><small>Nguyễn Tú · हिन्दी गाइड</small></span></a><nav id="main-nav" class="nav nav-taxonomy" aria-label="मुख्य नेविगेशन">${menu}${a("/संपर्क/","संपर्क करें","nav-cta")}</nav><div class="header-actions notranslate" translate="no"><a class="language-pill" href="${translateUrl(p.path)}" target="_blank" rel="noopener noreferrer" lang="en" aria-label="Automatically translate this page into English with Google Translate (opens a new tab)" title="Translate current page into English"><span class="lang-globe" aria-hidden="true">🌐</span><span class="lang-full">English</span><span class="lang-short">EN</span></a><button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="मेन्यू खोलें">☰</button></div></div></header>`;
+ return `<header class="site-header"><div class="container header-inner"><a class="brand" href="/" aria-label="हनोई मोटरबाइक किराया - मुख्य पृष्ठ"><span class="brand-icon">↗</span><span><strong>HANOI<span class="accent">RIDE</span></strong><small>Nguyễn Tú · हिन्दी गाइड</small></span></a><nav id="main-nav" class="nav nav-taxonomy" aria-label="मुख्य नेविगेशन">${menu}${a("/संपर्क/","संपर्क करें","nav-cta")}</nav><div class="header-actions notranslate" translate="no"><a class="language-pill" href="${translateUrl(p.path)}" target="_blank" rel="noopener noreferrer" lang="en" aria-label="Automatically translate this page into English with Google Translate (opens a new tab)" title="Translate current page into English"><span class="lang-globe" aria-hidden="true">🌐</span><span class="lang-full">English</span><span class="lang-short">EN</span></a>${readerFlags.smartSearch?siteSearchButton():""}<button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="मेन्यू खोलें">☰</button></div></div></header>${readerFlags.smartSearch?siteSearchPanel():""}`;
 }
 
 function footer(){
@@ -49,7 +98,7 @@ function footer(){
  return `<section class="footer-topic" aria-label="${e(hub.label)}"><h3>${a(hub.path,hub.label)}</h3>${children.map(c=>a(c.path,c.label,"footer-silo")).join("")}</section>`;
  }).join("");
  const utility=["/अक्सर-पूछे-जाने-वाले-सवाल/","/हमारे-बारे-में/","/संपर्क/","/गोपनीयता-नीति/","/नियम-और-शर्तें/"].map(x=>a(x,byPath[x].label)).join("");
- return `<footer class="footer"><div class="container footer-grid footer-grid--taxonomy"><div class="footer-summary"><a class="brand footer-brand" href="/"><span class="brand-icon">↗</span><span><strong>HANOI<span class="accent">RIDE</span></strong><small>Nguyễn Tú</small></span></a><p>हनोई में मोटरबाइक किराये के लिए हिन्दी जानकारी। मॉडल, कीमत और जमा की पुष्टि करें।</p><p><strong>112 Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội</strong></p><p>हर विषय का अपना Hub और संबंधित गाइड लिंक है।</p></div>${footGroups}<section class="footer-topic footer-resources"><h3>महत्वपूर्ण पृष्ठ</h3>${utility}<h3>संपर्क</h3><a href="tel:+84942467674">+84 942 467 674</a><a href="https://maps.google.com/maps?cid=7448790013669858019" rel="noopener noreferrer">Google Maps ↗</a><span>प्रतिदिन 09:00–21:00</span></section></div><div class="container footer-bottom"><span>© 2026 Cho Thuê Xe Máy Nguyễn Tú</span><span>हिन्दी · Vietnam (VND)</span></div></footer><a class="sticky-call" href="tel:+84942467674" aria-label="किराये के लिए फ़ोन करें">☎ <span>कॉल करें</span></a><script src="/assets/site.js" defer></script></body></html>`;
+ return `<footer class="footer"><div class="container footer-grid footer-grid--taxonomy"><div class="footer-summary"><a class="brand footer-brand" href="/"><span class="brand-icon">↗</span><span><strong>HANOI<span class="accent">RIDE</span></strong><small>Nguyễn Tú</small></span></a><p>हनोई में मोटरबाइक किराये के लिए हिन्दी जानकारी। मॉडल, कीमत और जमा की पुष्टि करें।</p><p><strong>112 Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội</strong></p><p>हर विषय का अपना Hub और संबंधित गाइड लिंक है।</p></div>${footGroups}<section class="footer-topic footer-resources"><h3>महत्वपूर्ण पृष्ठ</h3>${utility}<h3>संपर्क</h3><a href="tel:+84942467674">+84 942 467 674</a><a href="https://maps.google.com/maps?cid=7448790013669858019" rel="noopener noreferrer">Google Maps ↗</a><span>प्रतिदिन 09:00–21:00</span></section></div><div class="container footer-bottom"><span>© 2026 Cho Thuê Xe Máy Nguyễn Tú</span><span>हिन्दी · Vietnam (VND)</span></div></footer><a class="sticky-call" href="tel:+84942467674" aria-label="किराये के लिए फ़ोन करें">☎ <span>कॉल करें</span></a><script src="/assets/site.js" defer></script>${readerFlags.smartSearch?'<script src="/assets/js/site-search.js" defer></script>':""}</body></html>`;
 }
 
 function breadcrumbs(p){const arr=[];let cur=p;while(cur){arr.unshift(cur);cur=cur.parent?byPath[cur.parent]:null;}if(arr[0]?.path!=="/")arr.unshift(byPath["/"]);return `<nav class="breadcrumbs" aria-label="ब्रेडक्रंब">${arr.map((x,i)=>i===arr.length-1?`<span aria-current="page">${e(x.label)}</span>`:a(x.path,x.label)).join('<span aria-hidden="true">›</span>')}</nav>`;}
@@ -84,7 +133,7 @@ const sections=(p.sections||[]).map(section=>{
 }).join("");
 const sources=(p.sources||[]).map(s=>`<li><a href="${e(s.url)}" rel="noopener noreferrer nofollow" target="_blank">${e(s.title||s.url)}</a></li>`).join("");
 const related=(p.relatedPaths||[]).filter(x=>byPath[x]).map(x=>`<li><a href="${e(x)}">${e(byPath[x].label||byPath[x].title)}</a></li>`).join("");
-return `<main id="main"><section class="page-hero"><div class="container">${breadcrumbs(p)}<span class="section-kicker">हनोई यात्रा गाइड · प्रकाशित लेख</span><h1>${e(p.title)}</h1><p>${e(p.lead)}</p><p class="article-date"><time datetime="${e(p.publishedAt)}">${e(p.publishedAt.slice(0,10))}</time></p></div></section><div class="container section content-layout"><article class="article-body">${sections}<section class="article-section"><h2>संदर्भ और स्रोत</h2><p>संदर्भ स्रोतों की स्वतंत्र पुष्टि करें; कीमतें और नियम बदल सकते हैं।</p><ul>${sources}</ul></section><section class="article-section"><h2>संबंधित गाइड</h2><ul>${related}</ul><p><a href="${e(p.parentSilo)}">विषय सूची पर लौटें →</a></p></section></article><aside class="sidebar"><div class="sidebar-box"><h2>मुख्य विषय</h2><a href="${e(p.parentHub)}">${e(byPath[p.parentHub].label)} ↗</a><a href="${e(p.parentSilo)}">${e(byPath[p.parentSilo].label)} ↗</a></div></aside></div></main>`;
+return `<main id="main"><section class="page-hero"><div class="container">${breadcrumbs(p)}<span class="section-kicker">हनोई यात्रा गाइड · प्रकाशित लेख</span><h1>${e(p.title)}</h1><p>${e(p.lead)}</p><p class="article-date"><time datetime="${e(p.publishedAt)}">${e(p.publishedAt.slice(0,10))}</time></p></div></section><div class="container section content-layout"><article class="article-body">${sections}<section class="article-section"><h2>संदर्भ और स्रोत</h2><p>संदर्भ स्रोतों की स्वतंत्र पुष्टि करें; कीमतें और नियम बदल सकते हैं।</p><ul>${sources}</ul></section><section class="article-section"><h2>संबंधित गाइड</h2><ul>${related}</ul><p><a href="${e(p.parentSilo)}">विषय सूची पर लौटें →</a></p></section>${readerFlags.authorBox?publisherBox():""}${readerFlags.previousNext?previousNextNav(p):""}</article><aside class="sidebar"><div class="sidebar-box"><h2>मुख्य विषय</h2><a href="${e(p.parentHub)}">${e(byPath[p.parentHub].label)} ↗</a><a href="${e(p.parentSilo)}">${e(byPath[p.parentSilo].label)} ↗</a></div></aside></div></main>`;
 }
 
 function outputPath(path){return path==="/"?"index.html":path.slice(1)+"index.html";}
@@ -107,6 +156,7 @@ const files={};
 for(const p of all)files[outputPath(p.path)]=head(p)+header(p)+(p.path==="/"?homePage(p):regularPage(p))+footer();
 for(const a of articles)files[outputPath(a.path)]=head(a)+header(a)+articlePage(a)+footer();
 files["assets/chat/search-index.json"]=localChatIndex();
+files["assets/search/index.json"]=siteSearchIndex();
 files["sitemap.xml"]='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+[...all,...articles].map(p=>`<url><loc>${e(url(p.path))}</loc></url>`).join("")+"</urlset>\n";
 files["robots.txt"]="User-agent: *\nAllow: /\nSitemap: "+DOMAIN+"/sitemap.xml\n";
 files[".nojekyll"]="";

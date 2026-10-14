@@ -1,0 +1,34 @@
+name: India reader UX branch build
+on:
+  push:
+    branches: [feat/india-reader-ux-20261014]
+permissions:
+  contents: write
+jobs:
+  regenerate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Rebuild and verify all published pages
+        run: |
+          node scripts/build.mjs
+          node tests/qa.mjs
+          node tests/floating-qa.mjs
+          node tests/reader-ux.mjs
+          node scripts/build.mjs
+      - name: Commit deterministic generated pages to feature branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- '*.html' 'assets/chat/search-index.json' 'assets/search/index.json' 'sitemap.xml' 'robots.txt'
+          if ! git diff --cached --quiet; then
+            git commit -m "build(hi): regenerate reader UX across published pages [skip ci]"
+            git push origin HEAD:feat/india-reader-ux-20261014
+          fi
